@@ -1,7 +1,0 @@
-# ninja log v6
-60	1089	7845963594683324	CMakeFiles/OOPArcade.dir/XO_Demo.cpp.obj	735c66456297f8a0
-45	1102	7845963594556038	CMakeFiles/OOPArcade.dir/XO_Classes.cpp.obj	5a3407f80f9cb6d
-1102	2370	7845963605129986	OOPArcade.exe	7e0b44f6036beebb
-21	2760	7845982409081649	CMakeFiles/OOPArcade.dir/main.cpp.obj	a1ebf9979d1a0fa3
-32	2772	7845982409202855	CMakeFiles/OOPArcade.dir/Numerical_TTT_Classes.cpp.obj	23eaa3dbcd755476
-27	671	7845983068295677	OOPArcade.exe	1fe4009bad274d2f

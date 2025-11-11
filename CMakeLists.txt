@@ -5,8 +5,12 @@ set(CMAKE_CXX_STANDARD 14)
 
 include_directories(.)
 
+# Add your new files to this list
 add_executable(OOPArcade
+    main.cpp                 # This is your renamed XO_Demo.cpp
     BoardGame_Classes.h
     XO_Classes.cpp
     XO_Classes.h
-    XO_Demo.cpp)
+    Numerical_TTT_Classes.cpp  # Your new .cpp file
+    Numerical_TTT_Classes.h    # Your new .h file
+)

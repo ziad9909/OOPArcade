@@ -87,6 +87,11 @@ public:
 
     /** @brief Get number of columns. */
     int get_columns() const { return columns; }
+
+
+    T get_cell(int x, int y) {
+        return board[x][y];
+    }
 };
 
 //-----------------------------------------------------
@@ -126,7 +131,7 @@ class Player {
 protected:
     string name;         ///< Player name
     PlayerType type;     ///< Player type (e.g., HUMAN or COMPUTER)
-    T symbol;            ///< Player’s symbol on board
+    T symbol;            ///< Playerï¿½s symbol on board
     Board<T>* boardPtr;  ///< Pointer to the game board
 
 public:
@@ -168,7 +173,7 @@ protected:
     /**
      * @brief Ask the user for the player's name.
      */
-    string get_player_name(string player_label) {
+    virtual string get_player_name(string player_label) {
         string name;
         cout << "Enter " << player_label << " name: ";
         getline(cin >> ws, name);
@@ -178,7 +183,7 @@ protected:
     /**
      * @brief Ask the user to choose the player type from a list.
      */
-    PlayerType get_player_type_choice(string player_label, const vector<string>& options) {
+    virtual PlayerType get_player_type_choice(string player_label, const vector<string>& options) {
         cout << "Choose " << player_label << " type:\n";
         for (size_t i = 0; i < options.size(); ++i)
             cout << i + 1 << ". " << options[i] << "\n";
@@ -188,6 +193,9 @@ protected:
     }
 
 public:
+  
+    UI(int cell_display_width = 3) : cell_width(cell_display_width) {}
+
     /**
      * @brief Construct the UI and display a welcome message.
      */
@@ -199,7 +207,7 @@ public:
     virtual ~UI() {}
 
     /** @brief Display any message to the user. */
-    void display_message(string message) { cout << message << "\n"; }
+    virtual void display_message(string message) { cout << message << "\n"; }
 
     /**
      * @brief Ask the user (or AI) to make a move.
@@ -219,7 +227,7 @@ public:
     /**
      * @brief Display the current board matrix in formatted form.
      */
-    void display_board_matrix(const vector<vector<T>>& matrix) const {
+    virtual void display_board_matrix(const vector<vector<T>>& matrix) const {
         if (matrix.empty() || matrix[0].empty()) return;
 
         int rows = matrix.size();

@@ -1,4 +1,3 @@
-//--------------------------------------- IMPLEMENTATION
 
 #include <iostream>
 #include <iomanip>

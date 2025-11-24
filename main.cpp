@@ -45,13 +45,25 @@ void run_numerical_ttt_game() {
 // 5x5 TTT
 
 void run_fivebyfive_ttt_game() {
-    UI<char>* game_ui = new FiveByFive_TTT_UI();
-    Board<char>* board = new FiveByFive_TTT_Board();
+    FiveByFive_TTT_UI* game_ui = new FiveByFive_TTT_UI();
+    FiveByFive_TTT_Board* game_board = new FiveByFive_TTT_Board();
     Player<char>** players = game_ui->setup_players();
-    GameManager<char> game(board, players, game_ui);
+
+    GameManager<char> game(game_board, players, game_ui);
     game.run();
 
-    delete board;
+    int x_count = game_board->count_three_in_a_row('X');
+    int o_count = game_board->count_three_in_a_row('O');
+
+    game_ui->display_message("Game Over!");
+    game_ui->display_message("X sequences: " + to_string(x_count));
+    game_ui->display_message("O sequences: " + to_string(o_count));
+
+    if (x_count > o_count) game_ui->display_message("X wins!");
+    else if (o_count > x_count) game_ui->display_message("O wins!");
+    else game_ui->display_message("It's a draw!");
+
+    delete game_board;
     delete game_ui;
     for (int i = 0; i < 2; ++i) delete players[i];
     delete[] players;
@@ -80,7 +92,7 @@ int main() {
             run_xo_game();
         }
         else if (choice == 3) {
-            run_fivebyfive_ttt_game(); // ???? ???? implementation ????? ???????
+            run_fivebyfive_ttt_game();
         }
         else if (choice == 4) {
             cout << "Goodbye!" << endl;

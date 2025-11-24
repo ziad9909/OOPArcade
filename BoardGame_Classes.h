@@ -222,7 +222,7 @@ public:
     /**
      * @brief Create a player object based on input name, symbol, and type.
      */
-    virtual Player<T>* create_player(string& name, T symbol, PlayerType type) = 0;
+    virtual Player<T>* create_player(string& name, T symbol, PlayerType type);
 
     /**
      * @brief Display the current board matrix in formatted form.
@@ -324,6 +324,18 @@ Player<T>** UI<T>::setup_players() {
     players[1] = create_player(nameO, static_cast<T>('O'), typeO);
 
     return players;
+}
+//-----------------------------------------------------
+/**
+ * @brief Default implementation of creating a player.
+ */
+template <typename T>
+Player<T>* UI<T>::create_player(string& name, T symbol, PlayerType type) {
+    // Create player based on type
+    cout << "Creating " << (type == PlayerType::HUMAN ? "human" : "computer")
+        << " player: " << name << " (" << symbol << ")\n";
+
+    return new Player<T>(name, symbol, type);
 }
 
 #endif // _BOARDGAME_CLASSES_H

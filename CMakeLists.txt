@@ -5,8 +5,8 @@ set(CMAKE_CXX_STANDARD 14)
 
 include_directories(.)
 
-# Add your new files to this list
 add_executable(OOPArcade
+<<<<<<< Updated upstream
     main.cpp                 # This is your renamed XO_Demo.cpp
     BoardGame_Classes.h
     XO_Classes.cpp
@@ -14,3 +14,13 @@ add_executable(OOPArcade
     Numerical_TTT_Classes.cpp  # Your new .cpp file
     Numerical_TTT_Classes.h    # Your new .h file
 )
+=======
+    main.cpp
+    XO_Classes.cpp
+    Numerical_TTT_Classes.cpp
+    FiveByFiveTTT_Classes.cpp
+    Misere_TTT_Classes.cpp
+)
+
+
+>>>>>>> Stashed changes

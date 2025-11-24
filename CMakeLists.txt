@@ -7,10 +7,12 @@ include_directories(.)
 
 # Add your new files to this list
 add_executable(OOPArcade
-    main.cpp                 # This is your renamed XO_Demo.cpp
+    main.cpp
     BoardGame_Classes.h
     XO_Classes.cpp
     XO_Classes.h
-    Numerical_TTT_Classes.cpp  # Your new .cpp file
-    Numerical_TTT_Classes.h    # Your new .h file
+    Numerical_TTT_Classes.cpp
+    Numerical_TTT_Classes.h
+    FiveByFiveTTT_Classes.cpp
+    FiveByFiveTTT_Classes.h
 )

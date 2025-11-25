@@ -27,7 +27,6 @@ enum class PlayerType {
     AI,        ///< An AI player.
     RANDOM     ///< A Random player.
 };
-
 /**
  * @brief Base template for any board used in board games.
  *

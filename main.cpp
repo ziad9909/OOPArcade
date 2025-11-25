@@ -10,6 +10,7 @@
 #include "XO_Classes.h" 
 #include "Numerical_TTT_Classes.h"
 #include "Misere_TTT_Classes.h"
+#include "SUS.h"
 
 using namespace std;
 
@@ -63,6 +64,17 @@ void run_misere_ttt_game() {
     delete game_ui;
     delete game_board;
 }
+void run_SUS() {
+    UI<char> *game_ui = new SUS_player();
+    SUS_board *game_board = new SUS_board();
+    Player<char> **players = game_ui->setup_players();
+    GameManager<char> game(game_board, players, game_ui);
+    game.run();
+    for (int i = 0; i < 2; ++i) delete players[i];
+    delete[] players;
+    delete game_ui;
+    delete game_board;
+}
 
 int main() {
     srand(static_cast<unsigned int>(time(0))); // Seed the random number generator
@@ -74,7 +86,8 @@ int main() {
         cout << "2. Play X-O (Demo)" << endl;
         cout << "3. Play 5x5 Tic-Tac-Toe" << endl;
         cout << "4. Play Misere Tic Tac Toe" << endl;
-        cout << "5. Exit" << endl;
+        cout << "5. Play SUS" << endl;
+        cout << "6. Exit" << endl;
         cout << "Enter your choice: ";
         cin >> choice;
 
@@ -89,6 +102,9 @@ int main() {
             run_misere_ttt_game();
             break;
         case 5:
+            run_SUS();
+            break;
+        case 6:
             cout << "Goodbye!" << endl;
             return 0;
         default:

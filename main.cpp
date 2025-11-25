@@ -13,6 +13,8 @@
 #include "SUS.h"
 #include "Word_TTT.h"
 #include"4x4_TTT_Classes.h"
+#include "Obstacle6x6_TTT.h"
+
 
 using namespace std;
 
@@ -106,6 +108,21 @@ void run_4x4_ttt_game() {
     delete ui;
 }
 
+// obstacle 6x6 ttt game
+
+void run_obstacle6x6_ttt_game() {
+    UI<char>* ui = new Obstacle6x6_TTT_UI();
+    Board<char>* board = new Obstacle6x6_TTT_Board();
+    Player<char>** players = ui->setup_players();
+
+    GameManager<char> game(board, players, ui);
+    game.run();
+
+    for (int i = 0; i < 2; ++i) delete players[i];
+    delete[] players;
+    delete ui;
+    delete board;
+}
 
 
 int main() {
@@ -120,7 +137,8 @@ int main() {
         cout << "4. Play SUS" << endl;
         cout << "5. Play Word Tic Tac Toe" << endl;
         cout << "6. Play 4x4_TTT_"<<endl;
-         cout << "7. Exit" << endl;
+        cout << "7. Play Obstacle Tic Tac Toe" << endl;
+        cout << "8. Exit"<< endl;
         cout << "Enter your choice: ";
         cin >> choice;
 
@@ -144,6 +162,9 @@ int main() {
             run_4x4_ttt_game();
             break;
         case 7:
+			run_obstacle6x6_ttt_game();
+            break;
+        case 8:
             cout << "Goodbye!" << endl;
             return 0;
         default:

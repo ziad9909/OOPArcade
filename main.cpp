@@ -12,6 +12,7 @@
 #include "Misere_TTT_Classes.h"
 #include "SUS.h"
 #include "Word_TTT.h"
+#include"4x4_TTT_Classes.h"
 
 using namespace std;
 
@@ -91,7 +92,19 @@ void run_word_ttt_game() {
     delete game_ui;
     delete game_board;
 }
+void run_4x4_ttt_game() {
+    UI<char>* ui = new FourByFour_TTT_UI();
+    Board<char>* board = new FourByFour_TTT_Board();
+    Player<char>** players = ui->setup_players();
 
+    GameManager<char> game(board, players, ui);
+    game.run();
+
+    for (int i = 0; i < 2; i++) delete players[i];
+    delete[] players;
+    delete board;
+    delete ui;
+}
 
 
 
@@ -106,7 +119,8 @@ int main() {
         cout << "3. Play Misere Tic Tac Toe" << endl;
         cout << "4. Play SUS" << endl;
         cout << "5. Play Word Tic Tac Toe" << endl;
-        cout << "6. Exit" << endl;
+        cout << "6. Play 4x4_TTT_"<<endl;
+         cout << "7. Exit" << endl;
         cout << "Enter your choice: ";
         cin >> choice;
 
@@ -127,6 +141,9 @@ int main() {
             run_word_ttt_game();
             break;
         case 6:
+            run_4x4_ttt_game();
+            break;
+        case 7:
             cout << "Goodbye!" << endl;
             return 0;
         default:

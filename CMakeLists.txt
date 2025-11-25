@@ -18,4 +18,6 @@ add_executable(OOPArcade
     SUS.cpp
     Word_TTT.h
     Word_TTT.cpp
+    4x4_TTT_Classes.h
+    4x4_TTT_Classes.cpp
 )

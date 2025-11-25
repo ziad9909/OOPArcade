@@ -14,6 +14,7 @@
 #include "Word_TTT.h"
 #include"4x4_TTT_Classes.h"
 #include "Obstacle6x6_TTT.h"
+#include "Timed_TTT_Classes.h"
 
 
 using namespace std;
@@ -124,6 +125,20 @@ void run_obstacle6x6_ttt_game() {
     delete board;
 }
 
+// Infinity TTT game
+void run_timed_ttt_game() {
+    UI<char>* ui = new Timed_TTT_UI();
+    Board<char>* board = new Timed_TTT_Board();
+    Player<char>** players = ui->setup_players();
+
+    GameManager<char> game(board, players, ui);
+    game.run();
+
+    for (int i = 0; i < 2; ++i) delete players[i];
+    delete[] players;
+    delete ui;
+    delete board;
+}
 
 int main() {
     srand(static_cast<unsigned int>(time(0))); // Seed the random number generator
@@ -138,7 +153,8 @@ int main() {
         cout << "5. Play Word Tic Tac Toe" << endl;
         cout << "6. Play 4x4_TTT_"<<endl;
         cout << "7. Play Obstacle Tic Tac Toe" << endl;
-        cout << "8. Exit"<< endl;
+		cout << "8. Play Infinity Tic Tac Toe" << endl;
+        cout << "9. Exit"<< endl;
         cout << "Enter your choice: ";
         cin >> choice;
 
@@ -164,7 +180,10 @@ int main() {
         case 7:
 			run_obstacle6x6_ttt_game();
             break;
-        case 8:
+		case 8:
+            run_timed_ttt_game();
+            break;
+        case 9:
             cout << "Goodbye!" << endl;
             return 0;
         default:

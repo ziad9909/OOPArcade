@@ -11,6 +11,7 @@
 #include "Numerical_TTT_Classes.h"
 #include "Misere_TTT_Classes.h"
 #include "SUS.h"
+#include "Word_TTT.h"
 
 using namespace std;
 
@@ -76,6 +77,24 @@ void run_SUS() {
     delete game_board;
 }
 
+// Word TTT game 
+
+void run_word_ttt_game() {
+    UI<char>* game_ui = new Word_TTT_UI();
+    Board<char>* game_board = new Word_TTT_Board();
+    Player<char>** players = game_ui->setup_players();
+    GameManager<char> game(game_board, players, game_ui);
+    game.run();
+
+    for (int i = 0; i < 2; ++i) delete players[i];
+    delete[] players;
+    delete game_ui;
+    delete game_board;
+}
+
+
+
+
 int main() {
     srand(static_cast<unsigned int>(time(0))); // Seed the random number generator
 
@@ -84,9 +103,9 @@ int main() {
         cout << "\n--- OOP Game Arcade Menu ---" << endl;
         cout << "1. Play Numerical Tic-Tac-Toe (Group Game 9)" << endl;
         cout << "2. Play X-O (Demo)" << endl;
-        cout << "3. Play 5x5 Tic-Tac-Toe" << endl;
-        cout << "4. Play Misere Tic Tac Toe" << endl;
-        cout << "5. Play SUS" << endl;
+        cout << "3. Play Misere Tic Tac Toe" << endl;
+        cout << "4. Play SUS" << endl;
+        cout << "5. Play Word Tic Tac Toe" << endl;
         cout << "6. Exit" << endl;
         cout << "Enter your choice: ";
         cin >> choice;
@@ -98,11 +117,14 @@ int main() {
         case 2:
             run_xo_game();
             break;
-        case 4:
+        case 3:
             run_misere_ttt_game();
             break;
-        case 5:
+        case 4:
             run_SUS();
+            break;
+        case 5:
+            run_word_ttt_game();
             break;
         case 6:
             cout << "Goodbye!" << endl;

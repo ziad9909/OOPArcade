@@ -16,4 +16,6 @@ add_executable(OOPArcade
     Misere_TTT_Classes.h
     SUS.h
     SUS.cpp
+    Word_TTT.h
+    Word_TTT.cpp
 )

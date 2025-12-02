@@ -24,4 +24,5 @@ add_executable(OOPArcade
     Obstacle6x6_TTT.cpp
     "Timed_TTT_Classes.h"
     "Timed_TTT_Classes.cpp"
+        Four_in_a_row.cpp
 )

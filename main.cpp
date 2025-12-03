@@ -17,6 +17,7 @@
 #include "Timed_TTT_Classes.h"
 #include "Four_in_a_row.h"
 #include "Diamond_TTT_Classes.h"
+#include "FiveByFiveTTT_Classes.h"
 
 
 using namespace std;
@@ -172,6 +173,31 @@ void run_diamond_ttt_game() {
 
 
 
+//five by five ttt game
+
+void run_fivebyfive_ttt_game() {
+    FiveByFive_TTT_UI* ui = new FiveByFive_TTT_UI();
+    FiveByFive_TTT_Board* board = new FiveByFive_TTT_Board();
+    Player<char>** players = ui->setup_players();
+
+    // Set board pointers for both players
+    players[0]->set_board_ptr(board);
+    players[1]->set_board_ptr(board);
+
+    // Use custom game loop that only ends after 24 moves
+    ui->run_game_with_custom_loop(board, players);
+
+    // Cleanup
+    for (int i = 0; i < 2; ++i) delete players[i];
+    delete[] players;
+    delete ui;
+    delete board;
+}
+
+
+
+
+
 int main() {
     srand(static_cast<unsigned int>(time(0))); // Seed the random number generator
 
@@ -186,9 +212,10 @@ int main() {
         cout << "6. Play 4x4_TTT_"<<endl;
         cout << "7. Play Obstacle Tic Tac Toe" << endl;
 		cout << "8. Play Infinity Tic Tac Toe" << endl;
-        cout << "9.Play Four in a row " << endl;
-		cout << "10. Play Diamond Tic Tac Toe" << endl;
-        cout << "11. Exit"<< endl;
+        cout << "9. Play Four in a row " << endl;
+		cout << "10.Play Diamond Tic Tac Toe" << endl;
+        cout << "11.Play 5x5 Tic Tac Toe" << endl;
+        cout << "12.Exit"<< endl;
         cout << "Enter your choice: ";
         cin >> choice;
 
@@ -224,6 +251,9 @@ int main() {
             run_diamond_ttt_game();
 			break;
         case 11:
+			run_fivebyfive_ttt_game();
+            break;
+        case 12:
             cout << "Goodbye!" << endl;
             return 0;
         default:

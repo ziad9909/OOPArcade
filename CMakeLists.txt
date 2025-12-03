@@ -27,4 +27,6 @@ add_executable(OOPArcade
     Four_in_a_row.cpp
     Diamond_TTT_Classes.h 
     Diamond_TTT_Classes.cpp
+    FiveByFiveTTT_Classes.h
+    FiveByFiveTTT_Classes.cpp
 )

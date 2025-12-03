@@ -16,6 +16,7 @@
 #include "Obstacle6x6_TTT.h"
 #include "Timed_TTT_Classes.h"
 #include "Four_in_a_row.h"
+#include "Diamond_TTT_Classes.h"
 
 
 using namespace std;
@@ -140,6 +141,7 @@ void run_timed_ttt_game() {
     delete ui;
     delete board;
 }
+// Four in a row game
 void run_Four_in_row() {
     UI<char>* ui = new Four_in_a_row_Ui;
     Board<char>* board = new Four_in_a_row_board();
@@ -153,6 +155,21 @@ void run_Four_in_row() {
     delete ui;
     delete board;
 }
+// Diamond TTT game
+void run_diamond_ttt_game() {
+    UI<char>* ui = new Diamond_TTT_UI();
+    Board<char>* board = new Diamond_TTT_Board();
+    Player<char>** players = ui->setup_players();
+
+    GameManager<char> game(board, players, ui);
+    game.run();
+
+    for (int i = 0; i < 2; ++i) delete players[i];
+    delete[] players;
+    delete ui;
+    delete board;
+}
+
 
 
 int main() {
@@ -170,7 +187,8 @@ int main() {
         cout << "7. Play Obstacle Tic Tac Toe" << endl;
 		cout << "8. Play Infinity Tic Tac Toe" << endl;
         cout << "9.Play Four in a row " << endl;
-        cout << "10. Exit"<< endl;
+		cout << "10. Play Diamond Tic Tac Toe" << endl;
+        cout << "11. Exit"<< endl;
         cout << "Enter your choice: ";
         cin >> choice;
 
@@ -202,7 +220,10 @@ int main() {
         case 9:
             run_Four_in_row();
             break;
-        case 10:
+		case 10:
+            run_diamond_ttt_game();
+			break;
+        case 11:
             cout << "Goodbye!" << endl;
             return 0;
         default:

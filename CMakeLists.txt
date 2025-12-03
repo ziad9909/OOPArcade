@@ -22,7 +22,9 @@ add_executable(OOPArcade
     4x4_TTT_Classes.cpp
     Obstacle6x6_TTT.h 
     Obstacle6x6_TTT.cpp
-    "Timed_TTT_Classes.h"
-    "Timed_TTT_Classes.cpp"
-        Four_in_a_row.cpp
+    Timed_TTT_Classes.h
+    Timed_TTT_Classes.cpp
+    Four_in_a_row.cpp
+    Diamond_TTT_Classes.h 
+    Diamond_TTT_Classes.cpp
 )

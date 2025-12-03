@@ -478,25 +478,11 @@ Move<char>* Diamond_TTT_UI::get_move(Player<char>* player) {
  * PURPOSE: Display the board with diamond shape explanation
  */
 void Diamond_TTT_UI::display_board_matrix(const vector<vector<char>>& matrix) const {
-    cout << "\n" << string(50, '=') << "\n";
-    cout << "DIAMOND TIC-TAC-TOE BOARD\n";
-    cout << string(50, '=') << "\n";
+    cout << "\n=== Diamond Tic-Tac-Toe ===\n";
 
     // Call parent method to show the grid
     UI<char>::display_board_matrix(matrix);
 
-    // Explain diamond shape and winning conditions
-    cout << "\n" << string(50, '-') << "\n";
-    cout << "HOW TO WIN:\n";
-    cout << "1. Complete ONE line of 3 marks\n";
-    cout << "2. Complete ONE line of 4 marks\n";
-    cout << "3. Lines must be DIFFERENT directions (horizontal/vertical/diagonal)\n";
-    cout << "4. Lines can SHARE ONE cell\n";
-    cout << "\nDiamond cells (others marked with '.'):\n";
-    cout << "  Row 0: only column 2\n";
-    cout << "  Row 1: columns 1, 2, 3\n";
-    cout << "  Row 2: ALL columns 0-4\n";
-    cout << "  Row 3: columns 1, 2, 3\n";
-    cout << "  Row 4: only column 2\n";
-    cout << string(50, '=') << "\n";
+    // Only show a brief note about the diamond shape
+    cout << "Note: '.' marks invalid cells (not part of diamond shape)\n";
 }

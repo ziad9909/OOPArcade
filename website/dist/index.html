@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OOP Arcade - Board Games Collection</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header class="header">
+            <h1 class="title">🎮 OOP Arcade</h1>
+            <p class="subtitle">Classic Board Games Collection</p>
+        </header>
+
+        <!-- Game Selection Grid -->
+        <main class="games-grid">
+            <!-- Game Card 1: Classic Tic Tac Toe -->
+            <div class="game-card" data-game="tictactoe">
+                <div class="game-icon">❌⭕</div>
+                <h3 class="game-title">Tic Tac Toe</h3>
+                <p class="game-description">Classic 3x3 grid game. Get three in a row to win!</p>
+                <button class="play-btn" onclick="location.href='game.html?game=tictactoe'">Play Now</button>
+            </div>
+
+            <!-- Game Card 2: Four in a Row -->
+            <div class="game-card" data-game="fourinarow">
+                <div class="game-icon">🔴🟡</div>
+                <h3 class="game-title">Four in a Row</h3>
+                <p class="game-description">Connect 4 on a 6x7 board with smart AI opponent!</p>
+                <button class="play-btn" onclick="location.href='game.html?game=fourinarow'">Play Now</button>
+            </div>
+
+            <!-- Game Card 3: Numerical Tic Tac Toe -->
+            <div class="game-card" data-game="numerical">
+                <div class="game-icon">🔢</div>
+                <h3 class="game-title">Numerical Tic Tac Toe</h3>
+                <p class="game-description">Use numbers 1-9. Make any line sum to 15 to win!</p>
+                <button class="play-btn" onclick="location.href='game.html?game=numerical'">Play Now</button>
+            </div>
+
+            <!-- Game Card 4: SUS Game -->
+            <div class="game-card" data-game="sus">
+                <div class="game-icon">🎯</div>
+                <h3 class="game-title">SUS Game</h3>
+                <p class="game-description">Form "SUS" sequences. Highest score wins!</p>
+                <button class="play-btn" onclick="location.href='game.html?game=sus'">Play Now</button>
+            </div>
+
+            <!-- Game Card 5: Misere Tic Tac Toe -->
+            <div class="game-card" data-game="misere">
+                <div class="game-icon">🔄</div>
+                <h3 class="game-title">Misere Tic Tac Toe</h3>
+                <p class="game-description">Reverse rules - avoid getting three in a row!</p>
+                <button class="play-btn" onclick="location.href='game.html?game=misere'">Play Now</button>
+            </div>
+
+            <!-- Game Card 6: Word Tic Tac Toe -->
+            <div class="game-card" data-game="word">
+                <div class="game-icon">📝</div>
+                <h3 class="game-title">Word Tic Tac Toe</h3>
+                <p class="game-description">Form valid 3-letter words to win!</p>
+                <button class="play-btn" onclick="location.href='game.html?game=word'">Play Now</button>
+            </div>
+
+            <!-- Game Card 7: 4x4 Tic Tac Toe -->
+            <div class="game-card" data-game="4x4">
+                <div class="game-icon">🎲</div>
+                <h3 class="game-title">4x4 Tic Tac Toe</h3>
+                <p class="game-description">Expanded 4x4 grid with unique rules!</p>
+                <button class="play-btn" onclick="location.href='game.html?game=4x4'">Play Now</button>
+            </div>
+
+            <!-- Game Card 8: 5x5 Tic Tac Toe -->
+            <div class="game-card" data-game="5x5">
+                <div class="game-icon">🏆</div>
+                <h3 class="game-title">5x5 Tic Tac Toe</h3>
+                <p class="game-description">Count sequences! Most three-in-a-rows wins!</p>
+                <button class="play-btn" onclick="location.href='game.html?game=5x5'">Play Now</button>
+            </div>
+
+            <!-- Game Card 9: Obstacle 6x6 -->
+            <div class="game-card" data-game="obstacle">
+                <div class="game-icon">🚧</div>
+                <h3 class="game-title">Obstacle Tic Tac Toe</h3>
+                <p class="game-description">6x6 board with obstacles blocking your path!</p>
+                <button class="play-btn" onclick="location.href='game.html?game=obstacle'">Play Now</button>
+            </div>
+
+            <!-- Game Card 10: Diamond Tic Tac Toe -->
+            <div class="game-card" data-game="diamond">
+                <div class="game-icon">💎</div>
+                <h3 class="game-title">Diamond Tic Tac Toe</h3>
+                <p class="game-description">Play on a diamond-shaped board!</p>
+                <button class="play-btn" onclick="location.href='game.html?game=diamond'">Play Now</button>
+            </div>
+
+            <!-- Game Card 11: Timed Tic Tac Toe -->
+            <div class="game-card" data-game="timed">
+                <div class="game-icon">⏱️</div>
+                <h3 class="game-title">Timed Tic Tac Toe</h3>
+                <p class="game-description">Infinity mode - keep replacing pieces!</p>
+                <button class="play-btn" onclick="location.href='game.html?game=timed'">Play Now</button>
+            </div>
+        </main>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <p> project for FCAI-Cairo University, under the supervision of Dr. Mohammad El-Ramly</p>
+            <p>TEAM</p>
+            <ul>
+                <li>Ziad - 20240217</li>
+                <li>Retaj- 20240848</li>
+                <li>Moaz - 20240605</li>
+                <li>Hana - 20242386</li>
+        </footer>
+    </div>
+
+    <script src="js/home.min.js"></script>
+</body>
+</html>
+

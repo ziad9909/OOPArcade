@@ -1,0 +1,14 @@
+{
+  "name": "oop-arcade",
+  "version": "1.0.0",
+  "description": "Classic Board Games Collection",
+  "scripts": {
+    "build": "node build.js",
+    "deploy": "npm run build"
+  },
+  "devDependencies": {
+    "javascript-obfuscator": "^4.2.1",
+    "terser": "^5.44.1"
+  },
+  "private": true
+}

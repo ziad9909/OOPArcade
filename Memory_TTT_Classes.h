@@ -1,14 +1,18 @@
-
 #ifndef MEMORY_TTT_CLASSES_H
 #define MEMORY_TTT_CLASSES_H
 
 #include "BoardGame_Classes.h"
 #include <iostream>
+#include <vector>
 using namespace std;
 
+/**
+ * @class Memory_TTT_Board
+ * @brief Hidden-memory Tic-Tac-Toe board
+ */
 class Memory_TTT_Board : public Board<char> {
 private:
-    vector<vector<char>> realBoard; 
+    vector<vector<char>> realBoard;
 
 public:
     Memory_TTT_Board();
@@ -23,10 +27,13 @@ private:
     bool check_win(char sym);
 };
 
+/**
+ * @class Memory_TTT_UI
+ * @brief UI handling for Memory Tic-Tac-Toe
+ */
 class Memory_TTT_UI : public UI<char> {
 public:
     Memory_TTT_UI() : UI(3) {}
-
     Move<char>* get_move(Player<char>* player) override;
 };
 

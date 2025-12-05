@@ -18,6 +18,8 @@
 #include "Four_in_a_row.h"
 #include "Diamond_TTT_Classes.h"
 #include "FiveByFiveTTT_Classes.h"
+#include "Pyramid_TTT_Classes.h"
+#include "Memory_TTT_Classes.h"
 
 
 using namespace std;
@@ -193,10 +195,34 @@ void run_fivebyfive_ttt_game() {
     delete ui;
     delete board;
 }
+// pyramid_TTT
+void run_pyramid_ttt_game() {
+    UI<char>* ui = new Pyramid_TTT_UI();
+    Board<char>* board = new Pyramid_TTT_Board();
+    Player<char>** players = ui->setup_players();
+    GameManager<char> game(board, players, ui);
+    game.run();
 
+    for (int i = 0; i < 2; i++) delete players[i];
+    delete[] players;
+    delete board;
+    delete ui;
+}
 
+// memory -TTT
+void run_memory_ttt_game() {
+    UI<char>* ui = new Memory_TTT_UI();
+    Board<char>* board = new Memory_TTT_Board();
+    Player<char>** players = ui->setup_players();
 
+    GameManager<char> game(board, players, ui);
+    game.run();
 
+    for (int i = 0; i < 2; ++i) delete players[i];
+    delete[] players;
+    delete ui;
+    delete board;
+}
 
 int main() {
     srand(static_cast<unsigned int>(time(0))); // Seed the random number generator
@@ -215,7 +241,9 @@ int main() {
         cout << "9. Play Four in a row " << endl;
 		cout << "10.Play Diamond Tic Tac Toe" << endl;
         cout << "11.Play 5x5 Tic Tac Toe" << endl;
-        cout << "12.Exit"<< endl;
+        cout << "12.Play pyramid Tic Tac Toe" << endl;
+        cout << "13.Play memory Tic Tac Toe" << endl;
+        cout << "14.Exit"<< endl;
         cout << "Enter your choice: ";
         cin >> choice;
 
@@ -254,6 +282,12 @@ int main() {
 			run_fivebyfive_ttt_game();
             break;
         case 12:
+            run_pyramid_ttt_game();
+            break;
+        case 13:
+            run_memory_ttt_game();
+            break;
+        case 14:
             cout << "Goodbye!" << endl;
             return 0;
         default:

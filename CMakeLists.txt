@@ -29,4 +29,8 @@ add_executable(OOPArcade
     Diamond_TTT_Classes.cpp
     FiveByFiveTTT_Classes.h
     FiveByFiveTTT_Classes.cpp
+    Pyramid_TTT_Classes.h
+    Pyramid_TTT_Classes.cpp
+    Memory_TTT_Classes.h
+    Memory_TTT_Classes.cpp
 )

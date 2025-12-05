@@ -8,6 +8,8 @@
 #include <utility> // For std::pair
 #include <map>     // For std::map
 #include <string>  // For std::string
+#include <limits> // for INT_MAX, INT_MIN
+
 
 using namespace std;
 
@@ -35,6 +37,9 @@ private:
 
     // Get all possible winning lines in the diamond
     vector<vector<pair<int, int>>> get_all_lines();
+	// Evaluate board state for AI (not implemented here)
+    int evaluate_board(Diamond_TTT_Board* board, char ai_symbol, char opponent_symbol);
+
 
 public:
     /**
@@ -89,6 +94,10 @@ public:
      * @brief Debug method to check winning conditions
      */
     void debug_win_check(Player<char>* player);
+
+    // Undo a move (used by AI to backtrack)
+    void undo_move(int x, int y);
+
 };
 
 /**
@@ -124,6 +133,28 @@ public:
      * @brief Display the board with diamond shape information
      */
     virtual void display_board_matrix(const vector<vector<char>>& matrix) const;
+private:
+    // Evaluate a board state for AI (higher = better for AI)
+    int evaluate_board(Diamond_TTT_Board* board, char ai_symbol, char opponent_symbol);
+
+    // Minimax recursive function
+    int minimax(Diamond_TTT_Board* board,
+        char current_symbol,
+        char ai_symbol,
+        char opponent_symbol,
+        bool isMaximizing,
+        int depth = 0);
+    int minimax_helper(Diamond_TTT_Board* board,
+        char current_symbol,
+        char ai_symbol,
+        char opponent_symbol,
+        bool isMaximizing,
+        int depth);
+
+
+    // Find the best move for AI
+    pair<int, int> find_best_move(Diamond_TTT_Board* board, char ai_symbol, char opponent_symbol);
+
 };
 
 #endif // DIAMOND_TTT_CLASSES_H

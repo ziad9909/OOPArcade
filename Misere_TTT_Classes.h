@@ -11,6 +11,15 @@ public:
     bool is_lose(Player<char>* player) override;
     bool is_draw(Player<char>* player) override;
     bool game_is_over(Player<char>* player) override;
+    // New methods for AI (minimax)
+    Move<char>* get_best_move_for_ai(char aiSymbol, char humanSymbol);
+
+	//Helpers for minimax
+private:
+    bool check_three(char sym); 
+    int evaluate_state(char aiSym, char huSym, int depth);
+    int minimax(bool isMaximizing, char aiSym, char huSym, int depth, int alpha, int beta);
+
 };
 
 class Misere_TTT_UI : public UI<char> {

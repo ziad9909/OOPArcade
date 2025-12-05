@@ -1,0 +1,140 @@
+\doxysection{Misere\+\_\+\+TTT\+\_\+\+Board Class Reference}
+\hypertarget{class_misere___t_t_t___board}{}\label{class_misere___t_t_t___board}\index{Misere\_TTT\_Board@{Misere\_TTT\_Board}}
+Inheritance diagram for Misere\+\_\+\+TTT\+\_\+\+Board\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_misere___t_t_t___board}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{class_misere___t_t_t___board_ab378c462591c67a3c3c3be4162283264}{update\+\_\+board}} (\mbox{\hyperlink{class_move}{Move}}$<$ char $>$ \texorpdfstring{$\ast$}{*}move) override
+\begin{DoxyCompactList}\small\item\em Update the board with a new move. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_misere___t_t_t___board_a9b0d27a3ae08e02d28c11d0fd671dc06}{is\+\_\+win}} (\mbox{\hyperlink{class_player}{Player}}$<$ char $>$ \texorpdfstring{$\ast$}{*}player) override
+\begin{DoxyCompactList}\small\item\em Check if a player has won. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_misere___t_t_t___board_afb153d8306497fb8d7686ec7902dfd84}{is\+\_\+lose}} (\mbox{\hyperlink{class_player}{Player}}$<$ char $>$ \texorpdfstring{$\ast$}{*}player) override
+\begin{DoxyCompactList}\small\item\em Check if a player has lost. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_misere___t_t_t___board_a0ea7c31dbe7872543bd3be68a1eac78c}{is\+\_\+draw}} (\mbox{\hyperlink{class_player}{Player}}$<$ char $>$ \texorpdfstring{$\ast$}{*}player) override
+\begin{DoxyCompactList}\small\item\em Check if the game ended in a draw. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_misere___t_t_t___board_ad2fe4095929f4aee567e2a30682fee88}{game\+\_\+is\+\_\+over}} (\mbox{\hyperlink{class_player}{Player}}$<$ char $>$ \texorpdfstring{$\ast$}{*}player) override
+\begin{DoxyCompactList}\small\item\em Check if the game is over. \end{DoxyCompactList}\item 
+\Hypertarget{class_misere___t_t_t___board_a0cc2ec8cae42dd669ffcae4c773f2b64}\label{class_misere___t_t_t___board_a0cc2ec8cae42dd669ffcae4c773f2b64} 
+\mbox{\hyperlink{class_move}{Move}}$<$ char $>$ \texorpdfstring{$\ast$}{*} {\bfseries get\+\_\+best\+\_\+move\+\_\+for\+\_\+ai} (char ai\+Symbol, char human\+Symbol)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_board}{Board$<$ char $>$}}}
+\begin{DoxyCompactItemize}
+\item 
+{\bfseries Board} (int \mbox{\hyperlink{class_board_a948d978e3b5fc460559b588f5dee9572}{rows}}, int \mbox{\hyperlink{class_board_afaf8842d9d52ac724e8c2f5642ecafc7}{columns}})
+\begin{DoxyCompactList}\small\item\em Construct a board with given dimensions. \end{DoxyCompactList}\item 
+virtual {\bfseries \texorpdfstring{$\sim$}{\string~}\+Board} ()
+\begin{DoxyCompactList}\small\item\em Virtual destructor. Frees allocated board memory. \end{DoxyCompactList}\item 
+vector$<$ vector$<$ char $>$ $>$ {\bfseries get\+\_\+board\+\_\+matrix} () const
+\begin{DoxyCompactList}\small\item\em Return a copy of the current board as a 2D vector. \end{DoxyCompactList}\item 
+int {\bfseries get\+\_\+rows} () const
+\begin{DoxyCompactList}\small\item\em Get number of rows. \end{DoxyCompactList}\item 
+int {\bfseries get\+\_\+columns} () const
+\begin{DoxyCompactList}\small\item\em Get number of columns. \end{DoxyCompactList}\item 
+char {\bfseries get\+\_\+cell} (int x, int y)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Protected Attributes inherited from \mbox{\hyperlink{class_board}{Board$<$ char $>$}}}
+\begin{DoxyCompactItemize}
+\item 
+int {\bfseries rows}
+\begin{DoxyCompactList}\small\item\em Number of rows. \end{DoxyCompactList}\item 
+int {\bfseries columns}
+\begin{DoxyCompactList}\small\item\em Number of columns. \end{DoxyCompactList}\item 
+vector$<$ vector$<$ char $>$ $>$ {\bfseries board}
+\begin{DoxyCompactList}\small\item\em 2D vector for the board \end{DoxyCompactList}\item 
+int {\bfseries n\+\_\+moves}
+\begin{DoxyCompactList}\small\item\em Number of moves made. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\label{doc-func-members}
+\Hypertarget{class_misere___t_t_t___board_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_misere___t_t_t___board_ad2fe4095929f4aee567e2a30682fee88}\index{Misere\_TTT\_Board@{Misere\_TTT\_Board}!game\_is\_over@{game\_is\_over}}
+\index{game\_is\_over@{game\_is\_over}!Misere\_TTT\_Board@{Misere\_TTT\_Board}}
+\doxysubsubsection{\texorpdfstring{game\_is\_over()}{game\_is\_over()}}
+{\footnotesize\ttfamily \label{class_misere___t_t_t___board_ad2fe4095929f4aee567e2a30682fee88} 
+bool Misere\+\_\+\+TTT\+\_\+\+Board\+::game\+\_\+is\+\_\+over (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_player}{Player}}$<$ char $>$ \texorpdfstring{$\ast$}{*}}]{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Check if the game is over. 
+
+
+
+Implements \mbox{\hyperlink{class_board_ae0e4575ec3cc4b6eb9f367ffb2beed13}{Board$<$ char $>$}}.
+
+\Hypertarget{class_misere___t_t_t___board_a0ea7c31dbe7872543bd3be68a1eac78c}\index{Misere\_TTT\_Board@{Misere\_TTT\_Board}!is\_draw@{is\_draw}}
+\index{is\_draw@{is\_draw}!Misere\_TTT\_Board@{Misere\_TTT\_Board}}
+\doxysubsubsection{\texorpdfstring{is\_draw()}{is\_draw()}}
+{\footnotesize\ttfamily \label{class_misere___t_t_t___board_a0ea7c31dbe7872543bd3be68a1eac78c} 
+bool Misere\+\_\+\+TTT\+\_\+\+Board\+::is\+\_\+draw (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_player}{Player}}$<$ char $>$ \texorpdfstring{$\ast$}{*}}]{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Check if the game ended in a draw. 
+
+
+
+Implements \mbox{\hyperlink{class_board_a8dbe2a243881986f3e53b45799d377fc}{Board$<$ char $>$}}.
+
+\Hypertarget{class_misere___t_t_t___board_afb153d8306497fb8d7686ec7902dfd84}\index{Misere\_TTT\_Board@{Misere\_TTT\_Board}!is\_lose@{is\_lose}}
+\index{is\_lose@{is\_lose}!Misere\_TTT\_Board@{Misere\_TTT\_Board}}
+\doxysubsubsection{\texorpdfstring{is\_lose()}{is\_lose()}}
+{\footnotesize\ttfamily \label{class_misere___t_t_t___board_afb153d8306497fb8d7686ec7902dfd84} 
+bool Misere\+\_\+\+TTT\+\_\+\+Board\+::is\+\_\+lose (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_player}{Player}}$<$ char $>$ \texorpdfstring{$\ast$}{*}}]{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Check if a player has lost. 
+
+
+
+Implements \mbox{\hyperlink{class_board_a207d5f6feb77f81c51d1462f0245890d}{Board$<$ char $>$}}.
+
+\Hypertarget{class_misere___t_t_t___board_a9b0d27a3ae08e02d28c11d0fd671dc06}\index{Misere\_TTT\_Board@{Misere\_TTT\_Board}!is\_win@{is\_win}}
+\index{is\_win@{is\_win}!Misere\_TTT\_Board@{Misere\_TTT\_Board}}
+\doxysubsubsection{\texorpdfstring{is\_win()}{is\_win()}}
+{\footnotesize\ttfamily \label{class_misere___t_t_t___board_a9b0d27a3ae08e02d28c11d0fd671dc06} 
+bool Misere\+\_\+\+TTT\+\_\+\+Board\+::is\+\_\+win (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_player}{Player}}$<$ char $>$ \texorpdfstring{$\ast$}{*}}]{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Check if a player has won. 
+
+
+
+Implements \mbox{\hyperlink{class_board_ab316fe3e79677b4617fc3d90d6c48f33}{Board$<$ char $>$}}.
+
+\Hypertarget{class_misere___t_t_t___board_ab378c462591c67a3c3c3be4162283264}\index{Misere\_TTT\_Board@{Misere\_TTT\_Board}!update\_board@{update\_board}}
+\index{update\_board@{update\_board}!Misere\_TTT\_Board@{Misere\_TTT\_Board}}
+\doxysubsubsection{\texorpdfstring{update\_board()}{update\_board()}}
+{\footnotesize\ttfamily \label{class_misere___t_t_t___board_ab378c462591c67a3c3c3be4162283264} 
+bool Misere\+\_\+\+TTT\+\_\+\+Board\+::update\+\_\+board (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_move}{Move}}$<$ char $>$ \texorpdfstring{$\ast$}{*}}]{move}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Update the board with a new move. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em move} & The move object containing position and symbol. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if the move is valid and applied, false otherwise. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{class_board_a93d9dec601dda58b7e206ccb47633e57}{Board$<$ char $>$}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Misere\+\_\+\+TTT\+\_\+\+Classes.\+h\item 
+Misere\+\_\+\+TTT\+\_\+\+Classes.\+cpp\end{DoxyCompactItemize}

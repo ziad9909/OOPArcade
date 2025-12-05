@@ -1,0 +1,149 @@
+\doxysection{Timed\+\_\+\+TTT\+\_\+\+Board Class Reference}
+\hypertarget{class_timed___t_t_t___board}{}\label{class_timed___t_t_t___board}\index{Timed\_TTT\_Board@{Timed\_TTT\_Board}}
+
+
+A Tic-\/\+Tac-\/\+Toe variant where oldest moves disappear after every 3 moves.  
+
+
+
+
+{\ttfamily \#include $<$Timed\+\_\+\+TTT\+\_\+\+Classes.\+h$>$}
+
+Inheritance diagram for Timed\+\_\+\+TTT\+\_\+\+Board\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_timed___t_t_t___board}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual bool \mbox{\hyperlink{class_timed___t_t_t___board_a3807f6a145e870b6514f3aa03c85f85c}{update\+\_\+board}} (\mbox{\hyperlink{class_move}{Move}}$<$ char $>$ \texorpdfstring{$\ast$}{*}move)
+\begin{DoxyCompactList}\small\item\em Update the board with a new move. \end{DoxyCompactList}\item 
+virtual bool \mbox{\hyperlink{class_timed___t_t_t___board_a1df073c39eea606ad97f71c72cdd41d0}{is\+\_\+draw}} (\mbox{\hyperlink{class_player}{Player}}$<$ char $>$ \texorpdfstring{$\ast$}{*}player)
+\begin{DoxyCompactList}\small\item\em Check if the game ended in a draw. \end{DoxyCompactList}\item 
+virtual bool \mbox{\hyperlink{class_timed___t_t_t___board_aba0cd35fd2ea49fcc8cc9c36eb9239ca}{is\+\_\+win}} (\mbox{\hyperlink{class_player}{Player}}$<$ char $>$ \texorpdfstring{$\ast$}{*}player)
+\begin{DoxyCompactList}\small\item\em Check if a player has won. \end{DoxyCompactList}\item 
+virtual bool \mbox{\hyperlink{class_timed___t_t_t___board_a8723231728fb41b4e0d1c2f640f67833}{is\+\_\+lose}} (\mbox{\hyperlink{class_player}{Player}}$<$ char $>$ \texorpdfstring{$\ast$}{*}player)
+\begin{DoxyCompactList}\small\item\em Check if a player has lost. \end{DoxyCompactList}\item 
+virtual bool \mbox{\hyperlink{class_timed___t_t_t___board_a14cb835a4adaedf4aa23232dd6cb92f0}{game\+\_\+is\+\_\+over}} (\mbox{\hyperlink{class_player}{Player}}$<$ char $>$ \texorpdfstring{$\ast$}{*}player)
+\begin{DoxyCompactList}\small\item\em Check if the game is over. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_board}{Board$<$ char $>$}}}
+\begin{DoxyCompactItemize}
+\item 
+{\bfseries Board} (int \mbox{\hyperlink{class_board_a948d978e3b5fc460559b588f5dee9572}{rows}}, int \mbox{\hyperlink{class_board_afaf8842d9d52ac724e8c2f5642ecafc7}{columns}})
+\begin{DoxyCompactList}\small\item\em Construct a board with given dimensions. \end{DoxyCompactList}\item 
+virtual {\bfseries \texorpdfstring{$\sim$}{\string~}\+Board} ()
+\begin{DoxyCompactList}\small\item\em Virtual destructor. Frees allocated board memory. \end{DoxyCompactList}\item 
+vector$<$ vector$<$ char $>$ $>$ {\bfseries get\+\_\+board\+\_\+matrix} () const
+\begin{DoxyCompactList}\small\item\em Return a copy of the current board as a 2D vector. \end{DoxyCompactList}\item 
+int {\bfseries get\+\_\+rows} () const
+\begin{DoxyCompactList}\small\item\em Get number of rows. \end{DoxyCompactList}\item 
+int {\bfseries get\+\_\+columns} () const
+\begin{DoxyCompactList}\small\item\em Get number of columns. \end{DoxyCompactList}\item 
+char {\bfseries get\+\_\+cell} (int x, int y)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Protected Attributes inherited from \mbox{\hyperlink{class_board}{Board$<$ char $>$}}}
+\begin{DoxyCompactItemize}
+\item 
+int {\bfseries rows}
+\begin{DoxyCompactList}\small\item\em Number of rows. \end{DoxyCompactList}\item 
+int {\bfseries columns}
+\begin{DoxyCompactList}\small\item\em Number of columns. \end{DoxyCompactList}\item 
+vector$<$ vector$<$ char $>$ $>$ {\bfseries board}
+\begin{DoxyCompactList}\small\item\em 2D vector for the board \end{DoxyCompactList}\item 
+int {\bfseries n\+\_\+moves}
+\begin{DoxyCompactList}\small\item\em Number of moves made. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+A Tic-\/\+Tac-\/\+Toe variant where oldest moves disappear after every 3 moves. 
+
+\label{doc-func-members}
+\Hypertarget{class_timed___t_t_t___board_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_timed___t_t_t___board_a14cb835a4adaedf4aa23232dd6cb92f0}\index{Timed\_TTT\_Board@{Timed\_TTT\_Board}!game\_is\_over@{game\_is\_over}}
+\index{game\_is\_over@{game\_is\_over}!Timed\_TTT\_Board@{Timed\_TTT\_Board}}
+\doxysubsubsection{\texorpdfstring{game\_is\_over()}{game\_is\_over()}}
+{\footnotesize\ttfamily \label{class_timed___t_t_t___board_a14cb835a4adaedf4aa23232dd6cb92f0} 
+bool Timed\+\_\+\+TTT\+\_\+\+Board\+::game\+\_\+is\+\_\+over (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_player}{Player}}$<$ char $>$ \texorpdfstring{$\ast$}{*}}]{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Check if the game is over. 
+
+
+
+Implements \mbox{\hyperlink{class_board_ae0e4575ec3cc4b6eb9f367ffb2beed13}{Board$<$ char $>$}}.
+
+\Hypertarget{class_timed___t_t_t___board_a1df073c39eea606ad97f71c72cdd41d0}\index{Timed\_TTT\_Board@{Timed\_TTT\_Board}!is\_draw@{is\_draw}}
+\index{is\_draw@{is\_draw}!Timed\_TTT\_Board@{Timed\_TTT\_Board}}
+\doxysubsubsection{\texorpdfstring{is\_draw()}{is\_draw()}}
+{\footnotesize\ttfamily \label{class_timed___t_t_t___board_a1df073c39eea606ad97f71c72cdd41d0} 
+bool Timed\+\_\+\+TTT\+\_\+\+Board\+::is\+\_\+draw (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_player}{Player}}$<$ char $>$ \texorpdfstring{$\ast$}{*}}]{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Check if the game ended in a draw. 
+
+
+
+Implements \mbox{\hyperlink{class_board_a8dbe2a243881986f3e53b45799d377fc}{Board$<$ char $>$}}.
+
+\Hypertarget{class_timed___t_t_t___board_a8723231728fb41b4e0d1c2f640f67833}\index{Timed\_TTT\_Board@{Timed\_TTT\_Board}!is\_lose@{is\_lose}}
+\index{is\_lose@{is\_lose}!Timed\_TTT\_Board@{Timed\_TTT\_Board}}
+\doxysubsubsection{\texorpdfstring{is\_lose()}{is\_lose()}}
+{\footnotesize\ttfamily \label{class_timed___t_t_t___board_a8723231728fb41b4e0d1c2f640f67833} 
+virtual bool Timed\+\_\+\+TTT\+\_\+\+Board\+::is\+\_\+lose (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_player}{Player}}$<$ char $>$ \texorpdfstring{$\ast$}{*}}]{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Check if a player has lost. 
+
+
+
+Implements \mbox{\hyperlink{class_board_a207d5f6feb77f81c51d1462f0245890d}{Board$<$ char $>$}}.
+
+\Hypertarget{class_timed___t_t_t___board_aba0cd35fd2ea49fcc8cc9c36eb9239ca}\index{Timed\_TTT\_Board@{Timed\_TTT\_Board}!is\_win@{is\_win}}
+\index{is\_win@{is\_win}!Timed\_TTT\_Board@{Timed\_TTT\_Board}}
+\doxysubsubsection{\texorpdfstring{is\_win()}{is\_win()}}
+{\footnotesize\ttfamily \label{class_timed___t_t_t___board_aba0cd35fd2ea49fcc8cc9c36eb9239ca} 
+bool Timed\+\_\+\+TTT\+\_\+\+Board\+::is\+\_\+win (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_player}{Player}}$<$ char $>$ \texorpdfstring{$\ast$}{*}}]{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Check if a player has won. 
+
+
+
+Implements \mbox{\hyperlink{class_board_ab316fe3e79677b4617fc3d90d6c48f33}{Board$<$ char $>$}}.
+
+\Hypertarget{class_timed___t_t_t___board_a3807f6a145e870b6514f3aa03c85f85c}\index{Timed\_TTT\_Board@{Timed\_TTT\_Board}!update\_board@{update\_board}}
+\index{update\_board@{update\_board}!Timed\_TTT\_Board@{Timed\_TTT\_Board}}
+\doxysubsubsection{\texorpdfstring{update\_board()}{update\_board()}}
+{\footnotesize\ttfamily \label{class_timed___t_t_t___board_a3807f6a145e870b6514f3aa03c85f85c} 
+bool Timed\+\_\+\+TTT\+\_\+\+Board\+::update\+\_\+board (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_move}{Move}}$<$ char $>$ \texorpdfstring{$\ast$}{*}}]{move}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Update the board with a new move. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em move} & The move object containing position and symbol. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if the move is valid and applied, false otherwise. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{class_board_a93d9dec601dda58b7e206ccb47633e57}{Board$<$ char $>$}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Timed\+\_\+\+TTT\+\_\+\+Classes.\+h\item 
+Timed\+\_\+\+TTT\+\_\+\+Classes.\+cpp\end{DoxyCompactItemize}

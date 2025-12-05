@@ -1,6 +1,7 @@
 var searchData=
 [
-  ['ui_0',['UI',['../class_u_i.html',1,'UI&lt; T &gt;'],['../class_u_i.html#ae50eed41905ca2f8dc103d9bef427fe6',1,'UI::UI()']]],
-  ['ui_3c_20char_20_3e_1',['UI&lt; char &gt;',['../class_u_i.html',1,'']]],
-  ['update_5fboard_2',['update_board',['../class_board.html#a93d9dec601dda58b7e206ccb47633e57',1,'Board::update_board()'],['../class_x___o___board.html#aef2b0da670b2d5dc6333e0e0113f8b3d',1,'X_O_Board::update_board()']]]
+  ['readme_0',['README',['../md__r_e_a_d_m_e.html',1,'']]],
+  ['rows_1',['rows',['../class_board.html#a948d978e3b5fc460559b588f5dee9572',1,'Board']]],
+  ['run_2',['run',['../class_game_manager.html#a71f46d5189dac5c773f608cea1b5a203',1,'GameManager']]],
+  ['run_5fgame_5fwith_5fcustom_5floop_3',['run_game_with_custom_loop',['../class_five_by_five___t_t_t___u_i.html#ac7cdfa6c1ca84dab8b34e7043ef3a860',1,'FiveByFive_TTT_UI']]]
 ];

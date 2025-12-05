@@ -1,0 +1,45 @@
+\doxysection{Word\+\_\+\+TTT.\+h}
+\hypertarget{_word___t_t_t_8h_source}{}\label{_word___t_t_t_8h_source}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#ifndef\ \_WORD\_TTT\_H}}
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#define\ \_WORD\_TTT\_H}}
+\DoxyCodeLine{00004\ }
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <iostream>}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ <unordered\_set>}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ "{}BoardGame\_Classes.h"{}}}
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00011\ \textcolor{keyword}{using\ namespace\ }std;}
+\DoxyCodeLine{00012\ }
+\DoxyCodeLine{00013\ \textcolor{keyword}{class\ }Word\_TTT\_Board\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_board_ae5dfded241ee3644196e2f6074d1d0b1}{Board}}<char>\ \{}
+\DoxyCodeLine{00014\ \ \ \ \ unordered\_set<string>\ dictionary;}
+\DoxyCodeLine{00015\ \ \ \ \ \textcolor{keywordtype}{int}\ last\_x,\ last\_y;}
+\DoxyCodeLine{00016\ }
+\DoxyCodeLine{00017\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00018\ \ \ \ \ Word\_TTT\_Board();}
+\DoxyCodeLine{00019\ }
+\DoxyCodeLine{00020\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_word___t_t_t___board_ac2b890abf961c612fbb7be199891ffac}{update\_board}}(\mbox{\hyperlink{class_move}{Move<char>}}*\ move)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00021\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_word___t_t_t___board_a177ecadc173cd141385d3cad910a495b}{is\_win}}(\mbox{\hyperlink{class_player}{Player<char>}}*\ player)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00022\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_word___t_t_t___board_acab72866cb3af91f4d55155817d73fc1}{is\_lose}}(\mbox{\hyperlink{class_player}{Player<char>}}*\ player)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00023\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_word___t_t_t___board_a63a63ac23307a54b8cf9cebbdd263f37}{is\_draw}}(\mbox{\hyperlink{class_player}{Player<char>}}*\ player)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00024\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_word___t_t_t___board_aa89b95ae48e2bf40652caeb6296b9bf0}{game\_is\_over}}(\mbox{\hyperlink{class_player}{Player<char>}}*\ player)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00025\ }
+\DoxyCodeLine{00026\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00027\ \ \ \ \ \textcolor{keywordtype}{void}\ load\_dictionary(\textcolor{keyword}{const}\ \textcolor{keywordtype}{string}\&\ filename);}
+\DoxyCodeLine{00028\ \ \ \ \ \textcolor{keywordtype}{bool}\ check\_win();}
+\DoxyCodeLine{00029\ }
+\DoxyCodeLine{00030\ \};}
+\DoxyCodeLine{00031\ }
+\DoxyCodeLine{00032\ \textcolor{keyword}{class\ }Word\_TTT\_UI\ :\ \textcolor{keyword}{public}\ UI<char>\ \{}
+\DoxyCodeLine{00033\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00034\ \ \ \ \ Word\_TTT\_UI();}
+\DoxyCodeLine{00035\ }
+\DoxyCodeLine{00036\ \ \ \ \ \mbox{\hyperlink{class_move}{Move<char>}}*\ \mbox{\hyperlink{class_word___t_t_t___u_i_a7596b050bf0ca3967f2cb9089336c1eb}{get\_move}}(\mbox{\hyperlink{class_player}{Player<char>}}*\ player)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00037\ \ \ \ \ \mbox{\hyperlink{class_player}{Player<char>}}*\ \mbox{\hyperlink{class_word___t_t_t___u_i_a276e75893639babeb115960eb2dbeccb}{create\_player}}(\textcolor{keywordtype}{string}\&\ name,\ \textcolor{keywordtype}{char}\ symbol,\ PlayerType\ type)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00038\ \};}
+\DoxyCodeLine{00039\ }
+\DoxyCodeLine{00040\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

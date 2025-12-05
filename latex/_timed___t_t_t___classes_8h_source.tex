@@ -1,0 +1,50 @@
+\doxysection{Timed\+\_\+\+TTT\+\_\+\+Classes.\+h}
+\hypertarget{_timed___t_t_t___classes_8h_source}{}\label{_timed___t_t_t___classes_8h_source}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#ifndef\ TIMED\_TTT\_CLASSES\_H}}
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#define\ TIMED\_TTT\_CLASSES\_H}}
+\DoxyCodeLine{00004\ }
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ "{}BoardGame\_Classes.h"{}}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ <queue>}}
+\DoxyCodeLine{00008\ }
+\DoxyCodeLine{00009\ \textcolor{keyword}{using\ namespace\ }std;}
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00015\ \textcolor{keyword}{class\ }Timed\_TTT\_Board\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_board_ae5dfded241ee3644196e2f6074d1d0b1}{Board}}<char>\ \{}
+\DoxyCodeLine{00016\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00017\ \ \ \ \ queue<pair<int,\ int>>\ moveHistory;\ }
+\DoxyCodeLine{00018\ \ \ \ \ \textcolor{keywordtype}{char}\ emptyCell\ =\ \textcolor{charliteral}{'.'};\ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00019\ }
+\DoxyCodeLine{00023\ \ \ \ \ \textcolor{keywordtype}{void}\ removeOldestMove();}
+\DoxyCodeLine{00024\ }
+\DoxyCodeLine{00028\ \ \ \ \ \textcolor{keywordtype}{bool}\ checkThreeInRow(\textcolor{keywordtype}{char}\ symbol);}
+\DoxyCodeLine{00029\ }
+\DoxyCodeLine{00030\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00031\ \ \ \ \ \textcolor{comment}{//\ Constructor}}
+\DoxyCodeLine{00032\ \ \ \ \ Timed\_TTT\_Board();}
+\DoxyCodeLine{00033\ }
+\DoxyCodeLine{00034\ \ \ \ \ \textcolor{comment}{//\ Virtual\ function\ implementations}}
+\DoxyCodeLine{00035\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_timed___t_t_t___board_a3807f6a145e870b6514f3aa03c85f85c}{update\_board}}(\mbox{\hyperlink{class_move}{Move<char>}}*\ move);}
+\DoxyCodeLine{00036\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_timed___t_t_t___board_a1df073c39eea606ad97f71c72cdd41d0}{is\_draw}}(\mbox{\hyperlink{class_player}{Player<char>}}*\ player);}
+\DoxyCodeLine{00037\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_timed___t_t_t___board_aba0cd35fd2ea49fcc8cc9c36eb9239ca}{is\_win}}(\mbox{\hyperlink{class_player}{Player<char>}}*\ player);}
+\DoxyCodeLine{00038\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_timed___t_t_t___board_a8723231728fb41b4e0d1c2f640f67833}{is\_lose}}(\mbox{\hyperlink{class_player}{Player<char>}}*\ player)\ \{\ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};\ \}}
+\DoxyCodeLine{00039\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_timed___t_t_t___board_a14cb835a4adaedf4aa23232dd6cb92f0}{game\_is\_over}}(\mbox{\hyperlink{class_player}{Player<char>}}*\ player);}
+\DoxyCodeLine{00040\ \};}
+\DoxyCodeLine{00041\ }
+\DoxyCodeLine{00042\ \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{00043\ }
+\DoxyCodeLine{00048\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_timed___t_t_t___u_i_aaadf9fda7224d9036e3cf4190f623048}{Timed\_TTT\_UI}}\ :\ \textcolor{keyword}{public}\ UI<char>\ \{}
+\DoxyCodeLine{00049\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00053\ \ \ \ \ \mbox{\hyperlink{class_timed___t_t_t___u_i_aaadf9fda7224d9036e3cf4190f623048}{Timed\_TTT\_UI}}();}
+\DoxyCodeLine{00054\ }
+\DoxyCodeLine{00058\ \ \ \ \ \textcolor{keyword}{virtual}\ \mbox{\hyperlink{class_player}{Player<char>}}**\ \mbox{\hyperlink{class_timed___t_t_t___u_i_a6b7620a21935b6e533c85d21d947e1a8}{setup\_players}}();}
+\DoxyCodeLine{00059\ }
+\DoxyCodeLine{00063\ \ \ \ \ \textcolor{keyword}{virtual}\ \mbox{\hyperlink{class_player}{Player<char>}}*\ \mbox{\hyperlink{class_timed___t_t_t___u_i_ac05298430d691346a7fb153e81b9ed9c}{create\_player}}(\textcolor{keywordtype}{string}\&\ name,\ \textcolor{keywordtype}{char}\ symbol,\ PlayerType\ type);}
+\DoxyCodeLine{00064\ }
+\DoxyCodeLine{00068\ \ \ \ \ \textcolor{keyword}{virtual}\ \mbox{\hyperlink{class_move}{Move<char>}}*\ \mbox{\hyperlink{class_timed___t_t_t___u_i_a68f9f7c498f13300a5806ced9b502ff0}{get\_move}}(\mbox{\hyperlink{class_player}{Player<char>}}*\ player);}
+\DoxyCodeLine{00069\ \};}
+\DoxyCodeLine{00070\ }
+\DoxyCodeLine{00071\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ TIMED\_TTT\_CLASSES\_H}}
+
+\end{DoxyCode}

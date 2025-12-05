@@ -1,0 +1,97 @@
+\doxysection{Diamond\+\_\+\+TTT\+\_\+\+Classes.\+h}
+\hypertarget{_diamond___t_t_t___classes_8h_source}{}\label{_diamond___t_t_t___classes_8h_source}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ DIAMOND\_TTT\_CLASSES\_H}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ DIAMOND\_TTT\_CLASSES\_H}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}BoardGame\_Classes.h"{}}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ <set>}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ <algorithm>}}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ <utility>}\ \textcolor{comment}{//\ For\ std::pair}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ <map>}\ \ \ \ \ \textcolor{comment}{//\ For\ std::map}}
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#include\ <string>}\ \ \textcolor{comment}{//\ For\ std::string}}
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#include\ <limits>}\ \textcolor{comment}{//\ for\ INT\_MAX,\ INT\_MIN}}
+\DoxyCodeLine{00012\ }
+\DoxyCodeLine{00013\ }
+\DoxyCodeLine{00014\ \textcolor{keyword}{using\ namespace\ }std;}
+\DoxyCodeLine{00015\ }
+\DoxyCodeLine{00027\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_diamond___t_t_t___board_a8af454ea4640d0502cbe2f25fbc68224}{Diamond\_TTT\_Board}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_board_ae5dfded241ee3644196e2f6074d1d0b1}{Board}}<char>\ \{}
+\DoxyCodeLine{00028\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00029\ \ \ \ \ \textcolor{comment}{//\ Store\ coordinates\ of\ valid\ diamond-\/shaped\ cells}}
+\DoxyCodeLine{00030\ \ \ \ \ vector<pair<int,\ int>>\ valid\_cells;}
+\DoxyCodeLine{00031\ }
+\DoxyCodeLine{00032\ \ \ \ \ \textcolor{comment}{//\ Helper\ function\ to\ get\ cells\ along\ a\ line}}
+\DoxyCodeLine{00033\ \ \ \ \ vector<pair<int,\ int>>\ get\_line\_cells(\textcolor{keywordtype}{int}\ start\_x,\ \textcolor{keywordtype}{int}\ start\_y,\ \textcolor{keywordtype}{int}\ dx,\ \textcolor{keywordtype}{int}\ dy,\ \textcolor{keywordtype}{int}\ length);}
+\DoxyCodeLine{00034\ }
+\DoxyCodeLine{00035\ \ \ \ \ \textcolor{comment}{//\ Check\ if\ a\ coordinate\ is\ within\ the\ diamond\ shape}}
+\DoxyCodeLine{00036\ \ \ \ \ \textcolor{keywordtype}{bool}\ is\_valid\_cell(\textcolor{keywordtype}{int}\ x,\ \textcolor{keywordtype}{int}\ y)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00037\ }
+\DoxyCodeLine{00038\ \ \ \ \ \textcolor{comment}{//\ Get\ all\ possible\ winning\ lines\ in\ the\ diamond}}
+\DoxyCodeLine{00039\ \ \ \ \ vector<vector<pair<int,\ int>>>\ get\_all\_lines();}
+\DoxyCodeLine{00040\ \ \ \ \ \textcolor{comment}{//\ Evaluate\ board\ state\ for\ AI\ (not\ implemented\ here)}}
+\DoxyCodeLine{00041\ \ \ \ \ \textcolor{keywordtype}{int}\ evaluate\_board(\mbox{\hyperlink{class_diamond___t_t_t___board_a8af454ea4640d0502cbe2f25fbc68224}{Diamond\_TTT\_Board}}*\ \mbox{\hyperlink{class_board_af00c1fc363eb640ca276b8a572040040}{board}},\ \textcolor{keywordtype}{char}\ ai\_symbol,\ \textcolor{keywordtype}{char}\ opponent\_symbol);}
+\DoxyCodeLine{00042\ }
+\DoxyCodeLine{00043\ }
+\DoxyCodeLine{00044\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00049\ \ \ \ \ \mbox{\hyperlink{class_diamond___t_t_t___board_a8af454ea4640d0502cbe2f25fbc68224}{Diamond\_TTT\_Board}}();}
+\DoxyCodeLine{00050\ }
+\DoxyCodeLine{00056\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_diamond___t_t_t___board_aaf1a5ac8a037eeadfe051e4e6e32be40}{update\_board}}(\mbox{\hyperlink{class_move}{Move<char>}}*\ move);}
+\DoxyCodeLine{00057\ }
+\DoxyCodeLine{00063\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_diamond___t_t_t___board_af46b21984a035ee754ec4f9ec6fb9e2e}{is\_win}}(\mbox{\hyperlink{class_player}{Player<char>}}*\ player);}
+\DoxyCodeLine{00064\ }
+\DoxyCodeLine{00068\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_diamond___t_t_t___board_aa06732d810b9529ce096e90b34c648b6}{is\_lose}}(\mbox{\hyperlink{class_player}{Player<char>}}*\ player)\ \{\ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};\ \}}
+\DoxyCodeLine{00069\ }
+\DoxyCodeLine{00073\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_diamond___t_t_t___board_a3e57581d4c679424caae599067f1a3c3}{is\_draw}}(\mbox{\hyperlink{class_player}{Player<char>}}*\ player);}
+\DoxyCodeLine{00074\ }
+\DoxyCodeLine{00078\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_diamond___t_t_t___board_aeb547a5173537bb2edcb4a5be12a5535}{game\_is\_over}}(\mbox{\hyperlink{class_player}{Player<char>}}*\ player);}
+\DoxyCodeLine{00079\ }
+\DoxyCodeLine{00086\ \ \ \ \ \textcolor{keywordtype}{string}\ \mbox{\hyperlink{class_diamond___t_t_t___board_aed3f466f15c963a33f980e2a35f048bd}{validate\_move}}(\textcolor{keywordtype}{int}\ x,\ \textcolor{keywordtype}{int}\ y)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00087\ }
+\DoxyCodeLine{00091\ \ \ \ \ vector<pair<int,\ int>>\ \mbox{\hyperlink{class_diamond___t_t_t___board_ac5fd242fa01ff97bb31c38e5ff619727}{get\_empty\_cells}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00092\ }
+\DoxyCodeLine{00096\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_diamond___t_t_t___board_a7e52be28c7fb1197523e7925001a754c}{debug\_win\_check}}(\mbox{\hyperlink{class_player}{Player<char>}}*\ player);}
+\DoxyCodeLine{00097\ }
+\DoxyCodeLine{00098\ \ \ \ \ \textcolor{comment}{//\ Undo\ a\ move\ (used\ by\ AI\ to\ backtrack)}}
+\DoxyCodeLine{00099\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_diamond___t_t_t___board_ad3f8708bf75105f81ce797d91ba6d81a}{undo\_move}}(\textcolor{keywordtype}{int}\ x,\ \textcolor{keywordtype}{int}\ y);}
+\DoxyCodeLine{00100\ }
+\DoxyCodeLine{00101\ \};}
+\DoxyCodeLine{00102\ }
+\DoxyCodeLine{00109\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_diamond___t_t_t___u_i_ac7393af58785278f8f29644aff9065b9}{Diamond\_TTT\_UI}}\ :\ \textcolor{keyword}{public}\ UI<char>\ \{}
+\DoxyCodeLine{00110\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00114\ \ \ \ \ \mbox{\hyperlink{class_diamond___t_t_t___u_i_ac7393af58785278f8f29644aff9065b9}{Diamond\_TTT\_UI}}();}
+\DoxyCodeLine{00115\ }
+\DoxyCodeLine{00120\ \ \ \ \ \textcolor{keyword}{virtual}\ \mbox{\hyperlink{class_player}{Player<char>}}**\ \mbox{\hyperlink{class_diamond___t_t_t___u_i_aba62df21b4ad1b00dc9d4e1dc56895f0}{setup\_players}}();}
+\DoxyCodeLine{00121\ }
+\DoxyCodeLine{00125\ \ \ \ \ \textcolor{keyword}{virtual}\ \mbox{\hyperlink{class_player}{Player<char>}}*\ \mbox{\hyperlink{class_diamond___t_t_t___u_i_a7e7ee853458faf7d54c241835357a220}{create\_player}}(\textcolor{keywordtype}{string}\&\ name,\ \textcolor{keywordtype}{char}\ symbol,\ PlayerType\ type);}
+\DoxyCodeLine{00126\ }
+\DoxyCodeLine{00130\ \ \ \ \ \textcolor{keyword}{virtual}\ \mbox{\hyperlink{class_move}{Move<char>}}*\ \mbox{\hyperlink{class_diamond___t_t_t___u_i_a0932dea0b172a24115a2c4605f049f50}{get\_move}}(\mbox{\hyperlink{class_player}{Player<char>}}*\ player);}
+\DoxyCodeLine{00131\ }
+\DoxyCodeLine{00135\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_diamond___t_t_t___u_i_a104cbdfda44cc6c29eebdd4212746302}{display\_board\_matrix}}(\textcolor{keyword}{const}\ vector<vector<char>>\&\ matrix)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00136\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00137\ \ \ \ \ \textcolor{comment}{//\ Evaluate\ a\ board\ state\ for\ AI\ (higher\ =\ better\ for\ AI)}}
+\DoxyCodeLine{00138\ \ \ \ \ \textcolor{keywordtype}{int}\ evaluate\_board(\mbox{\hyperlink{class_diamond___t_t_t___board}{Diamond\_TTT\_Board}}*\ board,\ \textcolor{keywordtype}{char}\ ai\_symbol,\ \textcolor{keywordtype}{char}\ opponent\_symbol);}
+\DoxyCodeLine{00139\ }
+\DoxyCodeLine{00140\ \ \ \ \ \textcolor{comment}{//\ Minimax\ recursive\ function}}
+\DoxyCodeLine{00141\ \ \ \ \ \textcolor{keywordtype}{int}\ minimax(\mbox{\hyperlink{class_diamond___t_t_t___board}{Diamond\_TTT\_Board}}*\ board,}
+\DoxyCodeLine{00142\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{char}\ current\_symbol,}
+\DoxyCodeLine{00143\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{char}\ ai\_symbol,}
+\DoxyCodeLine{00144\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{char}\ opponent\_symbol,}
+\DoxyCodeLine{00145\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ isMaximizing,}
+\DoxyCodeLine{00146\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ depth\ =\ 0);}
+\DoxyCodeLine{00147\ \ \ \ \ \textcolor{keywordtype}{int}\ minimax\_helper(\mbox{\hyperlink{class_diamond___t_t_t___board}{Diamond\_TTT\_Board}}*\ board,}
+\DoxyCodeLine{00148\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{char}\ current\_symbol,}
+\DoxyCodeLine{00149\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{char}\ ai\_symbol,}
+\DoxyCodeLine{00150\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{char}\ opponent\_symbol,}
+\DoxyCodeLine{00151\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ isMaximizing,}
+\DoxyCodeLine{00152\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ depth);}
+\DoxyCodeLine{00153\ }
+\DoxyCodeLine{00154\ }
+\DoxyCodeLine{00155\ \ \ \ \ \textcolor{comment}{//\ Find\ the\ best\ move\ for\ AI}}
+\DoxyCodeLine{00156\ \ \ \ \ pair<int,\ int>\ find\_best\_move(\mbox{\hyperlink{class_diamond___t_t_t___board}{Diamond\_TTT\_Board}}*\ board,\ \textcolor{keywordtype}{char}\ ai\_symbol,\ \textcolor{keywordtype}{char}\ opponent\_symbol);}
+\DoxyCodeLine{00157\ }
+\DoxyCodeLine{00158\ \};}
+\DoxyCodeLine{00159\ }
+\DoxyCodeLine{00160\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ DIAMOND\_TTT\_CLASSES\_H}}
+
+\end{DoxyCode}

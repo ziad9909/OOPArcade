@@ -1,0 +1,52 @@
+\doxysection{Five\+By\+Five\+TTT\+\_\+\+Classes.\+h}
+\hypertarget{_five_by_five_t_t_t___classes_8h_source}{}\label{_five_by_five_t_t_t___classes_8h_source}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#ifndef\ FIVE\_BY\_FIVE\_TTT\_CLASSES\_H}}
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#define\ FIVE\_BY\_FIVE\_TTT\_CLASSES\_H}}
+\DoxyCodeLine{00004\ }
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ "{}BoardGame\_Classes.h"{}}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00008\ \textcolor{keyword}{using\ namespace\ }std;}
+\DoxyCodeLine{00009\ }
+\DoxyCodeLine{00014\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_five_by_five___t_t_t___board_a5514b010de26f439303e76d71a613d42}{FiveByFive\_TTT\_Board}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_board_ae5dfded241ee3644196e2f6074d1d0b1}{Board}}<char>\ \{}
+\DoxyCodeLine{00015\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00021\ \ \ \ \ \textcolor{keywordtype}{int}\ count\_sequences(\textcolor{keywordtype}{char}\ symbol);}
+\DoxyCodeLine{00022\ }
+\DoxyCodeLine{00023\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00027\ \ \ \ \ \mbox{\hyperlink{class_five_by_five___t_t_t___board_a5514b010de26f439303e76d71a613d42}{FiveByFive\_TTT\_Board}}();}
+\DoxyCodeLine{00028\ }
+\DoxyCodeLine{00029\ \ \ \ \ \textcolor{comment}{//\ -\/-\/-\/\ Virtual\ functions\ implementation\ -\/-\/-\/}}
+\DoxyCodeLine{00030\ }
+\DoxyCodeLine{00036\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_five_by_five___t_t_t___board_affee08e6d0556e6b02c5297d5f005358}{update\_board}}(\mbox{\hyperlink{class_move}{Move<char>}}*\ move);}
+\DoxyCodeLine{00037\ }
+\DoxyCodeLine{00043\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_five_by_five___t_t_t___board_a3a0dddccfc0f8b1bc6e0e12f881c7081}{is\_draw}}(\mbox{\hyperlink{class_player}{Player<char>}}*\ player);}
+\DoxyCodeLine{00044\ }
+\DoxyCodeLine{00050\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_five_by_five___t_t_t___board_acae40b0657438083f3bda21d22b2b639}{is\_win}}(\mbox{\hyperlink{class_player}{Player<char>}}*\ player);}
+\DoxyCodeLine{00051\ }
+\DoxyCodeLine{00057\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_five_by_five___t_t_t___board_a0822393f81608d9cd3737d8b5611fc10}{is\_lose}}(\mbox{\hyperlink{class_player}{Player<char>}}*\ player);}
+\DoxyCodeLine{00058\ }
+\DoxyCodeLine{00064\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_five_by_five___t_t_t___board_a1e71dddbc15ceb85fa8cf129c6a5ed7a}{game\_is\_over}}(\mbox{\hyperlink{class_player}{Player<char>}}*\ player);}
+\DoxyCodeLine{00065\ }
+\DoxyCodeLine{00070\ \ \ \ \ pair<int,\ int>\ \mbox{\hyperlink{class_five_by_five___t_t_t___board_ad7468fec9fe978c929e1b9a29bd7a1a9}{get\_sequence\_counts}}();}
+\DoxyCodeLine{00071\ }
+\DoxyCodeLine{00075\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_five_by_five___t_t_t___board_a1120c9df417f2f30e3550be4a3ea7bee}{get\_move\_count}}()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{class_board_a5952baefabced65fecec333de638408d}{n\_moves}};\ \}}
+\DoxyCodeLine{00076\ \};}
+\DoxyCodeLine{00077\ }
+\DoxyCodeLine{00082\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_five_by_five___t_t_t___u_i_a4768f047905d993fc1ea8b639fdc3fe7}{FiveByFive\_TTT\_UI}}\ :\ \textcolor{keyword}{public}\ UI<char>\ \{}
+\DoxyCodeLine{00083\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00087\ \ \ \ \ \mbox{\hyperlink{class_five_by_five___t_t_t___u_i_a4768f047905d993fc1ea8b639fdc3fe7}{FiveByFive\_TTT\_UI}}();}
+\DoxyCodeLine{00088\ }
+\DoxyCodeLine{00093\ \ \ \ \ \textcolor{keyword}{virtual}\ \mbox{\hyperlink{class_player}{Player<char>}}**\ \mbox{\hyperlink{class_five_by_five___t_t_t___u_i_a767a486d2789af7169e53b63ad406651}{setup\_players}}();}
+\DoxyCodeLine{00094\ }
+\DoxyCodeLine{00098\ \ \ \ \ \textcolor{keyword}{virtual}\ \mbox{\hyperlink{class_player}{Player<char>}}*\ \mbox{\hyperlink{class_five_by_five___t_t_t___u_i_af862862a1ec701858d7fb1596a146edc}{create\_player}}(\textcolor{keywordtype}{string}\&\ name,\ \textcolor{keywordtype}{char}\ symbol,\ PlayerType\ type);}
+\DoxyCodeLine{00099\ }
+\DoxyCodeLine{00103\ \ \ \ \ \textcolor{keyword}{virtual}\ \mbox{\hyperlink{class_move}{Move<char>}}*\ \mbox{\hyperlink{class_five_by_five___t_t_t___u_i_a0c00598957ea1d1430906b24c4e0365e}{get\_move}}(\mbox{\hyperlink{class_player}{Player<char>}}*\ player);}
+\DoxyCodeLine{00104\ }
+\DoxyCodeLine{00110\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_five_by_five___t_t_t___u_i_ac7cdfa6c1ca84dab8b34e7043ef3a860}{run\_game\_with\_custom\_loop}}(\mbox{\hyperlink{class_five_by_five___t_t_t___board}{FiveByFive\_TTT\_Board}}*\ board,\ \mbox{\hyperlink{class_player}{Player<char>}}*\ players[2]);}
+\DoxyCodeLine{00111\ \};}
+\DoxyCodeLine{00112\ }
+\DoxyCodeLine{00113\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ FIVE\_BY\_FIVE\_TTT\_CLASSES\_H}}
+
+\end{DoxyCode}

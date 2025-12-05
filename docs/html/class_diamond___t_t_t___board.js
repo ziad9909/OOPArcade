@@ -1,0 +1,26 @@
+var class_diamond___t_t_t___board =
+[
+    [ "Diamond_TTT_Board", "class_diamond___t_t_t___board.html#a8af454ea4640d0502cbe2f25fbc68224", null ],
+    [ "debug_win_check", "class_diamond___t_t_t___board.html#a7e52be28c7fb1197523e7925001a754c", null ],
+    [ "evaluate_board", "class_diamond___t_t_t___board.html#a5095253d040e795f371b401b05d9fef0", null ],
+    [ "game_is_over", "class_diamond___t_t_t___board.html#af2769217475fd46ba257b8f150dc7eee", null ],
+    [ "get_all_lines", "class_diamond___t_t_t___board.html#aed45cdf458c1b864c35a1a802db74f3e", null ],
+    [ "get_board_matrix", "class_diamond___t_t_t___board.html#a117f2e61fdb7deccca333bbbc9c62d3a", null ],
+    [ "get_cell", "class_diamond___t_t_t___board.html#a93558c58e60ca4291c6044828afd260b", null ],
+    [ "get_columns", "class_diamond___t_t_t___board.html#ac665e1ed1f49125fab248e2c9ddfd608", null ],
+    [ "get_empty_cells", "class_diamond___t_t_t___board.html#ac5fd242fa01ff97bb31c38e5ff619727", null ],
+    [ "get_line_cells", "class_diamond___t_t_t___board.html#a63097d48d24264934d769a1014a7c84d", null ],
+    [ "get_rows", "class_diamond___t_t_t___board.html#a93b130eff67bd4476fab27be8341cb78", null ],
+    [ "is_draw", "class_diamond___t_t_t___board.html#ae1976d509daec8bfd5a56a2620d67afd", null ],
+    [ "is_lose", "class_diamond___t_t_t___board.html#a1f403098c97ce8e9273ec4ba67b5cf03", null ],
+    [ "is_valid_cell", "class_diamond___t_t_t___board.html#a8c83c1bdc73361ea6c9ed88efed9f5ca", null ],
+    [ "is_win", "class_diamond___t_t_t___board.html#adf9e0f69e5c52aa4a9dae8b371043b56", null ],
+    [ "undo_move", "class_diamond___t_t_t___board.html#ad3f8708bf75105f81ce797d91ba6d81a", null ],
+    [ "update_board", "class_diamond___t_t_t___board.html#a13b920e079d44868e5e167319cce1c93", null ],
+    [ "validate_move", "class_diamond___t_t_t___board.html#aed3f466f15c963a33f980e2a35f048bd", null ],
+    [ "board", "class_diamond___t_t_t___board.html#af00c1fc363eb640ca276b8a572040040", null ],
+    [ "columns", "class_diamond___t_t_t___board.html#afaf8842d9d52ac724e8c2f5642ecafc7", null ],
+    [ "n_moves", "class_diamond___t_t_t___board.html#a5952baefabced65fecec333de638408d", null ],
+    [ "rows", "class_diamond___t_t_t___board.html#a948d978e3b5fc460559b588f5dee9572", null ],
+    [ "valid_cells", "class_diamond___t_t_t___board.html#a41580f39b1442504381312d9fca3dbce", null ]
+];

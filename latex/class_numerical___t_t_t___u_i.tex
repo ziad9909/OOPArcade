@@ -1,0 +1,96 @@
+\doxysection{Numerical\+\_\+\+TTT\+\_\+\+UI Class Reference}
+\hypertarget{class_numerical___t_t_t___u_i}{}\label{class_numerical___t_t_t___u_i}\index{Numerical\_TTT\_UI@{Numerical\_TTT\_UI}}
+
+
+User Interface class for the Numerical Tic-\/\+Tac-\/\+Toe game.  
+
+
+
+
+{\ttfamily \#include $<$Numerical\+\_\+\+TTT\+\_\+\+Classes.\+h$>$}
+
+Inheritance diagram for Numerical\+\_\+\+TTT\+\_\+\+UI\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_numerical___t_t_t___u_i}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_numerical___t_t_t___u_i_a2715fa4b793c7979e4c93d1100f4afbb}\label{class_numerical___t_t_t___u_i_a2715fa4b793c7979e4c93d1100f4afbb} 
+{\bfseries Numerical\+\_\+\+TTT\+\_\+\+UI} ()
+\begin{DoxyCompactList}\small\item\em Constructs a \doxylink{class_numerical___t_t_t___u_i}{Numerical\+\_\+\+TTT\+\_\+\+UI} object. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{class_player}{Player}}$<$ int $>$ \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_numerical___t_t_t___u_i_aea10850ae3bf8ea7b6a7b05c3fbe1581}{setup\+\_\+players}} ()
+\begin{DoxyCompactList}\small\item\em Overrides the base function to set up players. THIS IS THE KEY\+: We assign symbol \textquotesingle{}1\textquotesingle{} to \doxylink{class_player}{Player} 1 (Odd) and symbol \textquotesingle{}2\textquotesingle{} to \doxylink{class_player}{Player} 2 (Even). \end{DoxyCompactList}\item 
+\Hypertarget{class_numerical___t_t_t___u_i_ace66ef32d80112646836a5518c9250ac}\label{class_numerical___t_t_t___u_i_ace66ef32d80112646836a5518c9250ac} 
+virtual \mbox{\hyperlink{class_player}{Player}}$<$ int $>$ \texorpdfstring{$\ast$}{*} {\bfseries create\+\_\+player} (string \&name, int symbol, Player\+Type type)
+\begin{DoxyCompactList}\small\item\em Creates a player of the specified type. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{class_move}{Move}}$<$ int $>$ \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_numerical___t_t_t___u_i_a3c550b5bafc9e17aed4c4ae5da8a75b1}{get\+\_\+move}} (\mbox{\hyperlink{class_player}{Player}}$<$ int $>$ \texorpdfstring{$\ast$}{*}player)
+\begin{DoxyCompactList}\small\item\em Retrieves the next move from a player. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_u_i}{UI$<$ int $>$}}}
+\begin{DoxyCompactItemize}
+\item 
+{\bfseries UI} (int cell\+\_\+display\+\_\+width=3)
+\item 
+virtual void {\bfseries display\+\_\+message} (string message)
+\begin{DoxyCompactList}\small\item\em Display any message to the user. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{class_player}{Player}}$<$ int $>$ \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_u_i_a94561e0bb4bbcbe5ff71ca6d751922df}{create\+\_\+player}} (string \&name, int symbol, Player\+Type type)
+\begin{DoxyCompactList}\small\item\em Create a player object based on input name, symbol, and type. \end{DoxyCompactList}\item 
+virtual void {\bfseries display\+\_\+board\+\_\+matrix} (const vector$<$ vector$<$ int $>$ $>$ \&matrix) const
+\begin{DoxyCompactList}\small\item\em Display the current board matrix in formatted form. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Protected Member Functions inherited from \mbox{\hyperlink{class_u_i}{UI$<$ int $>$}}}
+\begin{DoxyCompactItemize}
+\item 
+virtual string {\bfseries get\+\_\+player\+\_\+name} (string player\+\_\+label)
+\begin{DoxyCompactList}\small\item\em Ask the user for the player\textquotesingle{}s name. \end{DoxyCompactList}\item 
+virtual Player\+Type {\bfseries get\+\_\+player\+\_\+type\+\_\+choice} (string player\+\_\+label, const vector$<$ string $>$ \&options)
+\begin{DoxyCompactList}\small\item\em Ask the user to choose the player type from a list. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes inherited from \mbox{\hyperlink{class_u_i}{UI$<$ int $>$}}}
+\begin{DoxyCompactItemize}
+\item 
+int {\bfseries cell\+\_\+width}
+\begin{DoxyCompactList}\small\item\em Width of each displayed board cell. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+User Interface class for the Numerical Tic-\/\+Tac-\/\+Toe game. 
+
+\label{doc-func-members}
+\Hypertarget{class_numerical___t_t_t___u_i_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_numerical___t_t_t___u_i_a3c550b5bafc9e17aed4c4ae5da8a75b1}\index{Numerical\_TTT\_UI@{Numerical\_TTT\_UI}!get\_move@{get\_move}}
+\index{get\_move@{get\_move}!Numerical\_TTT\_UI@{Numerical\_TTT\_UI}}
+\doxysubsubsection{\texorpdfstring{get\_move()}{get\_move()}}
+{\footnotesize\ttfamily \label{class_numerical___t_t_t___u_i_a3c550b5bafc9e17aed4c4ae5da8a75b1} 
+\mbox{\hyperlink{class_move}{Move}}$<$ int $>$ \texorpdfstring{$\ast$}{*} Numerical\+\_\+\+TTT\+\_\+\+UI\+::get\+\_\+move (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_player}{Player}}$<$ int $>$ \texorpdfstring{$\ast$}{*}}]{player}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Retrieves the next move from a player. 
+
+
+
+Implements \mbox{\hyperlink{class_u_i_a8befa259c38c57e6ae2e8ed81c476337}{UI$<$ int $>$}}.
+
+\Hypertarget{class_numerical___t_t_t___u_i_aea10850ae3bf8ea7b6a7b05c3fbe1581}\index{Numerical\_TTT\_UI@{Numerical\_TTT\_UI}!setup\_players@{setup\_players}}
+\index{setup\_players@{setup\_players}!Numerical\_TTT\_UI@{Numerical\_TTT\_UI}}
+\doxysubsubsection{\texorpdfstring{setup\_players()}{setup\_players()}}
+{\footnotesize\ttfamily \label{class_numerical___t_t_t___u_i_aea10850ae3bf8ea7b6a7b05c3fbe1581} 
+\mbox{\hyperlink{class_player}{Player}}$<$ int $>$ \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*} Numerical\+\_\+\+TTT\+\_\+\+UI\+::setup\+\_\+players (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Overrides the base function to set up players. THIS IS THE KEY\+: We assign symbol \textquotesingle{}1\textquotesingle{} to \doxylink{class_player}{Player} 1 (Odd) and symbol \textquotesingle{}2\textquotesingle{} to \doxylink{class_player}{Player} 2 (Even). 
+
+
+
+Reimplemented from \mbox{\hyperlink{class_u_i_a6966a040c995b2292e5edddaa94f889a}{UI$<$ int $>$}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Numerical\+\_\+\+TTT\+\_\+\+Classes.\+h\item 
+Numerical\+\_\+\+TTT\+\_\+\+Classes.\+cpp\end{DoxyCompactItemize}

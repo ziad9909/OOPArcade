@@ -1,0 +1,25 @@
+var class_four__in__a__row__board =
+[
+    [ "Four_in_a_row_board", "class_four__in__a__row__board.html#a67ad9084a89653dd44a9955e8b420d77", null ],
+    [ "check_win_for_symbol", "class_four__in__a__row__board.html#a51f259d93a9e1a006a3450f0c1b79987", null ],
+    [ "count_sequences", "class_four__in__a__row__board.html#a2f43d919ee2dcb6e2d8b1329417c8a56", null ],
+    [ "evaluate_board", "class_four__in__a__row__board.html#a488af0933a5531f89918feef692436c4", null ],
+    [ "game_is_over", "class_four__in__a__row__board.html#aef23257052e633102fb8fa6d83812173", null ],
+    [ "get_best_move", "class_four__in__a__row__board.html#abd629759920f92905c6b45a2b7e408dd", null ],
+    [ "get_board_matrix", "class_four__in__a__row__board.html#a117f2e61fdb7deccca333bbbc9c62d3a", null ],
+    [ "get_cell", "class_four__in__a__row__board.html#a93558c58e60ca4291c6044828afd260b", null ],
+    [ "get_columns", "class_four__in__a__row__board.html#ac665e1ed1f49125fab248e2c9ddfd608", null ],
+    [ "get_rows", "class_four__in__a__row__board.html#a93b130eff67bd4476fab27be8341cb78", null ],
+    [ "get_valid_columns", "class_four__in__a__row__board.html#acfade44a432fedfe4aea35c3a97d979c", null ],
+    [ "is_draw", "class_four__in__a__row__board.html#a93659030f74ebfe62875d69d4ea46e5c", null ],
+    [ "is_lose", "class_four__in__a__row__board.html#a2765bb8a9947c2ab2304c14650642a6f", null ],
+    [ "is_win", "class_four__in__a__row__board.html#a284f79e10f42917128f7e8cfd1b85afd", null ],
+    [ "minimax", "class_four__in__a__row__board.html#a57c7ca17fd2b9d519e0e0480bbed805b", null ],
+    [ "undo_move", "class_four__in__a__row__board.html#a7321321475bddc84e88d4972ad2683b2", null ],
+    [ "update_board", "class_four__in__a__row__board.html#a8e96455619dac988231c071ad61fae39", null ],
+    [ "blank_symbol", "class_four__in__a__row__board.html#ac9a7a8daa698a1dab87b530d8a717a4a", null ],
+    [ "board", "class_four__in__a__row__board.html#af00c1fc363eb640ca276b8a572040040", null ],
+    [ "columns", "class_four__in__a__row__board.html#afaf8842d9d52ac724e8c2f5642ecafc7", null ],
+    [ "n_moves", "class_four__in__a__row__board.html#a5952baefabced65fecec333de638408d", null ],
+    [ "rows", "class_four__in__a__row__board.html#a948d978e3b5fc460559b588f5dee9572", null ]
+];

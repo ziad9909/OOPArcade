@@ -1,0 +1,26 @@
+var class_s_u_s__board =
+[
+    [ "SUS_board", "class_s_u_s__board.html#ad987888271195378be6ea7c6e6ff8fdd", null ],
+    [ "check_new_sequences", "class_s_u_s__board.html#aad8f8c821709dc6219f77ea366148854", null ],
+    [ "evaluate_state", "class_s_u_s__board.html#aec29dd3e4cef8db8c0a2ed0ba393c670", null ],
+    [ "game_is_over", "class_s_u_s__board.html#a643afc87d99febd1fca2770d21d284ba", null ],
+    [ "get_best_move", "class_s_u_s__board.html#aa96fb0bd7581a866ae14227c2e09c0a8", null ],
+    [ "get_board_matrix", "class_s_u_s__board.html#a117f2e61fdb7deccca333bbbc9c62d3a", null ],
+    [ "get_cell", "class_s_u_s__board.html#a93558c58e60ca4291c6044828afd260b", null ],
+    [ "get_columns", "class_s_u_s__board.html#ac665e1ed1f49125fab248e2c9ddfd608", null ],
+    [ "get_empty_cells", "class_s_u_s__board.html#a1abcd726bac0b3ccbd8fa864b93aa226", null ],
+    [ "get_rows", "class_s_u_s__board.html#a93b130eff67bd4476fab27be8341cb78", null ],
+    [ "get_score", "class_s_u_s__board.html#ada7bf4e6512ec20fba2eef057e96bedb", null ],
+    [ "is_draw", "class_s_u_s__board.html#a9f32408b0527f92a59b1b355ad8aef15", null ],
+    [ "is_lose", "class_s_u_s__board.html#aa24cc0a7dd7273720d39ca2b36b07043", null ],
+    [ "is_win", "class_s_u_s__board.html#a2aebd9d1ba01c80e42ec84af328a810a", null ],
+    [ "minimax", "class_s_u_s__board.html#a29d86962b84edabf1ad5ce5890a78ce7", null ],
+    [ "update_board", "class_s_u_s__board.html#acf51eb71c5b45fbbccd5d4c4681a756f", null ],
+    [ "blank_symbol", "class_s_u_s__board.html#a1a4e754a2fc82f2cce6f97f410903008", null ],
+    [ "board", "class_s_u_s__board.html#af00c1fc363eb640ca276b8a572040040", null ],
+    [ "columns", "class_s_u_s__board.html#afaf8842d9d52ac724e8c2f5642ecafc7", null ],
+    [ "n_moves", "class_s_u_s__board.html#a5952baefabced65fecec333de638408d", null ],
+    [ "rows", "class_s_u_s__board.html#a948d978e3b5fc460559b588f5dee9572", null ],
+    [ "score_S", "class_s_u_s__board.html#a6331874cb6cd4fa38fdadbacad1bde0c", null ],
+    [ "score_U", "class_s_u_s__board.html#a6e978161d88e46a7b67d205c7a1b4f8f", null ]
+];

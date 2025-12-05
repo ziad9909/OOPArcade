@@ -1,0 +1,59 @@
+\doxysection{Four\+\_\+in\+\_\+a\+\_\+row.\+h}
+\hypertarget{_four__in__a__row_8h_source}{}\label{_four__in__a__row_8h_source}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ FOUR\_IN\_A\_ROW\_H}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ FOUR\_IN\_A\_ROW\_H}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}BoardGame\_Classes.h"{}}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00006\ \textcolor{keyword}{using\ namespace\ }std;}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00014\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_four__in__a__row__board_a67ad9084a89653dd44a9955e8b420d77}{Four\_in\_a\_row\_board}}:\ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_board_ae5dfded241ee3644196e2f6074d1d0b1}{Board}}<char>\ \{}
+\DoxyCodeLine{00015\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00016\ \ \ \ \ \textcolor{keywordtype}{char}\ blank\_symbol\ =\ \textcolor{charliteral}{'.'};\ }
+\DoxyCodeLine{00017\ }
+\DoxyCodeLine{00018\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00022\ \ \ \ \ \mbox{\hyperlink{class_four__in__a__row__board_a67ad9084a89653dd44a9955e8b420d77}{Four\_in\_a\_row\_board}}();}
+\DoxyCodeLine{00023\ }
+\DoxyCodeLine{00029\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_four__in__a__row__board_a53baf2079a459ddda535fc04b128d246}{update\_board}}(\mbox{\hyperlink{class_move}{Move<char>}}*\ move);}
+\DoxyCodeLine{00030\ }
+\DoxyCodeLine{00036\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_four__in__a__row__board_ae63fc358819bd95efbdf0776a58f6a7c}{is\_win}}(\mbox{\hyperlink{class_player}{Player<char>}}*\ player);}
+\DoxyCodeLine{00037\ }
+\DoxyCodeLine{00042\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_four__in__a__row__board_a8e5bf7e56782c69c2cb9ec2961aaf267}{is\_lose}}(\mbox{\hyperlink{class_player}{Player<char>}}*)\ \{\ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};\ \};}
+\DoxyCodeLine{00043\ }
+\DoxyCodeLine{00049\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_four__in__a__row__board_a1e50682e85c5df94463deb53c916c1c7}{is\_draw}}(\mbox{\hyperlink{class_player}{Player<char>}}*\ player);}
+\DoxyCodeLine{00050\ }
+\DoxyCodeLine{00056\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_four__in__a__row__board_a52dbab91b635825f4e7f0a43d7197850}{game\_is\_over}}(\mbox{\hyperlink{class_player}{Player<char>}}*\ player);}
+\DoxyCodeLine{00057\ }
+\DoxyCodeLine{00058\ \ \ \ \ \textcolor{comment}{//\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/\ AI\ FUNCTIONS\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{00059\ }
+\DoxyCodeLine{00064\ \ \ \ \ vector<int>\ \mbox{\hyperlink{class_four__in__a__row__board_acfade44a432fedfe4aea35c3a97d979c}{get\_valid\_columns}}();}
+\DoxyCodeLine{00065\ }
+\DoxyCodeLine{00071\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_four__in__a__row__board_a488af0933a5531f89918feef692436c4}{evaluate\_board}}(\textcolor{keywordtype}{char}\ aiSymbol);}
+\DoxyCodeLine{00072\ }
+\DoxyCodeLine{00079\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_four__in__a__row__board_a2f43d919ee2dcb6e2d8b1329417c8a56}{count\_sequences}}(\textcolor{keywordtype}{char}\ symbol,\ \textcolor{keywordtype}{int}\ length);}
+\DoxyCodeLine{00080\ }
+\DoxyCodeLine{00091\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_four__in__a__row__board_a57c7ca17fd2b9d519e0e0480bbed805b}{minimax}}(\textcolor{keywordtype}{int}\ depth,\ \textcolor{keywordtype}{bool}\ maximizing,\ \textcolor{keywordtype}{char}\ aiSymbol,\ \textcolor{keywordtype}{char}\ humanSymbol,\ \textcolor{keywordtype}{int}\ alpha,\ \textcolor{keywordtype}{int}\ beta);}
+\DoxyCodeLine{00092\ }
+\DoxyCodeLine{00099\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_four__in__a__row__board_abd629759920f92905c6b45a2b7e408dd}{get\_best\_move}}(\textcolor{keywordtype}{char}\ aiSymbol,\ \textcolor{keywordtype}{char}\ humanSymbol);}
+\DoxyCodeLine{00100\ }
+\DoxyCodeLine{00106\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_four__in__a__row__board_a51f259d93a9e1a006a3450f0c1b79987}{check\_win\_for\_symbol}}(\textcolor{keywordtype}{char}\ symbol);}
+\DoxyCodeLine{00107\ }
+\DoxyCodeLine{00112\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_four__in__a__row__board_a7321321475bddc84e88d4972ad2683b2}{undo\_move}}(\textcolor{keywordtype}{int}\ col);}
+\DoxyCodeLine{00113\ \};}
+\DoxyCodeLine{00114\ }
+\DoxyCodeLine{00121\ \textcolor{keyword}{class\ }Four\_in\_a\_row\_Ui:\ \textcolor{keyword}{public}\ UI<char>\ \{}
+\DoxyCodeLine{00122\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00123\ \ \ \ \ Four\_in\_a\_row\_Ui();}
+\DoxyCodeLine{00124\ \ \ \ \ \string~Four\_in\_a\_row\_Ui();}
+\DoxyCodeLine{00125\ }
+\DoxyCodeLine{00133\ \ \ \ \ \mbox{\hyperlink{class_player}{Player<char>}}*\ \mbox{\hyperlink{class_four__in__a__row___ui_a638ad404f4735edd8bcfc857c3bbbef4}{create\_player}}(\textcolor{keywordtype}{string}\ \&name,\ \textcolor{keywordtype}{char}\ symbol,\ PlayerType\ type);}
+\DoxyCodeLine{00134\ }
+\DoxyCodeLine{00139\ \ \ \ \ \mbox{\hyperlink{class_player}{Player<char>}}**\ \mbox{\hyperlink{class_four__in__a__row___ui_a867f735f93e4aa8f50817acaff33e133}{setup\_players}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00140\ }
+\DoxyCodeLine{00146\ \ \ \ \ \mbox{\hyperlink{class_move}{Move<char>}}*\ \mbox{\hyperlink{class_four__in__a__row___ui_ac48e8f4cf24685f5002b9704b422b1af}{get\_move}}(\mbox{\hyperlink{class_player}{Player<char>}}*\ player)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00147\ \};}
+\DoxyCodeLine{00148\ }
+\DoxyCodeLine{00149\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//FOUR\_IN\_A\_ROW\_H}}
+
+\end{DoxyCode}

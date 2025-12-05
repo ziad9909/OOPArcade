@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['set_5fboard_5fptr_0',['set_board_ptr',['../class_player.html#a3617a3ad0db435176a06948065f9a3a6',1,'Player']]],
-  ['setup_5fplayers_1',['setup_players',['../class_u_i.html#a6966a040c995b2292e5edddaa94f889a',1,'UI']]]
+  ['numerical_5fttt_5fui_0',['Numerical_TTT_UI',['../class_numerical___t_t_t___u_i.html#a2715fa4b793c7979e4c93d1100f4afbb',1,'Numerical_TTT_UI']]]
 ];

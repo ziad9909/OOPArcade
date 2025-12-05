@@ -1,0 +1,157 @@
+\doxysection{Numerical\+\_\+\+TTT\+\_\+\+Board Class Reference}
+\hypertarget{class_numerical___t_t_t___board}{}\label{class_numerical___t_t_t___board}\index{Numerical\_TTT\_Board@{Numerical\_TTT\_Board}}
+Inheritance diagram for Numerical\+\_\+\+TTT\+\_\+\+Board\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_numerical___t_t_t___board}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual bool \mbox{\hyperlink{class_numerical___t_t_t___board_a5b5feab56fe3ac3d154213fa513a0e69}{update\+\_\+board}} (\mbox{\hyperlink{class_move}{Move}}$<$ int $>$ \texorpdfstring{$\ast$}{*}move)
+\begin{DoxyCompactList}\small\item\em Updates the board with a player\textquotesingle{}s move. \end{DoxyCompactList}\item 
+virtual bool \mbox{\hyperlink{class_numerical___t_t_t___board_ad209792842aa7e0321b1d69494077b5a}{is\+\_\+draw}} (\mbox{\hyperlink{class_player}{Player}}$<$ int $>$ \texorpdfstring{$\ast$}{*}player)
+\begin{DoxyCompactList}\small\item\em Checks if the game has ended in a draw. \end{DoxyCompactList}\item 
+virtual bool \mbox{\hyperlink{class_numerical___t_t_t___board_a03ac4f3500ec2291d152f465b9ea0b0b}{is\+\_\+win}} (\mbox{\hyperlink{class_player}{Player}}$<$ int $>$ \texorpdfstring{$\ast$}{*}player)
+\begin{DoxyCompactList}\small\item\em Checks if a winning condition (any line sums to 15) is met\mbox{[}cite\+: 346\mbox{]}. \end{DoxyCompactList}\item 
+virtual bool \mbox{\hyperlink{class_numerical___t_t_t___board_a65fd544e85137928b911e047b0978e68}{is\+\_\+lose}} (\mbox{\hyperlink{class_player}{Player}}$<$ int $>$ \texorpdfstring{$\ast$}{*}player)
+\begin{DoxyCompactList}\small\item\em Checks if a player has lost. (Not used in this game). \end{DoxyCompactList}\item 
+virtual bool \mbox{\hyperlink{class_numerical___t_t_t___board_a9710303567eae6840f43a8b6a7c661fa}{game\+\_\+is\+\_\+over}} (\mbox{\hyperlink{class_player}{Player}}$<$ int $>$ \texorpdfstring{$\ast$}{*}player)
+\begin{DoxyCompactList}\small\item\em Checks if the game is over (win or draw). \end{DoxyCompactList}\item 
+vector$<$ int $>$ \mbox{\hyperlink{class_numerical___t_t_t___board_a10901b7de74e21075fafdb707b504b3c}{get\+\_\+available\+\_\+moves}} (int player\+\_\+symbol)
+\begin{DoxyCompactList}\small\item\em Gets the list of available numbers for a player. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_board}{Board$<$ int $>$}}}
+\begin{DoxyCompactItemize}
+\item 
+{\bfseries Board} (int \mbox{\hyperlink{class_board_a948d978e3b5fc460559b588f5dee9572}{rows}}, int \mbox{\hyperlink{class_board_afaf8842d9d52ac724e8c2f5642ecafc7}{columns}})
+\begin{DoxyCompactList}\small\item\em Construct a board with given dimensions. \end{DoxyCompactList}\item 
+virtual {\bfseries \texorpdfstring{$\sim$}{\string~}\+Board} ()
+\begin{DoxyCompactList}\small\item\em Virtual destructor. Frees allocated board memory. \end{DoxyCompactList}\item 
+vector$<$ vector$<$ int $>$ $>$ {\bfseries get\+\_\+board\+\_\+matrix} () const
+\begin{DoxyCompactList}\small\item\em Return a copy of the current board as a 2D vector. \end{DoxyCompactList}\item 
+int {\bfseries get\+\_\+rows} () const
+\begin{DoxyCompactList}\small\item\em Get number of rows. \end{DoxyCompactList}\item 
+int {\bfseries get\+\_\+columns} () const
+\begin{DoxyCompactList}\small\item\em Get number of columns. \end{DoxyCompactList}\item 
+int {\bfseries get\+\_\+cell} (int x, int y)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Protected Attributes inherited from \mbox{\hyperlink{class_board}{Board$<$ int $>$}}}
+\begin{DoxyCompactItemize}
+\item 
+int {\bfseries rows}
+\begin{DoxyCompactList}\small\item\em Number of rows. \end{DoxyCompactList}\item 
+int {\bfseries columns}
+\begin{DoxyCompactList}\small\item\em Number of columns. \end{DoxyCompactList}\item 
+vector$<$ vector$<$ int $>$ $>$ {\bfseries board}
+\begin{DoxyCompactList}\small\item\em 2D vector for the board \end{DoxyCompactList}\item 
+int {\bfseries n\+\_\+moves}
+\begin{DoxyCompactList}\small\item\em Number of moves made. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\label{doc-func-members}
+\Hypertarget{class_numerical___t_t_t___board_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_numerical___t_t_t___board_a9710303567eae6840f43a8b6a7c661fa}\index{Numerical\_TTT\_Board@{Numerical\_TTT\_Board}!game\_is\_over@{game\_is\_over}}
+\index{game\_is\_over@{game\_is\_over}!Numerical\_TTT\_Board@{Numerical\_TTT\_Board}}
+\doxysubsubsection{\texorpdfstring{game\_is\_over()}{game\_is\_over()}}
+{\footnotesize\ttfamily \label{class_numerical___t_t_t___board_a9710303567eae6840f43a8b6a7c661fa} 
+bool Numerical\+\_\+\+TTT\+\_\+\+Board\+::game\+\_\+is\+\_\+over (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_player}{Player}}$<$ int $>$ \texorpdfstring{$\ast$}{*}}]{player}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Checks if the game is over (win or draw). 
+
+
+
+Implements \mbox{\hyperlink{class_board_ae0e4575ec3cc4b6eb9f367ffb2beed13}{Board$<$ int $>$}}.
+
+\Hypertarget{class_numerical___t_t_t___board_a10901b7de74e21075fafdb707b504b3c}\index{Numerical\_TTT\_Board@{Numerical\_TTT\_Board}!get\_available\_moves@{get\_available\_moves}}
+\index{get\_available\_moves@{get\_available\_moves}!Numerical\_TTT\_Board@{Numerical\_TTT\_Board}}
+\doxysubsubsection{\texorpdfstring{get\_available\_moves()}{get\_available\_moves()}}
+{\footnotesize\ttfamily \label{class_numerical___t_t_t___board_a10901b7de74e21075fafdb707b504b3c} 
+vector$<$ int $>$ Numerical\+\_\+\+TTT\+\_\+\+Board\+::get\+\_\+available\+\_\+moves (\begin{DoxyParamCaption}\item[{int}]{player\+\_\+symbol}{}\end{DoxyParamCaption})}
+
+
+
+Gets the list of available numbers for a player. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em player\+\_\+symbol} & 1 for Odd (\doxylink{class_player}{Player} 1), 2 for Even (\doxylink{class_player}{Player} 2). \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_numerical___t_t_t___board_ad209792842aa7e0321b1d69494077b5a}\index{Numerical\_TTT\_Board@{Numerical\_TTT\_Board}!is\_draw@{is\_draw}}
+\index{is\_draw@{is\_draw}!Numerical\_TTT\_Board@{Numerical\_TTT\_Board}}
+\doxysubsubsection{\texorpdfstring{is\_draw()}{is\_draw()}}
+{\footnotesize\ttfamily \label{class_numerical___t_t_t___board_ad209792842aa7e0321b1d69494077b5a} 
+bool Numerical\+\_\+\+TTT\+\_\+\+Board\+::is\+\_\+draw (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_player}{Player}}$<$ int $>$ \texorpdfstring{$\ast$}{*}}]{player}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Checks if the game has ended in a draw. 
+
+\begin{DoxyReturn}{Returns}
+true if the board is full and no one has won\mbox{[}cite\+: 346\mbox{]}. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{class_board_a8dbe2a243881986f3e53b45799d377fc}{Board$<$ int $>$}}.
+
+\Hypertarget{class_numerical___t_t_t___board_a65fd544e85137928b911e047b0978e68}\index{Numerical\_TTT\_Board@{Numerical\_TTT\_Board}!is\_lose@{is\_lose}}
+\index{is\_lose@{is\_lose}!Numerical\_TTT\_Board@{Numerical\_TTT\_Board}}
+\doxysubsubsection{\texorpdfstring{is\_lose()}{is\_lose()}}
+{\footnotesize\ttfamily \label{class_numerical___t_t_t___board_a65fd544e85137928b911e047b0978e68} 
+virtual bool Numerical\+\_\+\+TTT\+\_\+\+Board\+::is\+\_\+lose (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_player}{Player}}$<$ int $>$ \texorpdfstring{$\ast$}{*}}]{player}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Checks if a player has lost. (Not used in this game). 
+
+
+
+Implements \mbox{\hyperlink{class_board_a207d5f6feb77f81c51d1462f0245890d}{Board$<$ int $>$}}.
+
+\Hypertarget{class_numerical___t_t_t___board_a03ac4f3500ec2291d152f465b9ea0b0b}\index{Numerical\_TTT\_Board@{Numerical\_TTT\_Board}!is\_win@{is\_win}}
+\index{is\_win@{is\_win}!Numerical\_TTT\_Board@{Numerical\_TTT\_Board}}
+\doxysubsubsection{\texorpdfstring{is\_win()}{is\_win()}}
+{\footnotesize\ttfamily \label{class_numerical___t_t_t___board_a03ac4f3500ec2291d152f465b9ea0b0b} 
+bool Numerical\+\_\+\+TTT\+\_\+\+Board\+::is\+\_\+win (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_player}{Player}}$<$ int $>$ \texorpdfstring{$\ast$}{*}}]{player}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Checks if a winning condition (any line sums to 15) is met\mbox{[}cite\+: 346\mbox{]}. 
+
+
+
+Implements \mbox{\hyperlink{class_board_ab316fe3e79677b4617fc3d90d6c48f33}{Board$<$ int $>$}}.
+
+\Hypertarget{class_numerical___t_t_t___board_a5b5feab56fe3ac3d154213fa513a0e69}\index{Numerical\_TTT\_Board@{Numerical\_TTT\_Board}!update\_board@{update\_board}}
+\index{update\_board@{update\_board}!Numerical\_TTT\_Board@{Numerical\_TTT\_Board}}
+\doxysubsubsection{\texorpdfstring{update\_board()}{update\_board()}}
+{\footnotesize\ttfamily \label{class_numerical___t_t_t___board_a5b5feab56fe3ac3d154213fa513a0e69} 
+bool Numerical\+\_\+\+TTT\+\_\+\+Board\+::update\+\_\+board (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_move}{Move}}$<$ int $>$ \texorpdfstring{$\ast$}{*}}]{move}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Updates the board with a player\textquotesingle{}s move. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em move} & Pointer to a \doxylink{class_move}{Move$<$int$>$} object. The move\textquotesingle{}s symbol is the number. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if the move is valid, false otherwise. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{class_board_a93d9dec601dda58b7e206ccb47633e57}{Board$<$ int $>$}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Numerical\+\_\+\+TTT\+\_\+\+Classes.\+h\item 
+Numerical\+\_\+\+TTT\+\_\+\+Classes.\+cpp\end{DoxyCompactItemize}

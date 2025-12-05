@@ -1,0 +1,131 @@
+\doxysection{SUS\+\_\+player Class Reference}
+\hypertarget{class_s_u_s__player}{}\label{class_s_u_s__player}\index{SUS\_player@{SUS\_player}}
+
+
+Handles player setup and moves (Human or AI) for SUS game.  
+
+
+
+
+{\ttfamily \#include $<$SUS.\+h$>$}
+
+Inheritance diagram for SUS\+\_\+player\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_s_u_s__player}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_s_u_s__player_ac84975e138731279e093c5a4c072034f}\label{class_s_u_s__player_ac84975e138731279e093c5a4c072034f} 
+{\bfseries SUS\+\_\+player} ()
+\begin{DoxyCompactList}\small\item\em Constructor initializes the \doxylink{class_u_i}{UI}. \end{DoxyCompactList}\item 
+\Hypertarget{class_s_u_s__player_ae4efe3333e8490d8d628f6440ce0fe70}\label{class_s_u_s__player_ae4efe3333e8490d8d628f6440ce0fe70} 
+{\bfseries \texorpdfstring{$\sim$}{\string~}\+SUS\+\_\+player} ()
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_player}{Player}}$<$ char $>$ \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_s_u_s__player_ac87941077424d91428030812121ad5e9}{create\+\_\+player}} (string \&name, char symbol, Player\+Type type) override
+\begin{DoxyCompactList}\small\item\em Creates a new player. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_player}{Player}}$<$ char $>$ \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_s_u_s__player_a83f356d87d3f4591f440a747edecf8d2}{setup\+\_\+players}} () override
+\begin{DoxyCompactList}\small\item\em Sets up two players (name, symbol, type). \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_move}{Move}}$<$ char $>$ \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_s_u_s__player_af503d06614259898e8457b2cd2cc081a}{get\+\_\+move}} (\mbox{\hyperlink{class_player}{Player}}$<$ char $>$ \texorpdfstring{$\ast$}{*}player) override
+\begin{DoxyCompactList}\small\item\em Gets the next move from a player (Human input or AI). \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_u_i}{UI$<$ char $>$}}}
+\begin{DoxyCompactItemize}
+\item 
+{\bfseries UI} (int cell\+\_\+display\+\_\+width=3)
+\item 
+virtual void {\bfseries display\+\_\+message} (string message)
+\begin{DoxyCompactList}\small\item\em Display any message to the user. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{class_player}{Player}}$<$ char $>$ \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_u_i_a94561e0bb4bbcbe5ff71ca6d751922df}{create\+\_\+player}} (string \&name, char symbol, Player\+Type type)
+\begin{DoxyCompactList}\small\item\em Create a player object based on input name, symbol, and type. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_u_i_aa3775124efaeac59935ae0afb354708d}{display\+\_\+board\+\_\+matrix}} (const vector$<$ vector$<$ char $>$ $>$ \&matrix) const
+\begin{DoxyCompactList}\small\item\em Display the current board matrix in formatted form. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Protected Member Functions inherited from \mbox{\hyperlink{class_u_i}{UI$<$ char $>$}}}
+\begin{DoxyCompactItemize}
+\item 
+virtual string {\bfseries get\+\_\+player\+\_\+name} (string player\+\_\+label)
+\begin{DoxyCompactList}\small\item\em Ask the user for the player\textquotesingle{}s name. \end{DoxyCompactList}\item 
+virtual Player\+Type {\bfseries get\+\_\+player\+\_\+type\+\_\+choice} (string player\+\_\+label, const vector$<$ string $>$ \&options)
+\begin{DoxyCompactList}\small\item\em Ask the user to choose the player type from a list. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes inherited from \mbox{\hyperlink{class_u_i}{UI$<$ char $>$}}}
+\begin{DoxyCompactItemize}
+\item 
+int {\bfseries cell\+\_\+width}
+\begin{DoxyCompactList}\small\item\em Width of each displayed board cell. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Handles player setup and moves (Human or AI) for SUS game. 
+
+\label{doc-func-members}
+\Hypertarget{class_s_u_s__player_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_s_u_s__player_ac87941077424d91428030812121ad5e9}\index{SUS\_player@{SUS\_player}!create\_player@{create\_player}}
+\index{create\_player@{create\_player}!SUS\_player@{SUS\_player}}
+\doxysubsubsection{\texorpdfstring{create\_player()}{create\_player()}}
+{\footnotesize\ttfamily \label{class_s_u_s__player_ac87941077424d91428030812121ad5e9} 
+\mbox{\hyperlink{class_player}{Player}}$<$ char $>$ \texorpdfstring{$\ast$}{*} SUS\+\_\+player\+::create\+\_\+player (\begin{DoxyParamCaption}\item[{string \&}]{name}{, }\item[{char}]{symbol}{, }\item[{Player\+Type}]{type}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}}
+
+
+
+Creates a new player. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & Name of the player. \\
+\hline
+{\em symbol} & \doxylink{class_player}{Player}\textquotesingle{}s symbol (\textquotesingle{}S\textquotesingle{} or \textquotesingle{}U\textquotesingle{}). \\
+\hline
+{\em type} & \doxylink{class_player}{Player} type (Human or Computer). \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Pointer to the created \doxylink{class_player}{Player} object. 
+\end{DoxyReturn}
+\Hypertarget{class_s_u_s__player_af503d06614259898e8457b2cd2cc081a}\index{SUS\_player@{SUS\_player}!get\_move@{get\_move}}
+\index{get\_move@{get\_move}!SUS\_player@{SUS\_player}}
+\doxysubsubsection{\texorpdfstring{get\_move()}{get\_move()}}
+{\footnotesize\ttfamily \label{class_s_u_s__player_af503d06614259898e8457b2cd2cc081a} 
+\mbox{\hyperlink{class_move}{Move}}$<$ char $>$ \texorpdfstring{$\ast$}{*} SUS\+\_\+player\+::get\+\_\+move (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_player}{Player}}$<$ char $>$ \texorpdfstring{$\ast$}{*}}]{player}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Gets the next move from a player (Human input or AI). 
+
+
+\begin{DoxyParams}{Parameters}
+{\em player} & Pointer to the \doxylink{class_player}{Player} object making the move. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Pointer to a \doxylink{class_move}{Move} object representing the chosen move. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{class_u_i_a8befa259c38c57e6ae2e8ed81c476337}{UI$<$ char $>$}}.
+
+\Hypertarget{class_s_u_s__player_a83f356d87d3f4591f440a747edecf8d2}\index{SUS\_player@{SUS\_player}!setup\_players@{setup\_players}}
+\index{setup\_players@{setup\_players}!SUS\_player@{SUS\_player}}
+\doxysubsubsection{\texorpdfstring{setup\_players()}{setup\_players()}}
+{\footnotesize\ttfamily \label{class_s_u_s__player_a83f356d87d3f4591f440a747edecf8d2} 
+\mbox{\hyperlink{class_player}{Player}}$<$ char $>$ \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*} SUS\+\_\+player\+::setup\+\_\+players (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Sets up two players (name, symbol, type). 
+
+\begin{DoxyReturn}{Returns}
+Array of pointers to \doxylink{class_player}{Player} objects. 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{class_u_i_a6966a040c995b2292e5edddaa94f889a}{UI$<$ char $>$}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+SUS.\+h\item 
+SUS.\+cpp\end{DoxyCompactItemize}

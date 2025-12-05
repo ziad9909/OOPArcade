@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['x_5fo_5fboard_0',['X_O_Board',['../class_x___o___board.html#aff75cefd426f1e8db38555ed9b59fee8',1,'X_O_Board']]],
-  ['xo_5fui_1',['XO_UI',['../class_x_o___u_i.html#a3777235b2b66dc912258a4ee20501ebb',1,'XO_UI']]]
+  ['run_0',['run',['../class_game_manager.html#a71f46d5189dac5c773f608cea1b5a203',1,'GameManager']]],
+  ['run_5fgame_5fwith_5fcustom_5floop_1',['run_game_with_custom_loop',['../class_five_by_five___t_t_t___u_i.html#ac7cdfa6c1ca84dab8b34e7043ef3a860',1,'FiveByFive_TTT_UI']]]
 ];

@@ -1,0 +1,118 @@
+\doxysection{Five\+By\+Five\+\_\+\+TTT\+\_\+\+UI Class Reference}
+\hypertarget{class_five_by_five___t_t_t___u_i}{}\label{class_five_by_five___t_t_t___u_i}\index{FiveByFive\_TTT\_UI@{FiveByFive\_TTT\_UI}}
+
+
+User Interface for the 5x5 Tic-\/\+Tac-\/\+Toe game.  
+
+
+
+
+{\ttfamily \#include $<$Five\+By\+Five\+TTT\+\_\+\+Classes.\+h$>$}
+
+Inheritance diagram for Five\+By\+Five\+\_\+\+TTT\+\_\+\+UI\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_five_by_five___t_t_t___u_i}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_five_by_five___t_t_t___u_i_a4768f047905d993fc1ea8b639fdc3fe7}\label{class_five_by_five___t_t_t___u_i_a4768f047905d993fc1ea8b639fdc3fe7} 
+{\bfseries Five\+By\+Five\+\_\+\+TTT\+\_\+\+UI} ()
+\begin{DoxyCompactList}\small\item\em Constructs the \doxylink{class_u_i}{UI} with welcome message. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{class_player}{Player}}$<$ char $>$ \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_five_by_five___t_t_t___u_i_a767a486d2789af7169e53b63ad406651}{setup\+\_\+players}} ()
+\begin{DoxyCompactList}\small\item\em Sets up two players for the game. \end{DoxyCompactList}\item 
+\Hypertarget{class_five_by_five___t_t_t___u_i_af862862a1ec701858d7fb1596a146edc}\label{class_five_by_five___t_t_t___u_i_af862862a1ec701858d7fb1596a146edc} 
+virtual \mbox{\hyperlink{class_player}{Player}}$<$ char $>$ \texorpdfstring{$\ast$}{*} {\bfseries create\+\_\+player} (string \&name, char symbol, Player\+Type type)
+\begin{DoxyCompactList}\small\item\em Creates a player of specified type. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{class_move}{Move}}$<$ char $>$ \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_five_by_five___t_t_t___u_i_a0c00598957ea1d1430906b24c4e0365e}{get\+\_\+move}} (\mbox{\hyperlink{class_player}{Player}}$<$ char $>$ \texorpdfstring{$\ast$}{*}player)
+\begin{DoxyCompactList}\small\item\em Gets a move from a player. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_five_by_five___t_t_t___u_i_ac7cdfa6c1ca84dab8b34e7043ef3a860}{run\+\_\+game\+\_\+with\+\_\+custom\+\_\+loop}} (\mbox{\hyperlink{class_five_by_five___t_t_t___board}{Five\+By\+Five\+\_\+\+TTT\+\_\+\+Board}} \texorpdfstring{$\ast$}{*}board, \mbox{\hyperlink{class_player}{Player}}$<$ char $>$ \texorpdfstring{$\ast$}{*}players\mbox{[}2\mbox{]})
+\begin{DoxyCompactList}\small\item\em Runs the game with custom logic for 5x5 TTT. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_u_i}{UI$<$ char $>$}}}
+\begin{DoxyCompactItemize}
+\item 
+{\bfseries UI} (int cell\+\_\+display\+\_\+width=3)
+\item 
+virtual void {\bfseries display\+\_\+message} (string message)
+\begin{DoxyCompactList}\small\item\em Display any message to the user. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{class_player}{Player}}$<$ char $>$ \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_u_i_a94561e0bb4bbcbe5ff71ca6d751922df}{create\+\_\+player}} (string \&name, char symbol, Player\+Type type)
+\begin{DoxyCompactList}\small\item\em Create a player object based on input name, symbol, and type. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_u_i_aa3775124efaeac59935ae0afb354708d}{display\+\_\+board\+\_\+matrix}} (const vector$<$ vector$<$ char $>$ $>$ \&matrix) const
+\begin{DoxyCompactList}\small\item\em Display the current board matrix in formatted form. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Protected Member Functions inherited from \mbox{\hyperlink{class_u_i}{UI$<$ char $>$}}}
+\begin{DoxyCompactItemize}
+\item 
+virtual string {\bfseries get\+\_\+player\+\_\+name} (string player\+\_\+label)
+\begin{DoxyCompactList}\small\item\em Ask the user for the player\textquotesingle{}s name. \end{DoxyCompactList}\item 
+virtual Player\+Type {\bfseries get\+\_\+player\+\_\+type\+\_\+choice} (string player\+\_\+label, const vector$<$ string $>$ \&options)
+\begin{DoxyCompactList}\small\item\em Ask the user to choose the player type from a list. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes inherited from \mbox{\hyperlink{class_u_i}{UI$<$ char $>$}}}
+\begin{DoxyCompactItemize}
+\item 
+int {\bfseries cell\+\_\+width}
+\begin{DoxyCompactList}\small\item\em Width of each displayed board cell. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+User Interface for the 5x5 Tic-\/\+Tac-\/\+Toe game. 
+
+\label{doc-func-members}
+\Hypertarget{class_five_by_five___t_t_t___u_i_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_five_by_five___t_t_t___u_i_a0c00598957ea1d1430906b24c4e0365e}\index{FiveByFive\_TTT\_UI@{FiveByFive\_TTT\_UI}!get\_move@{get\_move}}
+\index{get\_move@{get\_move}!FiveByFive\_TTT\_UI@{FiveByFive\_TTT\_UI}}
+\doxysubsubsection{\texorpdfstring{get\_move()}{get\_move()}}
+{\footnotesize\ttfamily \label{class_five_by_five___t_t_t___u_i_a0c00598957ea1d1430906b24c4e0365e} 
+\mbox{\hyperlink{class_move}{Move}}$<$ char $>$ \texorpdfstring{$\ast$}{*} Five\+By\+Five\+\_\+\+TTT\+\_\+\+UI\+::get\+\_\+move (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_player}{Player}}$<$ char $>$ \texorpdfstring{$\ast$}{*}}]{player}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Gets a move from a player. 
+
+
+
+Implements \mbox{\hyperlink{class_u_i_a8befa259c38c57e6ae2e8ed81c476337}{UI$<$ char $>$}}.
+
+\Hypertarget{class_five_by_five___t_t_t___u_i_ac7cdfa6c1ca84dab8b34e7043ef3a860}\index{FiveByFive\_TTT\_UI@{FiveByFive\_TTT\_UI}!run\_game\_with\_custom\_loop@{run\_game\_with\_custom\_loop}}
+\index{run\_game\_with\_custom\_loop@{run\_game\_with\_custom\_loop}!FiveByFive\_TTT\_UI@{FiveByFive\_TTT\_UI}}
+\doxysubsubsection{\texorpdfstring{run\_game\_with\_custom\_loop()}{run\_game\_with\_custom\_loop()}}
+{\footnotesize\ttfamily \label{class_five_by_five___t_t_t___u_i_ac7cdfa6c1ca84dab8b34e7043ef3a860} 
+void Five\+By\+Five\+\_\+\+TTT\+\_\+\+UI\+::run\+\_\+game\+\_\+with\+\_\+custom\+\_\+loop (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_five_by_five___t_t_t___board}{Five\+By\+Five\+\_\+\+TTT\+\_\+\+Board}} \texorpdfstring{$\ast$}{*}}]{board}{, }\item[{\mbox{\hyperlink{class_player}{Player}}$<$ char $>$ \texorpdfstring{$\ast$}{*}}]{players}{\mbox{[}2\mbox{]}}\end{DoxyParamCaption})}
+
+
+
+Runs the game with custom logic for 5x5 TTT. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em board} & The game board. \\
+\hline
+{\em players} & Array of two players. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_five_by_five___t_t_t___u_i_a767a486d2789af7169e53b63ad406651}\index{FiveByFive\_TTT\_UI@{FiveByFive\_TTT\_UI}!setup\_players@{setup\_players}}
+\index{setup\_players@{setup\_players}!FiveByFive\_TTT\_UI@{FiveByFive\_TTT\_UI}}
+\doxysubsubsection{\texorpdfstring{setup\_players()}{setup\_players()}}
+{\footnotesize\ttfamily \label{class_five_by_five___t_t_t___u_i_a767a486d2789af7169e53b63ad406651} 
+\mbox{\hyperlink{class_player}{Player}}$<$ char $>$ \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*} Five\+By\+Five\+\_\+\+TTT\+\_\+\+UI\+::setup\+\_\+players (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Sets up two players for the game. 
+
+\begin{DoxyReturn}{Returns}
+Array of two \doxylink{class_player}{Player} pointers. 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{class_u_i_a6966a040c995b2292e5edddaa94f889a}{UI$<$ char $>$}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Five\+By\+Five\+TTT\+\_\+\+Classes.\+h\item 
+Five\+By\+Five\+TTT\+\_\+\+Classes.\+cpp\end{DoxyCompactItemize}

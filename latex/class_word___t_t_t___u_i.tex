@@ -1,0 +1,78 @@
+\doxysection{Word\+\_\+\+TTT\+\_\+\+UI Class Reference}
+\hypertarget{class_word___t_t_t___u_i}{}\label{class_word___t_t_t___u_i}\index{Word\_TTT\_UI@{Word\_TTT\_UI}}
+Inheritance diagram for Word\+\_\+\+TTT\+\_\+\+UI\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_word___t_t_t___u_i}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_move}{Move}}$<$ char $>$ \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_word___t_t_t___u_i_a7596b050bf0ca3967f2cb9089336c1eb}{get\+\_\+move}} (\mbox{\hyperlink{class_player}{Player}}$<$ char $>$ \texorpdfstring{$\ast$}{*}player) override
+\begin{DoxyCompactList}\small\item\em Ask the user (or AI) to make a move. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_player}{Player}}$<$ char $>$ \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_word___t_t_t___u_i_a276e75893639babeb115960eb2dbeccb}{create\+\_\+player}} (string \&name, char symbol, Player\+Type type) override
+\begin{DoxyCompactList}\small\item\em Create a player object based on input name, symbol, and type. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_u_i}{UI$<$ char $>$}}}
+\begin{DoxyCompactItemize}
+\item 
+{\bfseries UI} (int cell\+\_\+display\+\_\+width=3)
+\item 
+virtual void {\bfseries display\+\_\+message} (string message)
+\begin{DoxyCompactList}\small\item\em Display any message to the user. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{class_player}{Player}}$<$ char $>$ \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_u_i_a6966a040c995b2292e5edddaa94f889a}{setup\+\_\+players}} ()
+\begin{DoxyCompactList}\small\item\em Set up players for the game. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_u_i_aa3775124efaeac59935ae0afb354708d}{display\+\_\+board\+\_\+matrix}} (const vector$<$ vector$<$ char $>$ $>$ \&matrix) const
+\begin{DoxyCompactList}\small\item\em Display the current board matrix in formatted form. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Protected Member Functions inherited from \mbox{\hyperlink{class_u_i}{UI$<$ char $>$}}}
+\begin{DoxyCompactItemize}
+\item 
+virtual string {\bfseries get\+\_\+player\+\_\+name} (string player\+\_\+label)
+\begin{DoxyCompactList}\small\item\em Ask the user for the player\textquotesingle{}s name. \end{DoxyCompactList}\item 
+virtual Player\+Type {\bfseries get\+\_\+player\+\_\+type\+\_\+choice} (string player\+\_\+label, const vector$<$ string $>$ \&options)
+\begin{DoxyCompactList}\small\item\em Ask the user to choose the player type from a list. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes inherited from \mbox{\hyperlink{class_u_i}{UI$<$ char $>$}}}
+\begin{DoxyCompactItemize}
+\item 
+int {\bfseries cell\+\_\+width}
+\begin{DoxyCompactList}\small\item\em Width of each displayed board cell. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\label{doc-func-members}
+\Hypertarget{class_word___t_t_t___u_i_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_word___t_t_t___u_i_a276e75893639babeb115960eb2dbeccb}\index{Word\_TTT\_UI@{Word\_TTT\_UI}!create\_player@{create\_player}}
+\index{create\_player@{create\_player}!Word\_TTT\_UI@{Word\_TTT\_UI}}
+\doxysubsubsection{\texorpdfstring{create\_player()}{create\_player()}}
+{\footnotesize\ttfamily \label{class_word___t_t_t___u_i_a276e75893639babeb115960eb2dbeccb} 
+\mbox{\hyperlink{class_player}{Player}}$<$ char $>$ \texorpdfstring{$\ast$}{*} Word\+\_\+\+TTT\+\_\+\+UI\+::create\+\_\+player (\begin{DoxyParamCaption}\item[{string \&}]{name}{, }\item[{char}]{symbol}{, }\item[{Player\+Type}]{type}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Create a player object based on input name, symbol, and type. 
+
+Default implementation of creating a player. 
+
+Reimplemented from \mbox{\hyperlink{class_u_i_a94561e0bb4bbcbe5ff71ca6d751922df}{UI$<$ char $>$}}.
+
+\Hypertarget{class_word___t_t_t___u_i_a7596b050bf0ca3967f2cb9089336c1eb}\index{Word\_TTT\_UI@{Word\_TTT\_UI}!get\_move@{get\_move}}
+\index{get\_move@{get\_move}!Word\_TTT\_UI@{Word\_TTT\_UI}}
+\doxysubsubsection{\texorpdfstring{get\_move()}{get\_move()}}
+{\footnotesize\ttfamily \label{class_word___t_t_t___u_i_a7596b050bf0ca3967f2cb9089336c1eb} 
+\mbox{\hyperlink{class_move}{Move}}$<$ char $>$ \texorpdfstring{$\ast$}{*} Word\+\_\+\+TTT\+\_\+\+UI\+::get\+\_\+move (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_player}{Player}}$<$ char $>$ \texorpdfstring{$\ast$}{*}}]{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Ask the user (or AI) to make a move. 
+
+
+
+Implements \mbox{\hyperlink{class_u_i_a8befa259c38c57e6ae2e8ed81c476337}{UI$<$ char $>$}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Word\+\_\+\+TTT.\+h\item 
+Word\+\_\+\+TTT.\+cpp\end{DoxyCompactItemize}

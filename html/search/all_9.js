@@ -1,6 +1,5 @@
 var searchData=
 [
-  ['set_5fboard_5fptr_0',['set_board_ptr',['../class_player.html#a3617a3ad0db435176a06948065f9a3a6',1,'Player']]],
-  ['setup_5fplayers_1',['setup_players',['../class_u_i.html#a6966a040c995b2292e5edddaa94f889a',1,'UI']]],
-  ['symbol_2',['symbol',['../class_player.html#a272d6c4dab769930d4f8074918e7708a',1,'Player']]]
+  ['obstacle6x6_5fttt_5fboard_0',['Obstacle6x6_TTT_Board',['../class_obstacle6x6___t_t_t___board.html',1,'']]],
+  ['obstacle6x6_5fttt_5fui_1',['Obstacle6x6_TTT_UI',['../class_obstacle6x6___t_t_t___u_i.html',1,'']]]
 ];

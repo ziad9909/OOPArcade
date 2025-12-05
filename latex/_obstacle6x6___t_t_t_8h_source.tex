@@ -1,0 +1,41 @@
+\doxysection{Obstacle6x6\+\_\+\+TTT.\+h}
+\hypertarget{_obstacle6x6___t_t_t_8h_source}{}\label{_obstacle6x6___t_t_t_8h_source}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#ifndef\ \_OBSTACLE6X6\_TTT\_H}}
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#define\ \_OBSTACLE6X6\_TTT\_H}}
+\DoxyCodeLine{00004\ }
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <iostream>}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ "{}BoardGame\_Classes.h"{}}}
+\DoxyCodeLine{00009\ }
+\DoxyCodeLine{00010\ \textcolor{keyword}{using\ namespace\ }std;}
+\DoxyCodeLine{00011\ }
+\DoxyCodeLine{00012\ \textcolor{keyword}{class\ }Obstacle6x6\_TTT\_Board\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_board_ae5dfded241ee3644196e2f6074d1d0b1}{Board}}<char>\ \{}
+\DoxyCodeLine{00013\ \ \ \ \ \textcolor{keywordtype}{int}\ round\_counter;\ \ \ \textcolor{comment}{//\ ???\ ??\ Round\ ????\ ?????}}
+\DoxyCodeLine{00014\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00015\ \ \ \ \ Obstacle6x6\_TTT\_Board();}
+\DoxyCodeLine{00016\ }
+\DoxyCodeLine{00017\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_obstacle6x6___t_t_t___board_ae995f48b4141acd7cca98c84c092aea9}{update\_board}}(\mbox{\hyperlink{class_move}{Move<char>}}*\ move)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00018\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_obstacle6x6___t_t_t___board_a0b4b017c11005b0fc9a2b5fa1f1d7341}{is\_win}}(\mbox{\hyperlink{class_player}{Player<char>}}*\ player)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00019\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_obstacle6x6___t_t_t___board_a24ab79e539888f75e6aedf7c9b7eee57}{is\_lose}}(\mbox{\hyperlink{class_player}{Player<char>}}*\ player)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00020\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_obstacle6x6___t_t_t___board_af9d8deb90688868744e18265f8d7aeba}{is\_draw}}(\mbox{\hyperlink{class_player}{Player<char>}}*\ player)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00021\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_obstacle6x6___t_t_t___board_ace1057f1a2e5dda1cef8dfe9a9c15d39}{game\_is\_over}}(\mbox{\hyperlink{class_player}{Player<char>}}*\ player)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00022\ }
+\DoxyCodeLine{00023\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00024\ \ \ \ \ \textcolor{keywordtype}{void}\ add\_obstacles();\ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ ?????\ ??????}}
+\DoxyCodeLine{00025\ \ \ \ \ \textcolor{keywordtype}{bool}\ check\_four\_in\_row(\textcolor{keywordtype}{char}\ s);\ \textcolor{comment}{//\ 4-\/in-\/a-\/row\ logic}}
+\DoxyCodeLine{00026\ \};}
+\DoxyCodeLine{00027\ }
+\DoxyCodeLine{00028\ \textcolor{keyword}{class\ }Obstacle6x6\_TTT\_UI\ :\ \textcolor{keyword}{public}\ UI<char>\ \{}
+\DoxyCodeLine{00029\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00030\ \ \ \ \ Obstacle6x6\_TTT\_UI();}
+\DoxyCodeLine{00031\ }
+\DoxyCodeLine{00032\ \ \ \ \ \mbox{\hyperlink{class_move}{Move<char>}}*\ \mbox{\hyperlink{class_obstacle6x6___t_t_t___u_i_ab3d1aefb33eac0fafc4a69979c42ef69}{get\_move}}(\mbox{\hyperlink{class_player}{Player<char>}}*\ player)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00033\ \ \ \ \ \mbox{\hyperlink{class_player}{Player<char>}}*\ create\_player(\textcolor{keywordtype}{string}\&\ name,\ \textcolor{keywordtype}{char}\ symbol,\ PlayerType\ type)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00034\ \};}
+\DoxyCodeLine{00035\ }
+\DoxyCodeLine{00036\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

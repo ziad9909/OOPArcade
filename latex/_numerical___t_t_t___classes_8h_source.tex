@@ -1,0 +1,60 @@
+\doxysection{Numerical\+\_\+\+TTT\+\_\+\+Classes.\+h}
+\hypertarget{_numerical___t_t_t___classes_8h_source}{}\label{_numerical___t_t_t___classes_8h_source}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#ifndef\ NUMERICAL\_TTT\_CLASSES\_H}}
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#define\ NUMERICAL\_TTT\_CLASSES\_H}}
+\DoxyCodeLine{00004\ }
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ "{}BoardGame\_Classes.h"{}}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ <numeric>}\ \textcolor{comment}{//\ For\ std::iota}}
+\DoxyCodeLine{00008\ }
+\DoxyCodeLine{00009\ \textcolor{keyword}{using\ namespace\ }std;}
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00011\ \textcolor{comment}{//\ This\ class\ will\ hold\ the\ game\ logic\ for\ Numerical\ Tic-\/Tac-\/Toe}}
+\DoxyCodeLine{00012\ \textcolor{keyword}{class\ }Numerical\_TTT\_Board\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_board_ae5dfded241ee3644196e2f6074d1d0b1}{Board}}<int>\ \{}
+\DoxyCodeLine{00013\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00014\ \ \ \ \ \textcolor{comment}{//\ Tracks\ which\ numbers\ are\ still\ available\ for\ each\ player}}
+\DoxyCodeLine{00015\ \ \ \ \ vector<int>\ odd\_nums;\ \ \textcolor{comment}{//\ For\ Player\ 1\ [cite:\ 344]}}
+\DoxyCodeLine{00016\ \ \ \ \ vector<int>\ even\_nums;\ \textcolor{comment}{//\ For\ Player\ 2\ [cite:\ 344]}}
+\DoxyCodeLine{00017\ }
+\DoxyCodeLine{00018\ \ \ \ \ \textcolor{comment}{//\ A\ helper\ function\ to\ check\ all\ 8\ lines\ for\ a\ win}}
+\DoxyCodeLine{00019\ \ \ \ \ \textcolor{keywordtype}{bool}\ check\_win();}
+\DoxyCodeLine{00020\ }
+\DoxyCodeLine{00021\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00022\ \ \ \ \ \textcolor{comment}{//\ Constructor}}
+\DoxyCodeLine{00023\ \ \ \ \ Numerical\_TTT\_Board();}
+\DoxyCodeLine{00024\ }
+\DoxyCodeLine{00025\ \ \ \ \ \textcolor{comment}{//\ -\/-\/-\/\ Must\ implement\ all\ virtual\ functions\ from\ Board<T>\ -\/-\/-\/}}
+\DoxyCodeLine{00026\ }
+\DoxyCodeLine{00032\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_numerical___t_t_t___board_a5b5feab56fe3ac3d154213fa513a0e69}{update\_board}}(\mbox{\hyperlink{class_move}{Move<int>}}*\ move);}
+\DoxyCodeLine{00033\ }
+\DoxyCodeLine{00038\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_numerical___t_t_t___board_ad209792842aa7e0321b1d69494077b5a}{is\_draw}}(\mbox{\hyperlink{class_player}{Player<int>}}*\ player);}
+\DoxyCodeLine{00039\ }
+\DoxyCodeLine{00043\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_numerical___t_t_t___board_a03ac4f3500ec2291d152f465b9ea0b0b}{is\_win}}(\mbox{\hyperlink{class_player}{Player<int>}}*\ player);}
+\DoxyCodeLine{00044\ }
+\DoxyCodeLine{00048\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_numerical___t_t_t___board_a65fd544e85137928b911e047b0978e68}{is\_lose}}(\mbox{\hyperlink{class_player}{Player<int>}}*\ player)\ \{\ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};\ \}}
+\DoxyCodeLine{00049\ }
+\DoxyCodeLine{00053\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_numerical___t_t_t___board_a9710303567eae6840f43a8b6a7c661fa}{game\_is\_over}}(\mbox{\hyperlink{class_player}{Player<int>}}*\ player);}
+\DoxyCodeLine{00054\ }
+\DoxyCodeLine{00055\ \ \ \ \ \textcolor{comment}{//\ -\/-\/-\/\ Helper\ functions\ for\ this\ specific\ game\ -\/-\/-\/}}
+\DoxyCodeLine{00056\ }
+\DoxyCodeLine{00061\ \ \ \ \ vector<int>\ \mbox{\hyperlink{class_numerical___t_t_t___board_a10901b7de74e21075fafdb707b504b3c}{get\_available\_moves}}(\textcolor{keywordtype}{int}\ player\_symbol);}
+\DoxyCodeLine{00062\ \};}
+\DoxyCodeLine{00063\ }
+\DoxyCodeLine{00064\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ NUMERICAL\_TTT\_CLASSES\_H}}
+\DoxyCodeLine{00065\ }
+\DoxyCodeLine{00066\ \textcolor{comment}{//\ ...\ (keep\ the\ Numerical\_TTT\_Board\ class\ definition\ above)}}
+\DoxyCodeLine{00067\ }
+\DoxyCodeLine{00072\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_numerical___t_t_t___u_i_a2715fa4b793c7979e4c93d1100f4afbb}{Numerical\_TTT\_UI}}\ :\ \textcolor{keyword}{public}\ UI<int>\ \{}
+\DoxyCodeLine{00073\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00077\ \ \ \ \ \mbox{\hyperlink{class_numerical___t_t_t___u_i_a2715fa4b793c7979e4c93d1100f4afbb}{Numerical\_TTT\_UI}}();}
+\DoxyCodeLine{00078\ }
+\DoxyCodeLine{00084\ \ \ \ \ \textcolor{keyword}{virtual}\ \mbox{\hyperlink{class_player}{Player<int>}}**\ \mbox{\hyperlink{class_numerical___t_t_t___u_i_aea10850ae3bf8ea7b6a7b05c3fbe1581}{setup\_players}}();}
+\DoxyCodeLine{00085\ }
+\DoxyCodeLine{00089\ \ \ \ \ \textcolor{keyword}{virtual}\ \mbox{\hyperlink{class_player}{Player<int>}}*\ \mbox{\hyperlink{class_numerical___t_t_t___u_i_ace66ef32d80112646836a5518c9250ac}{create\_player}}(\textcolor{keywordtype}{string}\&\ name,\ \textcolor{keywordtype}{int}\ symbol,\ PlayerType\ type);}
+\DoxyCodeLine{00090\ }
+\DoxyCodeLine{00094\ \ \ \ \ \textcolor{keyword}{virtual}\ \mbox{\hyperlink{class_move}{Move<int>}}*\ \mbox{\hyperlink{class_numerical___t_t_t___u_i_a3c550b5bafc9e17aed4c4ae5da8a75b1}{get\_move}}(\mbox{\hyperlink{class_player}{Player<int>}}*\ player);}
+\DoxyCodeLine{00095\ \};}
+
+\end{DoxyCode}

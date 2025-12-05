@@ -1,0 +1,37 @@
+\doxysection{Misere\+\_\+\+TTT\+\_\+\+Classes.\+h}
+\hypertarget{_misere___t_t_t___classes_8h_source}{}\label{_misere___t_t_t___classes_8h_source}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ MISERE\_TTT\_CLASSES\_H}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ MISERE\_TTT\_CLASSES\_H}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}BoardGame\_Classes.h"{}}}
+\DoxyCodeLine{00005\ }
+\DoxyCodeLine{00006\ \textcolor{keyword}{class\ }Misere\_TTT\_Board\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_board_ae5dfded241ee3644196e2f6074d1d0b1}{Board}}<char>\ \{}
+\DoxyCodeLine{00007\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00008\ \ \ \ \ Misere\_TTT\_Board();}
+\DoxyCodeLine{00009\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_misere___t_t_t___board_ab378c462591c67a3c3c3be4162283264}{update\_board}}(\mbox{\hyperlink{class_move}{Move<char>}}*\ move)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00010\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_misere___t_t_t___board_a9b0d27a3ae08e02d28c11d0fd671dc06}{is\_win}}(\mbox{\hyperlink{class_player}{Player<char>}}*\ player)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00011\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_misere___t_t_t___board_afb153d8306497fb8d7686ec7902dfd84}{is\_lose}}(\mbox{\hyperlink{class_player}{Player<char>}}*\ player)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00012\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_misere___t_t_t___board_a0ea7c31dbe7872543bd3be68a1eac78c}{is\_draw}}(\mbox{\hyperlink{class_player}{Player<char>}}*\ player)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00013\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_misere___t_t_t___board_ad2fe4095929f4aee567e2a30682fee88}{game\_is\_over}}(\mbox{\hyperlink{class_player}{Player<char>}}*\ player)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00014\ \ \ \ \ \textcolor{comment}{//\ New\ methods\ for\ AI\ (minimax)}}
+\DoxyCodeLine{00015\ \ \ \ \ \mbox{\hyperlink{class_move}{Move<char>}}*\ get\_best\_move\_for\_ai(\textcolor{keywordtype}{char}\ aiSymbol,\ \textcolor{keywordtype}{char}\ humanSymbol);}
+\DoxyCodeLine{00016\ }
+\DoxyCodeLine{00017\ \ \ \ \ \textcolor{comment}{//Helpers\ for\ minimax}}
+\DoxyCodeLine{00018\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00019\ \ \ \ \ \textcolor{keywordtype}{bool}\ check\_three(\textcolor{keywordtype}{char}\ sym);\ }
+\DoxyCodeLine{00020\ \ \ \ \ \textcolor{keywordtype}{int}\ evaluate\_state(\textcolor{keywordtype}{char}\ aiSym,\ \textcolor{keywordtype}{char}\ huSym,\ \textcolor{keywordtype}{int}\ depth);}
+\DoxyCodeLine{00021\ \ \ \ \ \textcolor{keywordtype}{int}\ minimax(\textcolor{keywordtype}{bool}\ isMaximizing,\ \textcolor{keywordtype}{char}\ aiSym,\ \textcolor{keywordtype}{char}\ huSym,\ \textcolor{keywordtype}{int}\ depth,\ \textcolor{keywordtype}{int}\ alpha,\ \textcolor{keywordtype}{int}\ beta);}
+\DoxyCodeLine{00022\ }
+\DoxyCodeLine{00023\ \};}
+\DoxyCodeLine{00024\ }
+\DoxyCodeLine{00025\ \textcolor{keyword}{class\ }Misere\_TTT\_UI\ :\ \textcolor{keyword}{public}\ UI<char>\ \{}
+\DoxyCodeLine{00026\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00027\ \ \ \ \ Misere\_TTT\_UI();}
+\DoxyCodeLine{00028\ \ \ \ \ \mbox{\hyperlink{class_player}{Player<char>}}*\ create\_player(std::string\&\ name,\ \textcolor{keywordtype}{char}\ symbol,\ PlayerType\ type)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00029\ \ \ \ \ \mbox{\hyperlink{class_move}{Move<char>}}*\ \mbox{\hyperlink{class_misere___t_t_t___u_i_aa6c69dd5d03cccfae43f8c7c1d8dbad5}{get\_move}}(\mbox{\hyperlink{class_player}{Player<char>}}*\ player)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00030\ \};}
+\DoxyCodeLine{00031\ }
+\DoxyCodeLine{00032\ \textcolor{preprocessor}{\#endif\ }}
+
+\end{DoxyCode}

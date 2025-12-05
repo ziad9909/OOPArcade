@@ -25,6 +25,7 @@
 var NAVTREE =
 [
   [ "My Project", "index.html", [
+    [ "README", "md__r_e_a_d_m_e.html", null ],
     [ "Classes", "annotated.html", [
       [ "Class List", "annotated.html", "annotated_dup" ],
       [ "Class Index", "classes.html", null ],
@@ -36,18 +37,14 @@ var NAVTREE =
       ] ]
     ] ],
     [ "Files", "files.html", [
-      [ "File List", "files.html", "files_dup" ],
-      [ "File Members", "globals.html", [
-        [ "All", "globals.html", null ],
-        [ "Functions", "globals_func.html", null ]
-      ] ]
+      [ "File List", "files.html", "files_dup" ]
     ] ]
   ] ]
 ];
 
 var NAVTREEINDEX =
 [
-"_board_game___classes_8h_source.html"
+"4x4___t_t_t___classes_8h_source.html"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronization';

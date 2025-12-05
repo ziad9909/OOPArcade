@@ -1,3 +1,28 @@
+/**
+ * @file FiveByFiveTTT_Classes.h
+ * @brief 5x5 Tic-Tac-Toe variant implementation
+ * @author Your Name/Team
+ * @date 2024
+ * @version 1.0
+ * @copyright Copyright (c) 2024 Board Game Collection
+ *
+ * @brief 5x5 Tic-Tac-Toe: Larger board, compete for most three-in-a-rows.
+ *
+ * @game
+ * - Board: 5x5 grid
+ * - Players: 2
+ * - Symbols: 'X' and 'O'
+ * - Objective: Create more three-in-a-row sequences than opponent
+ * - Game ends when board is full (after 25 moves)
+ * - Winner is player with more sequences at game end
+ *
+ * @variant
+ * - Larger 5x5 board for more complex gameplay
+ * - Score-based winning condition
+ * - Multiple winning lines can be created
+ * - Draws possible when sequences are equal
+ */
+
 #pragma once
 #ifndef FIVE_BY_FIVE_TTT_CLASSES_H
 #define FIVE_BY_FIVE_TTT_CLASSES_H
@@ -9,103 +34,110 @@ using namespace std;
 
 /**
  * @class FiveByFive_TTT_Board
- * @brief Represents a 5x5 Tic-Tac-Toe board where players compete to create the most three-in-a-row sequences.
+ * @brief Represents 5x5 Tic-Tac-Toe board
+ *
+ * Players compete to create the most three-in-a-row sequences.
  */
 class FiveByFive_TTT_Board : public Board<char> {
 private:
     /**
-     * @brief Counts all three-in-a-row sequences for a given symbol.
-     * @param symbol The symbol (X or O) to check.
-     * @return The total number of three-in-a-row sequences for the symbol.
+     * @brief Count all three-in-a-row sequences for given symbol
+     * @param symbol Symbol to check ('X' or 'O')
+     * @return Total number of three-in-a-row sequences
      */
     int count_sequences(char symbol);
 
 public:
     /**
-     * @brief Constructs a 5x5 Tic-Tac-Toe board.
+     * @brief Constructor for 5x5 Tic-Tac-Toe board
      */
     FiveByFive_TTT_Board();
 
-    // --- Virtual functions implementation ---
-
     /**
-     * @brief Updates the board with a player's move.
-     * @param move Pointer to a Move<char> object.
-     * @return true if the move is valid, false otherwise.
+     * @brief Update board with player's move
+     * @param move Pointer to Move object
+     * @return true if move is valid and applied, false otherwise
      */
-    virtual bool update_board(Move<char>* move);
+    virtual bool update_board(Move<char>* move) override;
 
     /**
-     * @brief Checks if the game ended in a draw.
-     * @param player Current player (not used for draw check).
-     * @return true if the board is full, false otherwise.
+     * @brief Check if game is a draw
+     * @param player Current player
+     * @return true if board is full, false otherwise
      */
-    virtual bool is_draw(Player<char>* player);
+    virtual bool is_draw(Player<char>* player) override;
 
     /**
-     * @brief Checks if a player has won (has more sequences than opponent).
-     * @param player Current player to check.
-     * @return true if current player has more three-in-a-row sequences.
+     * @brief Check if player has won
+     * @param player Current player to check
+     * @return true if player has more sequences than opponent
      */
-    virtual bool is_win(Player<char>* player);
+    virtual bool is_win(Player<char>* player) override;
 
     /**
-     * @brief Checks if a player has lost (opponent has more sequences).
-     * @param player Current player to check.
-     * @return true if opponent has more three-in-a-row sequences.
+     * @brief Check if player has lost
+     * @param player Current player to check
+     * @return true if opponent has more sequences
      */
-    virtual bool is_lose(Player<char>* player);
+    virtual bool is_lose(Player<char>* player) override;
 
     /**
-     * @brief Checks if the game is over.
-     * @param player Current player.
-     * @return true if the board is full (after 24 moves).
+     * @brief Check if game is over
+     * @param player Current player
+     * @return true if board is full (after 25 moves)
      */
-    virtual bool game_is_over(Player<char>* player);
+    virtual bool game_is_over(Player<char>* player) override;
 
     /**
-     * @brief Gets the count of sequences for both players.
-     * @return Pair of integers (X sequences, O sequences).
+     * @brief Get sequence counts for both players
+     * @return Pair (X sequences, O sequences)
      */
     pair<int, int> get_sequence_counts();
 
     /**
-     * @brief Gets the number of moves made (public accessor for n_moves).
+     * @brief Get number of moves made
+     * @return Current move count
      */
     int get_move_count() const { return n_moves; }
 };
 
 /**
  * @class FiveByFive_TTT_UI
- * @brief User Interface for the 5x5 Tic-Tac-Toe game.
+ * @brief User Interface for 5x5 Tic-Tac-Toe
  */
 class FiveByFive_TTT_UI : public UI<char> {
 public:
     /**
-     * @brief Constructs the UI with welcome message.
+     * @brief Constructor with welcome message
      */
     FiveByFive_TTT_UI();
 
     /**
-     * @brief Sets up two players for the game.
-     * @return Array of two Player pointers.
+     * @brief Set up two players for the game
+     * @return Array of two Player pointers
      */
-    virtual Player<char>** setup_players();
+    virtual Player<char>** setup_players() override;
 
     /**
-     * @brief Creates a player of specified type.
+     * @brief Create a player of specified type
+     * @param name Player's name
+     * @param symbol Player's symbol
+     * @param type Player type (Human or Computer)
+     * @return Pointer to created Player object
      */
-    virtual Player<char>* create_player(string& name, char symbol, PlayerType type);
+    virtual Player<char>* create_player(string& name, char symbol, PlayerType type) override;
 
     /**
-     * @brief Gets a move from a player.
+     * @brief Get a move from a player
+     * @param player Pointer to player making move
+     * @return Pointer to Move object
      */
-    virtual Move<char>* get_move(Player<char>* player);
+    virtual Move<char>* get_move(Player<char>* player) override;
 
     /**
-     * @brief Runs the game with custom logic for 5x5 TTT.
-     * @param board The game board.
-     * @param players Array of two players.
+     * @brief Run game with custom logic for 5x5 TTT
+     * @param board The game board
+     * @param players Array of two players
      */
     void run_game_with_custom_loop(FiveByFive_TTT_Board* board, Player<char>* players[2]);
 };

@@ -1,0 +1,96 @@
+\doxysection{Timed\+\_\+\+TTT\+\_\+\+UI Class Reference}
+\hypertarget{class_timed___t_t_t___u_i}{}\label{class_timed___t_t_t___u_i}\index{Timed\_TTT\_UI@{Timed\_TTT\_UI}}
+
+
+User Interface for Timed Tic-\/\+Tac-\/\+Toe game.  
+
+
+
+
+{\ttfamily \#include $<$Timed\+\_\+\+TTT\+\_\+\+Classes.\+h$>$}
+
+Inheritance diagram for Timed\+\_\+\+TTT\+\_\+\+UI\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_timed___t_t_t___u_i}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_timed___t_t_t___u_i_aaadf9fda7224d9036e3cf4190f623048}\label{class_timed___t_t_t___u_i_aaadf9fda7224d9036e3cf4190f623048} 
+{\bfseries Timed\+\_\+\+TTT\+\_\+\+UI} ()
+\begin{DoxyCompactList}\small\item\em Constructs a \doxylink{class_timed___t_t_t___u_i}{Timed\+\_\+\+TTT\+\_\+\+UI} object. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{class_player}{Player}}$<$ char $>$ \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_timed___t_t_t___u_i_a6b7620a21935b6e533c85d21d947e1a8}{setup\+\_\+players}} ()
+\begin{DoxyCompactList}\small\item\em Sets up players for the game. \end{DoxyCompactList}\item 
+\Hypertarget{class_timed___t_t_t___u_i_ac05298430d691346a7fb153e81b9ed9c}\label{class_timed___t_t_t___u_i_ac05298430d691346a7fb153e81b9ed9c} 
+virtual \mbox{\hyperlink{class_player}{Player}}$<$ char $>$ \texorpdfstring{$\ast$}{*} {\bfseries create\+\_\+player} (string \&name, char symbol, Player\+Type type)
+\begin{DoxyCompactList}\small\item\em Creates a player of the specified type. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{class_move}{Move}}$<$ char $>$ \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_timed___t_t_t___u_i_a68f9f7c498f13300a5806ced9b502ff0}{get\+\_\+move}} (\mbox{\hyperlink{class_player}{Player}}$<$ char $>$ \texorpdfstring{$\ast$}{*}player)
+\begin{DoxyCompactList}\small\item\em Retrieves the next move from a player. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_u_i}{UI$<$ char $>$}}}
+\begin{DoxyCompactItemize}
+\item 
+{\bfseries UI} (int cell\+\_\+display\+\_\+width=3)
+\item 
+virtual void {\bfseries display\+\_\+message} (string message)
+\begin{DoxyCompactList}\small\item\em Display any message to the user. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{class_player}{Player}}$<$ char $>$ \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_u_i_a94561e0bb4bbcbe5ff71ca6d751922df}{create\+\_\+player}} (string \&name, char symbol, Player\+Type type)
+\begin{DoxyCompactList}\small\item\em Create a player object based on input name, symbol, and type. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_u_i_aa3775124efaeac59935ae0afb354708d}{display\+\_\+board\+\_\+matrix}} (const vector$<$ vector$<$ char $>$ $>$ \&matrix) const
+\begin{DoxyCompactList}\small\item\em Display the current board matrix in formatted form. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Protected Member Functions inherited from \mbox{\hyperlink{class_u_i}{UI$<$ char $>$}}}
+\begin{DoxyCompactItemize}
+\item 
+virtual string {\bfseries get\+\_\+player\+\_\+name} (string player\+\_\+label)
+\begin{DoxyCompactList}\small\item\em Ask the user for the player\textquotesingle{}s name. \end{DoxyCompactList}\item 
+virtual Player\+Type {\bfseries get\+\_\+player\+\_\+type\+\_\+choice} (string player\+\_\+label, const vector$<$ string $>$ \&options)
+\begin{DoxyCompactList}\small\item\em Ask the user to choose the player type from a list. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes inherited from \mbox{\hyperlink{class_u_i}{UI$<$ char $>$}}}
+\begin{DoxyCompactItemize}
+\item 
+int {\bfseries cell\+\_\+width}
+\begin{DoxyCompactList}\small\item\em Width of each displayed board cell. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+User Interface for Timed Tic-\/\+Tac-\/\+Toe game. 
+
+\label{doc-func-members}
+\Hypertarget{class_timed___t_t_t___u_i_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_timed___t_t_t___u_i_a68f9f7c498f13300a5806ced9b502ff0}\index{Timed\_TTT\_UI@{Timed\_TTT\_UI}!get\_move@{get\_move}}
+\index{get\_move@{get\_move}!Timed\_TTT\_UI@{Timed\_TTT\_UI}}
+\doxysubsubsection{\texorpdfstring{get\_move()}{get\_move()}}
+{\footnotesize\ttfamily \label{class_timed___t_t_t___u_i_a68f9f7c498f13300a5806ced9b502ff0} 
+\mbox{\hyperlink{class_move}{Move}}$<$ char $>$ \texorpdfstring{$\ast$}{*} Timed\+\_\+\+TTT\+\_\+\+UI\+::get\+\_\+move (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_player}{Player}}$<$ char $>$ \texorpdfstring{$\ast$}{*}}]{player}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Retrieves the next move from a player. 
+
+
+
+Implements \mbox{\hyperlink{class_u_i_a8befa259c38c57e6ae2e8ed81c476337}{UI$<$ char $>$}}.
+
+\Hypertarget{class_timed___t_t_t___u_i_a6b7620a21935b6e533c85d21d947e1a8}\index{Timed\_TTT\_UI@{Timed\_TTT\_UI}!setup\_players@{setup\_players}}
+\index{setup\_players@{setup\_players}!Timed\_TTT\_UI@{Timed\_TTT\_UI}}
+\doxysubsubsection{\texorpdfstring{setup\_players()}{setup\_players()}}
+{\footnotesize\ttfamily \label{class_timed___t_t_t___u_i_a6b7620a21935b6e533c85d21d947e1a8} 
+\mbox{\hyperlink{class_player}{Player}}$<$ char $>$ \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*} Timed\+\_\+\+TTT\+\_\+\+UI\+::setup\+\_\+players (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Sets up players for the game. 
+
+
+
+Reimplemented from \mbox{\hyperlink{class_u_i_a6966a040c995b2292e5edddaa94f889a}{UI$<$ char $>$}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Timed\+\_\+\+TTT\+\_\+\+Classes.\+h\item 
+Timed\+\_\+\+TTT\+\_\+\+Classes.\+cpp\end{DoxyCompactItemize}

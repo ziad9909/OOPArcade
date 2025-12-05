@@ -1,27 +1,27 @@
 var indexSectionsWithContent =
 {
-  0: "bcdgimnprstux~",
-  1: "bgmpux",
-  2: "x",
-  3: "bcdgimprsux~",
-  4: "bcnrst"
+  0: "bcdefgimnoprstuvwx~",
+  1: "bdfgmnopstuwx",
+  2: "bcdefgimnprstuv~",
+  3: "bcnrst",
+  4: "r"
 };
 
 var indexSectionNames =
 {
   0: "all",
   1: "classes",
-  2: "files",
-  3: "functions",
-  4: "variables"
+  2: "functions",
+  3: "variables",
+  4: "pages"
 };
 
 var indexSectionLabels =
 {
   0: "All",
   1: "Classes",
-  2: "Files",
-  3: "Functions",
-  4: "Variables"
+  2: "Functions",
+  3: "Variables",
+  4: "Pages"
 };
 

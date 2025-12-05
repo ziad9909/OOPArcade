@@ -133,6 +133,27 @@ build CMakeFiles/OOPArcade.dir/FiveByFiveTTT_Classes.cpp.obj: CXX_COMPILER__OOPA
   OBJECT_DIR = CMakeFiles\OOPArcade.dir
   OBJECT_FILE_DIR = CMakeFiles\OOPArcade.dir
 
+build CMakeFiles/OOPArcade.dir/Pyramid_TTT_Classes.cpp.obj: CXX_COMPILER__OOPArcade_unscanned_Debug D$:/OOPArcade/Pyramid_TTT_Classes.cpp || cmake_object_order_depends_target_OOPArcade
+  DEP_FILE = CMakeFiles\OOPArcade.dir\Pyramid_TTT_Classes.cpp.obj.d
+  FLAGS = -g -std=gnu++14 -fdiagnostics-color=always
+  INCLUDES = -ID:/OOPArcade/.
+  OBJECT_DIR = CMakeFiles\OOPArcade.dir
+  OBJECT_FILE_DIR = CMakeFiles\OOPArcade.dir
+
+build CMakeFiles/OOPArcade.dir/Memory_TTT_Classes.cpp.obj: CXX_COMPILER__OOPArcade_unscanned_Debug D$:/OOPArcade/Memory_TTT_Classes.cpp || cmake_object_order_depends_target_OOPArcade
+  DEP_FILE = CMakeFiles\OOPArcade.dir\Memory_TTT_Classes.cpp.obj.d
+  FLAGS = -g -std=gnu++14 -fdiagnostics-color=always
+  INCLUDES = -ID:/OOPArcade/.
+  OBJECT_DIR = CMakeFiles\OOPArcade.dir
+  OBJECT_FILE_DIR = CMakeFiles\OOPArcade.dir
+
+build CMakeFiles/OOPArcade.dir/Ultimate_TTT_Classes.cpp.obj: CXX_COMPILER__OOPArcade_unscanned_Debug D$:/OOPArcade/Ultimate_TTT_Classes.cpp || cmake_object_order_depends_target_OOPArcade
+  DEP_FILE = CMakeFiles\OOPArcade.dir\Ultimate_TTT_Classes.cpp.obj.d
+  FLAGS = -g -std=gnu++14 -fdiagnostics-color=always
+  INCLUDES = -ID:/OOPArcade/.
+  OBJECT_DIR = CMakeFiles\OOPArcade.dir
+  OBJECT_FILE_DIR = CMakeFiles\OOPArcade.dir
+
 
 # =============================================================================
 # Link build statements for EXECUTABLE target OOPArcade
@@ -141,7 +162,7 @@ build CMakeFiles/OOPArcade.dir/FiveByFiveTTT_Classes.cpp.obj: CXX_COMPILER__OOPA
 #############################################
 # Link the executable OOPArcade.exe
 
-build OOPArcade.exe: CXX_EXECUTABLE_LINKER__OOPArcade_Debug CMakeFiles/OOPArcade.dir/main.cpp.obj CMakeFiles/OOPArcade.dir/XO_Classes.cpp.obj CMakeFiles/OOPArcade.dir/Numerical_TTT_Classes.cpp.obj CMakeFiles/OOPArcade.dir/Misere_TTT_Classes.cpp.obj CMakeFiles/OOPArcade.dir/SUS.cpp.obj CMakeFiles/OOPArcade.dir/Word_TTT.cpp.obj CMakeFiles/OOPArcade.dir/4x4_TTT_Classes.cpp.obj CMakeFiles/OOPArcade.dir/Obstacle6x6_TTT.cpp.obj CMakeFiles/OOPArcade.dir/Timed_TTT_Classes.cpp.obj CMakeFiles/OOPArcade.dir/Four_in_a_row.cpp.obj CMakeFiles/OOPArcade.dir/Diamond_TTT_Classes.cpp.obj CMakeFiles/OOPArcade.dir/FiveByFiveTTT_Classes.cpp.obj
+build OOPArcade.exe: CXX_EXECUTABLE_LINKER__OOPArcade_Debug CMakeFiles/OOPArcade.dir/main.cpp.obj CMakeFiles/OOPArcade.dir/XO_Classes.cpp.obj CMakeFiles/OOPArcade.dir/Numerical_TTT_Classes.cpp.obj CMakeFiles/OOPArcade.dir/Misere_TTT_Classes.cpp.obj CMakeFiles/OOPArcade.dir/SUS.cpp.obj CMakeFiles/OOPArcade.dir/Word_TTT.cpp.obj CMakeFiles/OOPArcade.dir/4x4_TTT_Classes.cpp.obj CMakeFiles/OOPArcade.dir/Obstacle6x6_TTT.cpp.obj CMakeFiles/OOPArcade.dir/Timed_TTT_Classes.cpp.obj CMakeFiles/OOPArcade.dir/Four_in_a_row.cpp.obj CMakeFiles/OOPArcade.dir/Diamond_TTT_Classes.cpp.obj CMakeFiles/OOPArcade.dir/FiveByFiveTTT_Classes.cpp.obj CMakeFiles/OOPArcade.dir/Pyramid_TTT_Classes.cpp.obj CMakeFiles/OOPArcade.dir/Memory_TTT_Classes.cpp.obj CMakeFiles/OOPArcade.dir/Ultimate_TTT_Classes.cpp.obj
   FLAGS = -g
   LINK_LIBRARIES = -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   OBJECT_DIR = CMakeFiles\OOPArcade.dir

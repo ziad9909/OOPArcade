@@ -423,19 +423,28 @@ function initNumericalTTT(player1Config, player2Config) {
 
     // Create UI
     const ui = new NumericalTTTUI();
+// Create game manager
+const gameManager = new GameManager(board, players, ui);
 
-    // Create game manager
-    const gameManager = new GameManager(board, players, ui);
+// ربط gameManager بالـ window قبل أي تحديث للواجهة
+window.gameManager = gameManager;
 
-    // Display initial board
-    ui.displayBoard(board);
-    ui.updateTurnIndicator(players[0]);
+// Display initial board
+ui.displayBoard(board);
 
-    // Update player info display
-    document.querySelector('#player1-info .player-name').textContent = player1Config.name;
-    document.querySelector('#player1-info .player-symbol').textContent = 'ODD';
-    document.querySelector('#player2-info .player-name').textContent = player2Config.name;
-    document.querySelector('#player2-info .player-symbol').textContent = 'EVEN';
+// إذا كان اللاعب الأول بشري، نحدث واجهة اختيار الرقم
+if (players[0].getType() === PlayerType.HUMAN) {
+    ui.updateNumberSelection(board);
+}
+
+// Update turn indicator
+ui.updateTurnIndicator(players[0]);
+
+// Update player info display
+document.querySelector('#player1-info .player-name').textContent = player1Config.name;
+document.querySelector('#player1-info .player-symbol').textContent = 'ODD';
+document.querySelector('#player2-info .player-name').textContent = player2Config.name;
+document.querySelector('#player2-info .player-symbol').textContent = 'EVEN';
 
     // Add info about the game
     const additionalInfo = document.getElementById('additional-info');
@@ -461,4 +470,5 @@ if (typeof window !== 'undefined') {
     window.NumericalTTTUI = NumericalTTTUI;
     window.initNumericalTTT = initNumericalTTT;
 }
+
 

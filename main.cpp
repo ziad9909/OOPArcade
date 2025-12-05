@@ -5,6 +5,7 @@
 #include <limits>
 #include <cstdlib> // For srand
 #include <ctime>   // For time
+#include "Ultimate_TTT_Classes.h"
 
 #include "BoardGame_Classes.h"
 #include "XO_Classes.h" 
@@ -224,6 +225,14 @@ void run_memory_ttt_game() {
     delete board;
 }
 
+// Ultimate TTT game
+void run_ultimate_ttt_game() {
+    UI<char>* ui = new Ultimate_TTT_UI();
+    Board<char>* board = new Ultimate_TTT_Board();
+    Player<char>** players = ui->setup_players();
+    GameManager<char> game(board, players, ui);
+    game.run();
+}
 int main() {
     srand(static_cast<unsigned int>(time(0))); // Seed the random number generator
 
@@ -243,7 +252,8 @@ int main() {
         cout << "11.Play 5x5 Tic Tac Toe" << endl;
         cout << "12.Play pyramid Tic Tac Toe" << endl;
         cout << "13.Play memory Tic Tac Toe" << endl;
-        cout << "14.Exit"<< endl;
+        cout << "14.Play Ultimate Tic Tac Toe" << endl;
+        cout << "15.Exit"<< endl;
         cout << "Enter your choice: ";
         cin >> choice;
 
@@ -288,6 +298,9 @@ int main() {
             run_memory_ttt_game();
             break;
         case 14:
+            run_ultimate_ttt_game();
+            break;
+        case 15:
             cout << "Goodbye!" << endl;
             return 0;
         default:

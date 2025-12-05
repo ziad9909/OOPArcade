@@ -166,3 +166,4 @@ if (typeof window !== 'undefined') {
     window.init4x4TTT = init4x4TTT;
 }
 
+

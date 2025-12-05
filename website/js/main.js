@@ -203,3 +203,4 @@ window.startGame = startGame;
 window.restartGame = restartGame;
 window.goHome = goHome;
 
+

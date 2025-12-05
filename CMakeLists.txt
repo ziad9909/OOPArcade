@@ -33,4 +33,6 @@ add_executable(OOPArcade
     Pyramid_TTT_Classes.cpp
     Memory_TTT_Classes.h
     Memory_TTT_Classes.cpp
+    Ultimate_TTT_Classes.h
+    Ultimate_TTT_Classes.cpp
 )

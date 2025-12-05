@@ -29,6 +29,7 @@
 #include <limits>
 #include <cstdlib> // For srand
 #include <ctime>   // For time
+#include "Ultimate_TTT_Classes.h"
 
 #include "BoardGame_Classes.h"
 #include "XO_Classes.h" 
@@ -42,6 +43,8 @@
 #include "Four_in_a_row.h"
 #include "Diamond_TTT_Classes.h"
 #include "FiveByFiveTTT_Classes.h"
+#include "Pyramid_TTT_Classes.h"
+#include "Memory_TTT_Classes.h"
 
 using namespace std;
 
@@ -278,6 +281,13 @@ void run_fivebyfive_ttt_game() {
     delete ui;
     delete board;
 }
+// pyramid_TTT
+void run_pyramid_ttt_game() {
+    UI<char>* ui = new Pyramid_TTT_UI();
+    Board<char>* board = new Pyramid_TTT_Board();
+    Player<char>** players = ui->setup_players();
+    GameManager<char> game(board, players, ui);
+    game.run();
 
 /**
  * @brief Main function - entry point of the application
@@ -286,6 +296,35 @@ void run_fivebyfive_ttt_game() {
  * Displays a menu allowing users to select which game to play.
  * Loops until user chooses to exit.
  */
+    for (int i = 0; i < 2; i++) delete players[i];
+    delete[] players;
+    delete board;
+    delete ui;
+}
+
+// memory -TTT
+void run_memory_ttt_game() {
+    UI<char>* ui = new Memory_TTT_UI();
+    Board<char>* board = new Memory_TTT_Board();
+    Player<char>** players = ui->setup_players();
+
+    GameManager<char> game(board, players, ui);
+    game.run();
+
+    for (int i = 0; i < 2; ++i) delete players[i];
+    delete[] players;
+    delete ui;
+    delete board;
+}
+
+// Ultimate TTT game
+void run_ultimate_ttt_game() {
+    UI<char>* ui = new Ultimate_TTT_UI();
+    Board<char>* board = new Ultimate_TTT_Board();
+    Player<char>** players = ui->setup_players();
+    GameManager<char> game(board, players, ui);
+    game.run();
+}
 int main() {
     srand(static_cast<unsigned int>(time(0))); // Seed the random number generator
 
@@ -299,11 +338,14 @@ int main() {
         cout << "5. Play Word Tic Tac Toe" << endl;
         cout << "6. Play 4x4 Moving Tic-Tac-Toe" << endl;
         cout << "7. Play Obstacle Tic Tac Toe" << endl;
-        cout << "8. Play Infinity Tic Tac Toe" << endl;
-        cout << "9. Play Four in a Row" << endl;
-        cout << "10. Play Diamond Tic Tac Toe" << endl;
-        cout << "11. Play 5x5 Tic Tac Toe" << endl;
-        cout << "12. Exit" << endl;
+		cout << "8. Play Infinity Tic Tac Toe" << endl;
+        cout << "9. Play Four in a row " << endl;
+		cout << "10.Play Diamond Tic Tac Toe" << endl;
+        cout << "11.Play 5x5 Tic Tac Toe" << endl;
+        cout << "12.Play pyramid Tic Tac Toe" << endl;
+        cout << "13.Play memory Tic Tac Toe" << endl;
+        cout << "14.Play Ultimate Tic Tac Toe" << endl;
+        cout << "15.Exit"<< endl;
         cout << "Enter your choice: ";
         cin >> choice;
 
@@ -342,6 +384,15 @@ int main() {
             run_fivebyfive_ttt_game();
             break;
         case 12:
+            run_pyramid_ttt_game();
+            break;
+        case 13:
+            run_memory_ttt_game();
+            break;
+        case 14:
+            run_ultimate_ttt_game();
+            break;
+        case 15:
             cout << "Goodbye!" << endl;
             return 0;
         default:

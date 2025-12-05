@@ -246,3 +246,4 @@ if (typeof window !== 'undefined') {
     window.initWordTTT = initWordTTT;
 }
 
+

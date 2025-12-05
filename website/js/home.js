@@ -79,3 +79,4 @@ function navigateToGame(gameType) {
 // Expose to window
 window.navigateToGame = navigateToGame;
 
+

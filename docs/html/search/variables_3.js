@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['emptycell_0',['emptyCell',['../class_timed___t_t_t___board.html#af9497b6d6136c4ee85e11c4a61660025',1,'Timed_TTT_Board']]],
-  ['even_5fnums_1',['even_nums',['../class_numerical___t_t_t___board.html#ae23a1e4c295c836b194aafaec68a2756',1,'Numerical_TTT_Board']]]
+  ['dictionary_0',['dictionary',['../class_word___t_t_t___board.html#aa76808a3374fe54a5390ff0b51c86fe5',1,'Word_TTT_Board']]]
 ];

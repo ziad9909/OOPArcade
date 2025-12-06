@@ -120,7 +120,7 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:aaad19c26b8e4c49ba7ada54abd83e23c" id="r_aaad19c26b8e4c49ba7ada54abd83e23c"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_u_i.html#aaad19c26b8e4c49ba7ada54abd83e23c">display_message</a> (string message)</td></tr>
 <tr class="memdesc:aaad19c26b8e4c49ba7ada54abd83e23c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Display any message to the user.  <br /></td></tr>
 <tr class="memitem:ab3d1aefb33eac0fafc4a69979c42ef69" id="r_ab3d1aefb33eac0fafc4a69979c42ef69"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_move.html">Move</a>&lt; char &gt; *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab3d1aefb33eac0fafc4a69979c42ef69">get_move</a> (<a class="el" href="class_player.html">Player</a>&lt; char &gt; *player) override</td></tr>
-<tr class="memdesc:ab3d1aefb33eac0fafc4a69979c42ef69"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get a move from a player.  <br /></td></tr>
+<tr class="memdesc:ab3d1aefb33eac0fafc4a69979c42ef69"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get a move from a player (human or computer).  <br /></td></tr>
 <tr class="memitem:a6966a040c995b2292e5edddaa94f889a" id="r_a6966a040c995b2292e5edddaa94f889a"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="class_player.html">Player</a>&lt; char &gt; **&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_u_i.html#a6966a040c995b2292e5edddaa94f889a">setup_players</a> ()</td></tr>
 <tr class="memdesc:a6966a040c995b2292e5edddaa94f889a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set up players for the game.  <br /></td></tr>
 </table><table class="memberdecls">
@@ -138,8 +138,9 @@ Protected Attributes</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>User Interface for 6x6 Tic-Tac-Toe with obstacles. </p>
+<p>Handles player input, displays the board, and manages both human and computer player interactions. Computer players make random valid moves. </p>
 
-<p class="definition">Definition at line <a class="el" href="_obstacle6x6___t_t_t_8h_source.html#l00103">103</a> of file <a class="el" href="_obstacle6x6___t_t_t_8h_source.html">Obstacle6x6_TTT.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_obstacle6x6___t_t_t_8h_source.html#l00126">126</a> of file <a class="el" href="_obstacle6x6___t_t_t_8h_source.html">Obstacle6x6_TTT.h</a>.</p>
 </div><a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a043dbaae8ca750d60354f123c9f364bb" name="a043dbaae8ca750d60354f123c9f364bb"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a043dbaae8ca750d60354f123c9f364bb">&#9670;&#160;</a></span>Obstacle6x6_TTT_UI()</h2>
@@ -157,6 +158,7 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Constructor for 6x6 Tic-Tac-Toe with obstacles <a class="el" href="class_u_i.html" title="Base class for handling user interface and input/output.">UI</a>. </p>
+<p>Initializes the <a class="el" href="class_u_i.html" title="Base class for handling user interface and input/output.">UI</a> for a 6x6 board game. </p>
 
 <p class="definition">Definition at line <a class="el" href="_obstacle6x6___t_t_t_8cpp_source.html#l00111">111</a> of file <a class="el" href="_obstacle6x6___t_t_t_8cpp_source.html">Obstacle6x6_TTT.cpp</a>.</p>
 
@@ -201,7 +203,7 @@ Protected Attributes</h2></td></tr>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">name</td><td><a class="el" href="class_player.html" title="Base template for all players (human or AI).">Player</a>'s name </td></tr>
-    <tr><td class="paramname">symbol</td><td><a class="el" href="class_player.html" title="Base template for all players (human or AI).">Player</a>'s symbol </td></tr>
+    <tr><td class="paramname">symbol</td><td><a class="el" href="class_player.html" title="Base template for all players (human or AI).">Player</a>'s symbol ('X' or 'O') </td></tr>
     <tr><td class="paramname">type</td><td><a class="el" href="class_player.html" title="Base template for all players (human or AI).">Player</a> type (Human or Computer) </td></tr>
   </table>
   </dd>
@@ -334,14 +336,15 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Get a move from a player. </p>
+<p>Get a move from a player (human or computer). </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">player</td><td>Pointer to player making the move </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>Pointer to <a class="el" href="class_move.html" title="Represents a single move in a board game.">Move</a> object </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>Pointer to <a class="el" href="class_move.html" title="Represents a single move in a board game.">Move</a> object containing coordinates and symbol</dd></dl>
+<p>For human players: prompts for row and column input (0-5) For computer players: generates random valid move automatically </p>
 
 <p>Implements <a class="el" href="class_u_i.html#a8befa259c38c57e6ae2e8ed81c476337">UI&lt; char &gt;</a>.</p>
 

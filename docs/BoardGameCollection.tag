@@ -88,6 +88,7 @@
     <name>main.cpp</name>
     <path></path>
     <filename>main_8cpp.html</filename>
+    <includes id="_ultimate___t_t_t___classes_8h" name="Ultimate_TTT_Classes.h" local="yes" import="no" module="no" objc="no">Ultimate_TTT_Classes.h</includes>
     <includes id="_board_game___classes_8h" name="BoardGame_Classes.h" local="yes" import="no" module="no" objc="no">BoardGame_Classes.h</includes>
     <includes id="_x_o___classes_8h" name="XO_Classes.h" local="yes" import="no" module="no" objc="no">XO_Classes.h</includes>
     <includes id="_numerical___t_t_t___classes_8h" name="Numerical_TTT_Classes.h" local="yes" import="no" module="no" objc="no">Numerical_TTT_Classes.h</includes>
@@ -100,6 +101,8 @@
     <includes id="_four__in__a__row_8h" name="Four_in_a_row.h" local="yes" import="no" module="no" objc="no">Four_in_a_row.h</includes>
     <includes id="_diamond___t_t_t___classes_8h" name="Diamond_TTT_Classes.h" local="yes" import="no" module="no" objc="no">Diamond_TTT_Classes.h</includes>
     <includes id="_five_by_five_t_t_t___classes_8h" name="FiveByFiveTTT_Classes.h" local="yes" import="no" module="no" objc="no">FiveByFiveTTT_Classes.h</includes>
+    <includes id="_pyramid___t_t_t___classes_8h" name="Pyramid_TTT_Classes.h" local="yes" import="no" module="no" objc="no">Pyramid_TTT_Classes.h</includes>
+    <includes id="_memory___t_t_t___classes_8h" name="Memory_TTT_Classes.h" local="yes" import="no" module="no" objc="no">Memory_TTT_Classes.h</includes>
     <member kind="function">
       <type>int</type>
       <name>main</name>
@@ -137,6 +140,13 @@
     </member>
     <member kind="function">
       <type>void</type>
+      <name>run_memory_ttt_game</name>
+      <anchorfile>main_8cpp.html</anchorfile>
+      <anchor>af6480ddb38d20223feabaed4b732bca9</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
       <name>run_misere_ttt_game</name>
       <anchorfile>main_8cpp.html</anchorfile>
       <anchor>a3a9800f8c84af0ae1cf970df4b625ca3</anchor>
@@ -158,6 +168,13 @@
     </member>
     <member kind="function">
       <type>void</type>
+      <name>run_pyramid_ttt_game</name>
+      <anchorfile>main_8cpp.html</anchorfile>
+      <anchor>a4e2d13a0b800dd5bf8738037dd937fa6</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
       <name>run_SUS</name>
       <anchorfile>main_8cpp.html</anchorfile>
       <anchor>ae828e0b958cc5493bdfcffece9d17c80</anchor>
@@ -168,6 +185,13 @@
       <name>run_timed_ttt_game</name>
       <anchorfile>main_8cpp.html</anchorfile>
       <anchor>a6f200dcbd7b053049aff43e19d717fcf</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>run_ultimate_ttt_game</name>
+      <anchorfile>main_8cpp.html</anchorfile>
+      <anchor>ae05937e894f6c3d9687b2ff5ecb0c767</anchor>
       <arglist>()</arglist>
     </member>
     <member kind="function">
@@ -184,6 +208,20 @@
       <anchor>a728639b8c5a3a4c5b1783529abd8834c</anchor>
       <arglist>()</arglist>
     </member>
+  </compound>
+  <compound kind="file">
+    <name>Memory_TTT_Classes.cpp</name>
+    <path></path>
+    <filename>_memory___t_t_t___classes_8cpp.html</filename>
+    <includes id="_memory___t_t_t___classes_8h" name="Memory_TTT_Classes.h" local="yes" import="no" module="no" objc="no">Memory_TTT_Classes.h</includes>
+  </compound>
+  <compound kind="file">
+    <name>Memory_TTT_Classes.h</name>
+    <path></path>
+    <filename>_memory___t_t_t___classes_8h.html</filename>
+    <includes id="_board_game___classes_8h" name="BoardGame_Classes.h" local="yes" import="no" module="no" objc="no">BoardGame_Classes.h</includes>
+    <class kind="class">Memory_TTT_Board</class>
+    <class kind="class">Memory_TTT_UI</class>
   </compound>
   <compound kind="file">
     <name>Misere_TTT_Classes.cpp</name>
@@ -242,6 +280,21 @@
     </member>
   </compound>
   <compound kind="file">
+    <name>Pyramid_TTT_Classes.cpp</name>
+    <path></path>
+    <filename>_pyramid___t_t_t___classes_8cpp.html</filename>
+    <includes id="_pyramid___t_t_t___classes_8h" name="Pyramid_TTT_Classes.h" local="yes" import="no" module="no" objc="no">Pyramid_TTT_Classes.h</includes>
+  </compound>
+  <compound kind="file">
+    <name>Pyramid_TTT_Classes.h</name>
+    <path></path>
+    <filename>_pyramid___t_t_t___classes_8h.html</filename>
+    <includes id="_board_game___classes_8h" name="BoardGame_Classes.h" local="yes" import="no" module="no" objc="no">BoardGame_Classes.h</includes>
+    <class kind="class">Pyramid_TTT_Board</class>
+    <class kind="class">Pyramid_TTT_UI</class>
+    <class kind="class">RandomComputerPlayer</class>
+  </compound>
+  <compound kind="file">
     <name>SUS.cpp</name>
     <path></path>
     <filename>_s_u_s_8cpp.html</filename>
@@ -275,6 +328,20 @@
       <anchor>a70d2aca68d1eee6efb885e936b99d5c7</anchor>
       <arglist></arglist>
     </member>
+  </compound>
+  <compound kind="file">
+    <name>Ultimate_TTT_Classes.cpp</name>
+    <path></path>
+    <filename>_ultimate___t_t_t___classes_8cpp.html</filename>
+    <includes id="_ultimate___t_t_t___classes_8h" name="Ultimate_TTT_Classes.h" local="yes" import="no" module="no" objc="no">Ultimate_TTT_Classes.h</includes>
+  </compound>
+  <compound kind="file">
+    <name>Ultimate_TTT_Classes.h</name>
+    <path></path>
+    <filename>_ultimate___t_t_t___classes_8h.html</filename>
+    <includes id="_board_game___classes_8h" name="BoardGame_Classes.h" local="yes" import="no" module="no" objc="no">BoardGame_Classes.h</includes>
+    <class kind="class">Ultimate_TTT_Board</class>
+    <class kind="class">Ultimate_TTT_UI</class>
   </compound>
   <compound kind="file">
     <name>Word_TTT.cpp</name>
@@ -1377,6 +1444,191 @@
     </member>
   </compound>
   <compound kind="class">
+    <name>Memory_TTT_Board</name>
+    <filename>class_memory___t_t_t___board.html</filename>
+    <base>Board&lt; char &gt;</base>
+    <member kind="function">
+      <type></type>
+      <name>Memory_TTT_Board</name>
+      <anchorfile>class_memory___t_t_t___board.html</anchorfile>
+      <anchor>ae94a166523284e0730a2c9e7efe8965a</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>game_is_over</name>
+      <anchorfile>class_memory___t_t_t___board.html</anchorfile>
+      <anchor>a1efc398d5ed16fddb7682e1b6eaa47b2</anchor>
+      <arglist>(Player&lt; char &gt; *player) override</arglist>
+    </member>
+    <member kind="function">
+      <type>vector&lt; vector&lt; char &gt; &gt;</type>
+      <name>get_board_matrix</name>
+      <anchorfile>class_board.html</anchorfile>
+      <anchor>a117f2e61fdb7deccca333bbbc9c62d3a</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function">
+      <type>char</type>
+      <name>get_cell</name>
+      <anchorfile>class_board.html</anchorfile>
+      <anchor>a93558c58e60ca4291c6044828afd260b</anchor>
+      <arglist>(int x, int y)</arglist>
+    </member>
+    <member kind="function">
+      <type>int</type>
+      <name>get_columns</name>
+      <anchorfile>class_board.html</anchorfile>
+      <anchor>ac665e1ed1f49125fab248e2c9ddfd608</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function">
+      <type>int</type>
+      <name>get_rows</name>
+      <anchorfile>class_board.html</anchorfile>
+      <anchor>a93b130eff67bd4476fab27be8341cb78</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>is_draw</name>
+      <anchorfile>class_memory___t_t_t___board.html</anchorfile>
+      <anchor>a9534f941a9c2182b1404c89f8eca9790</anchor>
+      <arglist>(Player&lt; char &gt; *player) override</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>is_lose</name>
+      <anchorfile>class_memory___t_t_t___board.html</anchorfile>
+      <anchor>ac2725009f0643a157268835eca2bb7d4</anchor>
+      <arglist>(Player&lt; char &gt; *player) override</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>is_win</name>
+      <anchorfile>class_memory___t_t_t___board.html</anchorfile>
+      <anchor>a595acec49d668d7ed0f243a04cdb898e</anchor>
+      <arglist>(Player&lt; char &gt; *player) override</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>update_board</name>
+      <anchorfile>class_memory___t_t_t___board.html</anchorfile>
+      <anchor>af724aa87f8378bce9d90485f3a6e33a8</anchor>
+      <arglist>(Move&lt; char &gt; *move) override</arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>vector&lt; vector&lt; char &gt; &gt;</type>
+      <name>board</name>
+      <anchorfile>class_board.html</anchorfile>
+      <anchor>af00c1fc363eb640ca276b8a572040040</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>int</type>
+      <name>columns</name>
+      <anchorfile>class_board.html</anchorfile>
+      <anchor>afaf8842d9d52ac724e8c2f5642ecafc7</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>int</type>
+      <name>n_moves</name>
+      <anchorfile>class_board.html</anchorfile>
+      <anchor>a5952baefabced65fecec333de638408d</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>int</type>
+      <name>rows</name>
+      <anchorfile>class_board.html</anchorfile>
+      <anchor>a948d978e3b5fc460559b588f5dee9572</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function" protection="private">
+      <type>bool</type>
+      <name>check_win</name>
+      <anchorfile>class_memory___t_t_t___board.html</anchorfile>
+      <anchor>a9a750ae0a91dbfbe0c8607c6fd1c0b15</anchor>
+      <arglist>(char sym)</arglist>
+    </member>
+    <member kind="variable" protection="private">
+      <type>vector&lt; vector&lt; char &gt; &gt;</type>
+      <name>realBoard</name>
+      <anchorfile>class_memory___t_t_t___board.html</anchorfile>
+      <anchor>aa18bf071d61b4ebb8786c8613b448821</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>Memory_TTT_UI</name>
+    <filename>class_memory___t_t_t___u_i.html</filename>
+    <base>UI&lt; char &gt;</base>
+    <member kind="function">
+      <type></type>
+      <name>Memory_TTT_UI</name>
+      <anchorfile>class_memory___t_t_t___u_i.html</anchorfile>
+      <anchor>ab699c175a4c984c304749a0b712eb495</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual Player&lt; char &gt; *</type>
+      <name>create_player</name>
+      <anchorfile>class_u_i.html</anchorfile>
+      <anchor>a94561e0bb4bbcbe5ff71ca6d751922df</anchor>
+      <arglist>(string &amp;name, char symbol, PlayerType type)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>display_board_matrix</name>
+      <anchorfile>class_u_i.html</anchorfile>
+      <anchor>aa3775124efaeac59935ae0afb354708d</anchor>
+      <arglist>(const vector&lt; vector&lt; char &gt; &gt; &amp;matrix) const</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>display_message</name>
+      <anchorfile>class_u_i.html</anchorfile>
+      <anchor>aaad19c26b8e4c49ba7ada54abd83e23c</anchor>
+      <arglist>(string message)</arglist>
+    </member>
+    <member kind="function">
+      <type>Move&lt; char &gt; *</type>
+      <name>get_move</name>
+      <anchorfile>class_memory___t_t_t___u_i.html</anchorfile>
+      <anchor>a2928f42ac1107e8ea6c1937956f7c38c</anchor>
+      <arglist>(Player&lt; char &gt; *player) override</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual Player&lt; char &gt; **</type>
+      <name>setup_players</name>
+      <anchorfile>class_u_i.html</anchorfile>
+      <anchor>a6966a040c995b2292e5edddaa94f889a</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual string</type>
+      <name>get_player_name</name>
+      <anchorfile>class_u_i.html</anchorfile>
+      <anchor>a7b1603de1f73fbb4006e4f00a27c44da</anchor>
+      <arglist>(string player_label)</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual PlayerType</type>
+      <name>get_player_type_choice</name>
+      <anchorfile>class_u_i.html</anchorfile>
+      <anchor>ac3d45fea2bbcaa0372d8e5101e116ca1</anchor>
+      <arglist>(string player_label, const vector&lt; string &gt; &amp;options)</arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>int</type>
+      <name>cell_width</name>
+      <anchorfile>class_u_i.html</anchorfile>
+      <anchor>a6c79c489ae9aa3a7860fb58e5a14ddfe</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="class">
     <name>Misere_TTT_Board</name>
     <filename>class_misere___t_t_t___board.html</filename>
     <base>Board&lt; char &gt;</base>
@@ -2124,6 +2376,266 @@
     </member>
   </compound>
   <compound kind="class">
+    <name>Pyramid_TTT_Board</name>
+    <filename>class_pyramid___t_t_t___board.html</filename>
+    <base>Board&lt; char &gt;</base>
+    <member kind="function">
+      <type></type>
+      <name>Pyramid_TTT_Board</name>
+      <anchorfile>class_pyramid___t_t_t___board.html</anchorfile>
+      <anchor>aa14b3bb5d953b6652b3ce4b3bb443434</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>game_is_over</name>
+      <anchorfile>class_pyramid___t_t_t___board.html</anchorfile>
+      <anchor>a70a473df74d623ae8132450379818f9a</anchor>
+      <arglist>(Player&lt; char &gt; *player) override</arglist>
+    </member>
+    <member kind="function">
+      <type>vector&lt; vector&lt; char &gt; &gt;</type>
+      <name>get_board_matrix</name>
+      <anchorfile>class_board.html</anchorfile>
+      <anchor>a117f2e61fdb7deccca333bbbc9c62d3a</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function">
+      <type>char</type>
+      <name>get_cell</name>
+      <anchorfile>class_board.html</anchorfile>
+      <anchor>a93558c58e60ca4291c6044828afd260b</anchor>
+      <arglist>(int x, int y)</arglist>
+    </member>
+    <member kind="function">
+      <type>int</type>
+      <name>get_columns</name>
+      <anchorfile>class_board.html</anchorfile>
+      <anchor>ac665e1ed1f49125fab248e2c9ddfd608</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function">
+      <type>int</type>
+      <name>get_rows</name>
+      <anchorfile>class_board.html</anchorfile>
+      <anchor>a93b130eff67bd4476fab27be8341cb78</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>is_draw</name>
+      <anchorfile>class_pyramid___t_t_t___board.html</anchorfile>
+      <anchor>ad8c9aae2294f8af6e414aaab442f068a</anchor>
+      <arglist>(Player&lt; char &gt; *player) override</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>is_lose</name>
+      <anchorfile>class_pyramid___t_t_t___board.html</anchorfile>
+      <anchor>a18548183ef545a92f51135d585aaf200</anchor>
+      <arglist>(Player&lt; char &gt; *player) override</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>is_win</name>
+      <anchorfile>class_pyramid___t_t_t___board.html</anchorfile>
+      <anchor>a553e49f3d8a4baad5c68b36126cae18e</anchor>
+      <arglist>(Player&lt; char &gt; *player) override</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>update_board</name>
+      <anchorfile>class_pyramid___t_t_t___board.html</anchorfile>
+      <anchor>a244af96c00b7f8f189b4b14fc947c554</anchor>
+      <arglist>(Move&lt; char &gt; *move) override</arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>vector&lt; vector&lt; char &gt; &gt;</type>
+      <name>board</name>
+      <anchorfile>class_board.html</anchorfile>
+      <anchor>af00c1fc363eb640ca276b8a572040040</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>int</type>
+      <name>columns</name>
+      <anchorfile>class_board.html</anchorfile>
+      <anchor>afaf8842d9d52ac724e8c2f5642ecafc7</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>int</type>
+      <name>n_moves</name>
+      <anchorfile>class_board.html</anchorfile>
+      <anchor>a5952baefabced65fecec333de638408d</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>int</type>
+      <name>rows</name>
+      <anchorfile>class_board.html</anchorfile>
+      <anchor>a948d978e3b5fc460559b588f5dee9572</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>Pyramid_TTT_UI</name>
+    <filename>class_pyramid___t_t_t___u_i.html</filename>
+    <base>UI&lt; char &gt;</base>
+    <member kind="function">
+      <type></type>
+      <name>Pyramid_TTT_UI</name>
+      <anchorfile>class_pyramid___t_t_t___u_i.html</anchorfile>
+      <anchor>a8a197c345a971eeebde2e7dc14cb8e6a</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>Player&lt; char &gt; *</type>
+      <name>create_player</name>
+      <anchorfile>class_pyramid___t_t_t___u_i.html</anchorfile>
+      <anchor>a94099798c5eb5053f140c51c56e4cb24</anchor>
+      <arglist>(string &amp;name, char symbol, PlayerType type) override</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual Player&lt; char &gt; *</type>
+      <name>create_player</name>
+      <anchorfile>class_u_i.html</anchorfile>
+      <anchor>a94561e0bb4bbcbe5ff71ca6d751922df</anchor>
+      <arglist>(string &amp;name, char symbol, PlayerType type)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>display_board_matrix</name>
+      <anchorfile>class_u_i.html</anchorfile>
+      <anchor>aa3775124efaeac59935ae0afb354708d</anchor>
+      <arglist>(const vector&lt; vector&lt; char &gt; &gt; &amp;matrix) const</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>display_message</name>
+      <anchorfile>class_u_i.html</anchorfile>
+      <anchor>aaad19c26b8e4c49ba7ada54abd83e23c</anchor>
+      <arglist>(string message)</arglist>
+    </member>
+    <member kind="function">
+      <type>Move&lt; char &gt; *</type>
+      <name>get_move</name>
+      <anchorfile>class_pyramid___t_t_t___u_i.html</anchorfile>
+      <anchor>a5cacb0c3944cc817f673778c51830d1e</anchor>
+      <arglist>(Player&lt; char &gt; *player) override</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual Player&lt; char &gt; **</type>
+      <name>setup_players</name>
+      <anchorfile>class_u_i.html</anchorfile>
+      <anchor>a6966a040c995b2292e5edddaa94f889a</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual string</type>
+      <name>get_player_name</name>
+      <anchorfile>class_u_i.html</anchorfile>
+      <anchor>a7b1603de1f73fbb4006e4f00a27c44da</anchor>
+      <arglist>(string player_label)</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual PlayerType</type>
+      <name>get_player_type_choice</name>
+      <anchorfile>class_u_i.html</anchorfile>
+      <anchor>ac3d45fea2bbcaa0372d8e5101e116ca1</anchor>
+      <arglist>(string player_label, const vector&lt; string &gt; &amp;options)</arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>int</type>
+      <name>cell_width</name>
+      <anchorfile>class_u_i.html</anchorfile>
+      <anchor>a6c79c489ae9aa3a7860fb58e5a14ddfe</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>RandomComputerPlayer</name>
+    <filename>class_random_computer_player.html</filename>
+    <base>Player&lt; char &gt;</base>
+    <member kind="function">
+      <type></type>
+      <name>RandomComputerPlayer</name>
+      <anchorfile>class_random_computer_player.html</anchorfile>
+      <anchor>ab90d68b5d64e8c19a72694b8f535b090</anchor>
+      <arglist>(string name, char symbol)</arglist>
+    </member>
+    <member kind="function">
+      <type>Board&lt; char &gt; *</type>
+      <name>get_board_ptr</name>
+      <anchorfile>class_player.html</anchorfile>
+      <anchor>a508617eddfae8915d098102d480fc888</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function">
+      <type>Move&lt; char &gt; *</type>
+      <name>get_computer_move</name>
+      <anchorfile>class_random_computer_player.html</anchorfile>
+      <anchor>a3df69b46bc06f8e8d63cd74df0c1ebc7</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>string</type>
+      <name>get_name</name>
+      <anchorfile>class_player.html</anchorfile>
+      <anchor>aed2af19790ba73190e3ebeea589518e1</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function">
+      <type>char</type>
+      <name>get_symbol</name>
+      <anchorfile>class_player.html</anchorfile>
+      <anchor>af56f0bf98c0423a3a75b0848607d03a4</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function">
+      <type>PlayerType</type>
+      <name>get_type</name>
+      <anchorfile>class_player.html</anchorfile>
+      <anchor>a2df3bd299bf7aecfa2275ec6902a60f8</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>set_board_ptr</name>
+      <anchorfile>class_player.html</anchorfile>
+      <anchor>a3617a3ad0db435176a06948065f9a3a6</anchor>
+      <arglist>(Board&lt; char &gt; *b)</arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>Board&lt; char &gt; *</type>
+      <name>boardPtr</name>
+      <anchorfile>class_player.html</anchorfile>
+      <anchor>a26249e756f850b6585267bfbc928ac79</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>string</type>
+      <name>name</name>
+      <anchorfile>class_player.html</anchorfile>
+      <anchor>af0ad0d4ca8584d23a98c723cd703a4f6</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>char</type>
+      <name>symbol</name>
+      <anchorfile>class_player.html</anchorfile>
+      <anchor>a272d6c4dab769930d4f8074918e7708a</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>PlayerType</type>
+      <name>type</name>
+      <anchorfile>class_player.html</anchorfile>
+      <anchor>a81a15b1b507fd5f2157fb15bf0fd283f</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="class">
     <name>SUS_board</name>
     <filename>class_s_u_s__board.html</filename>
     <base>Board&lt; char &gt;</base>
@@ -2656,6 +3168,310 @@
       <name>cell_width</name>
       <anchorfile>class_u_i.html</anchorfile>
       <anchor>a6c79c489ae9aa3a7860fb58e5a14ddfe</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>Ultimate_TTT_Board</name>
+    <filename>class_ultimate___t_t_t___board.html</filename>
+    <base>Board&lt; char &gt;</base>
+    <member kind="function">
+      <type></type>
+      <name>Ultimate_TTT_Board</name>
+      <anchorfile>class_ultimate___t_t_t___board.html</anchorfile>
+      <anchor>a0d55d9aef30e370186c01122b949ceb8</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>tuple&lt; int, int, int, int &gt;</type>
+      <name>convert_coordinates</name>
+      <anchorfile>class_ultimate___t_t_t___board.html</anchorfile>
+      <anchor>ae018fc5f617cd74794c993cad1f74ca5</anchor>
+      <arglist>(int global_x, int global_y)</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>game_is_over</name>
+      <anchorfile>class_ultimate___t_t_t___board.html</anchorfile>
+      <anchor>a9cfbf9981b457fbd53ccf5db9b442634</anchor>
+      <arglist>(Player&lt; char &gt; *player)</arglist>
+    </member>
+    <member kind="function">
+      <type>pair&lt; int, int &gt;</type>
+      <name>get_active_sub_board</name>
+      <anchorfile>class_ultimate___t_t_t___board.html</anchorfile>
+      <anchor>a635183614e435f585f1610abe9cb48f7</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>vector&lt; vector&lt; char &gt; &gt;</type>
+      <name>get_board_matrix</name>
+      <anchorfile>class_board.html</anchorfile>
+      <anchor>a117f2e61fdb7deccca333bbbc9c62d3a</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function">
+      <type>char</type>
+      <name>get_cell</name>
+      <anchorfile>class_board.html</anchorfile>
+      <anchor>a93558c58e60ca4291c6044828afd260b</anchor>
+      <arglist>(int x, int y)</arglist>
+    </member>
+    <member kind="function">
+      <type>int</type>
+      <name>get_columns</name>
+      <anchorfile>class_board.html</anchorfile>
+      <anchor>ac665e1ed1f49125fab248e2c9ddfd608</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function">
+      <type>vector&lt; vector&lt; char &gt; &gt;</type>
+      <name>get_main_board</name>
+      <anchorfile>class_ultimate___t_t_t___board.html</anchorfile>
+      <anchor>a295407adb4c6f2ab08e8ef49f1ac5d8b</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function">
+      <type>int</type>
+      <name>get_rows</name>
+      <anchorfile>class_board.html</anchorfile>
+      <anchor>a93b130eff67bd4476fab27be8341cb78</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function">
+      <type>vector&lt; vector&lt; char &gt; &gt;</type>
+      <name>get_sub_board</name>
+      <anchorfile>class_ultimate___t_t_t___board.html</anchorfile>
+      <anchor>a19c6deed938c4287ddb74504f066cff5</anchor>
+      <arglist>(int main_r, int main_c) const</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>is_draw</name>
+      <anchorfile>class_ultimate___t_t_t___board.html</anchorfile>
+      <anchor>a0b769aaa13409ec3bf43eadc1e0ce810</anchor>
+      <arglist>(Player&lt; char &gt; *player)</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>is_lose</name>
+      <anchorfile>class_ultimate___t_t_t___board.html</anchorfile>
+      <anchor>a7c1849151fcd355f104366a3c878fe5b</anchor>
+      <arglist>(Player&lt; char &gt; *)</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>is_sub_board_available</name>
+      <anchorfile>class_ultimate___t_t_t___board.html</anchorfile>
+      <anchor>ab224b415501ff2a176517ec3014dd8b2</anchor>
+      <arglist>(int main_r, int main_c)</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>is_win</name>
+      <anchorfile>class_ultimate___t_t_t___board.html</anchorfile>
+      <anchor>af316b8b00b542ac60775afcd49712cb3</anchor>
+      <arglist>(Player&lt; char &gt; *player)</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>update_board</name>
+      <anchorfile>class_ultimate___t_t_t___board.html</anchorfile>
+      <anchor>af002cc54c50dc5e93f677cf3efe4c1cc</anchor>
+      <arglist>(Move&lt; char &gt; *move)</arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>vector&lt; vector&lt; char &gt; &gt;</type>
+      <name>board</name>
+      <anchorfile>class_board.html</anchorfile>
+      <anchor>af00c1fc363eb640ca276b8a572040040</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>int</type>
+      <name>columns</name>
+      <anchorfile>class_board.html</anchorfile>
+      <anchor>afaf8842d9d52ac724e8c2f5642ecafc7</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>int</type>
+      <name>n_moves</name>
+      <anchorfile>class_board.html</anchorfile>
+      <anchor>a5952baefabced65fecec333de638408d</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>int</type>
+      <name>rows</name>
+      <anchorfile>class_board.html</anchorfile>
+      <anchor>a948d978e3b5fc460559b588f5dee9572</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function" protection="private">
+      <type>char</type>
+      <name>check_sub_board_win</name>
+      <anchorfile>class_ultimate___t_t_t___board.html</anchorfile>
+      <anchor>acfa4586e92edebb9b5fbad536cc29212</anchor>
+      <arglist>(int main_r, int main_c)</arglist>
+    </member>
+    <member kind="function" protection="private">
+      <type>bool</type>
+      <name>is_sub_board_full</name>
+      <anchorfile>class_ultimate___t_t_t___board.html</anchorfile>
+      <anchor>a78893b5267f9b0166a46bf590d0b3d67</anchor>
+      <arglist>(int main_r, int main_c)</arglist>
+    </member>
+    <member kind="variable" protection="private">
+      <type>int</type>
+      <name>active_main_col</name>
+      <anchorfile>class_ultimate___t_t_t___board.html</anchorfile>
+      <anchor>aca923610a3cd544948dcdfce805aec68</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="private">
+      <type>int</type>
+      <name>active_main_row</name>
+      <anchorfile>class_ultimate___t_t_t___board.html</anchorfile>
+      <anchor>a4705417197ba137ccce418b2af6897ce</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="private">
+      <type>char</type>
+      <name>blank_symbol</name>
+      <anchorfile>class_ultimate___t_t_t___board.html</anchorfile>
+      <anchor>ad6e3afb5b165fcd1ab266be5bd6e3b34</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="private">
+      <type>vector&lt; vector&lt; char &gt; &gt;</type>
+      <name>main_board</name>
+      <anchorfile>class_ultimate___t_t_t___board.html</anchorfile>
+      <anchor>afccb547836719651284c69ffb5a5e7d0</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="private">
+      <type>vector&lt; vector&lt; int &gt; &gt;</type>
+      <name>sub_board_moves</name>
+      <anchorfile>class_ultimate___t_t_t___board.html</anchorfile>
+      <anchor>a6195016b2ac44fc03dcda3edc082bf38</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="private">
+      <type>vector&lt; vector&lt; vector&lt; vector&lt; char &gt; &gt; &gt; &gt;</type>
+      <name>sub_boards</name>
+      <anchorfile>class_ultimate___t_t_t___board.html</anchorfile>
+      <anchor>afd43c687c671144ed1cc0c00e10f62fb</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>Ultimate_TTT_UI</name>
+    <filename>class_ultimate___t_t_t___u_i.html</filename>
+    <base>UI&lt; char &gt;</base>
+    <member kind="function">
+      <type></type>
+      <name>Ultimate_TTT_UI</name>
+      <anchorfile>class_ultimate___t_t_t___u_i.html</anchorfile>
+      <anchor>a0c0b528af4fb4a4c9d9453f41caed913</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>~Ultimate_TTT_UI</name>
+      <anchorfile>class_ultimate___t_t_t___u_i.html</anchorfile>
+      <anchor>aa7592fd5f2e4c91aaa89aed3c3f572ee</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual Player&lt; char &gt; *</type>
+      <name>create_player</name>
+      <anchorfile>class_u_i.html</anchorfile>
+      <anchor>a94561e0bb4bbcbe5ff71ca6d751922df</anchor>
+      <arglist>(string &amp;name, char symbol, PlayerType type)</arglist>
+    </member>
+    <member kind="function">
+      <type>Player&lt; char &gt; *</type>
+      <name>create_player</name>
+      <anchorfile>class_ultimate___t_t_t___u_i.html</anchorfile>
+      <anchor>a2e5fb91eca06ed9b40313a3b747b115c</anchor>
+      <arglist>(string &amp;name, char symbol, PlayerType type)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>display_board_matrix</name>
+      <anchorfile>class_u_i.html</anchorfile>
+      <anchor>aa3775124efaeac59935ae0afb354708d</anchor>
+      <arglist>(const vector&lt; vector&lt; char &gt; &gt; &amp;matrix) const</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>display_board_matrix</name>
+      <anchorfile>class_ultimate___t_t_t___u_i.html</anchorfile>
+      <anchor>a9d5c9efeb5cace44b6afb2f42321b260</anchor>
+      <arglist>(const vector&lt; vector&lt; char &gt; &gt; &amp;matrix) const override</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>display_message</name>
+      <anchorfile>class_u_i.html</anchorfile>
+      <anchor>aaad19c26b8e4c49ba7ada54abd83e23c</anchor>
+      <arglist>(string message)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>display_ultimate_board</name>
+      <anchorfile>class_ultimate___t_t_t___u_i.html</anchorfile>
+      <anchor>aa9df6da7ac8d32f016f0a9469785f539</anchor>
+      <arglist>(Ultimate_TTT_Board *board)</arglist>
+    </member>
+    <member kind="function">
+      <type>Move&lt; char &gt; *</type>
+      <name>get_move</name>
+      <anchorfile>class_ultimate___t_t_t___u_i.html</anchorfile>
+      <anchor>af6dc8f560a9d25270847f70ee7138fb3</anchor>
+      <arglist>(Player&lt; char &gt; *player)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>set_board_ptr</name>
+      <anchorfile>class_ultimate___t_t_t___u_i.html</anchorfile>
+      <anchor>afe22318f59444ea75538a302329708d7</anchor>
+      <arglist>(Ultimate_TTT_Board *board)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual Player&lt; char &gt; **</type>
+      <name>setup_players</name>
+      <anchorfile>class_u_i.html</anchorfile>
+      <anchor>a6966a040c995b2292e5edddaa94f889a</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual string</type>
+      <name>get_player_name</name>
+      <anchorfile>class_u_i.html</anchorfile>
+      <anchor>a7b1603de1f73fbb4006e4f00a27c44da</anchor>
+      <arglist>(string player_label)</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual PlayerType</type>
+      <name>get_player_type_choice</name>
+      <anchorfile>class_u_i.html</anchorfile>
+      <anchor>ac3d45fea2bbcaa0372d8e5101e116ca1</anchor>
+      <arglist>(string player_label, const vector&lt; string &gt; &amp;options)</arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>int</type>
+      <name>cell_width</name>
+      <anchorfile>class_u_i.html</anchorfile>
+      <anchor>a6c79c489ae9aa3a7860fb58e5a14ddfe</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="private">
+      <type>Ultimate_TTT_Board *</type>
+      <name>ultimate_board_ptr</name>
+      <anchorfile>class_ultimate___t_t_t___u_i.html</anchorfile>
+      <anchor>a0b39ed6184cff724fc514b8f2d082c18</anchor>
       <arglist></arglist>
     </member>
   </compound>

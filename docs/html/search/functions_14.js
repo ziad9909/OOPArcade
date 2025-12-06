@@ -5,5 +5,6 @@ var searchData=
   ['_7eplayer_2',['~Player',['../class_player.html#aac1f2ab2a8e2aa0336d302c16068020e',1,'Player']]],
   ['_7esus_5fplayer_3',['~SUS_player',['../class_s_u_s__player.html#ae4efe3333e8490d8d628f6440ce0fe70',1,'SUS_player']]],
   ['_7eui_4',['~UI',['../class_u_i.html#a1012e508ff7df030714c62ddf6b261a7',1,'UI']]],
-  ['_7exo_5fui_5',['~XO_UI',['../class_x_o___u_i.html#a6c58a77a2fa80f73e7076ca4a94fcc8a',1,'XO_UI']]]
+  ['_7eultimate_5fttt_5fui_5',['~Ultimate_TTT_UI',['../class_ultimate___t_t_t___u_i.html#aa7592fd5f2e4c91aaa89aed3c3f572ee',1,'Ultimate_TTT_UI']]],
+  ['_7exo_5fui_6',['~XO_UI',['../class_x_o___u_i.html#a6c58a77a2fa80f73e7076ca4a94fcc8a',1,'XO_UI']]]
 ];

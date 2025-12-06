@@ -93,7 +93,7 @@ $(function(){initNavTree('class_four_by_four___t_t_t___u_i.html','','class_four_
 </div><!--header-->
 <div class="contents">
 
-<p>User Interface for 4x4 Tic-Tac-Toe.  
+<p>User Interface for 4x4 Moving Tic-Tac-Toe game.  
  <a href="#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="4x4___t_t_t___classes_8h_source.html">4x4_TTT_Classes.h</a>&gt;</code></p>
@@ -110,7 +110,7 @@ Inheritance diagram for FourByFour_TTT_UI:</div>
 <tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a286827042fcf9c70aa4da639f5feb02f" id="r_a286827042fcf9c70aa4da639f5feb02f"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a286827042fcf9c70aa4da639f5feb02f">FourByFour_TTT_UI</a> ()</td></tr>
-<tr class="memdesc:a286827042fcf9c70aa4da639f5feb02f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor for 4x4 Tic-Tac-Toe <a class="el" href="class_u_i.html" title="Base class for handling user interface and input/output.">UI</a>.  <br /></td></tr>
+<tr class="memdesc:a286827042fcf9c70aa4da639f5feb02f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor for 4x4 Moving Tic-Tac-Toe <a class="el" href="class_u_i.html" title="Base class for handling user interface and input/output.">UI</a>.  <br /></td></tr>
 <tr class="memitem:a350b8cf77216b800650adfe26d08fa19" id="r_a350b8cf77216b800650adfe26d08fa19"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_player.html">Player</a>&lt; char &gt; *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a350b8cf77216b800650adfe26d08fa19">create_player</a> (string &amp;name, char symbol, <a class="el" href="_board_game___classes_8h.html#abe590f3c9109f404f003d5d7e4f0fccf">PlayerType</a> type) override</td></tr>
 <tr class="memdesc:a350b8cf77216b800650adfe26d08fa19"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create a player object.  <br /></td></tr>
 <tr class="memitem:a94561e0bb4bbcbe5ff71ca6d751922df" id="r_a94561e0bb4bbcbe5ff71ca6d751922df"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="class_player.html">Player</a>&lt; char &gt; *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_u_i.html#a94561e0bb4bbcbe5ff71ca6d751922df">create_player</a> (string &amp;name, char symbol, <a class="el" href="_board_game___classes_8h.html#abe590f3c9109f404f003d5d7e4f0fccf">PlayerType</a> type)</td></tr>
@@ -137,9 +137,10 @@ Protected Attributes</h2></td></tr>
 <tr class="memdesc:a6c79c489ae9aa3a7860fb58e5a14ddfe"><td class="mdescLeft">&#160;</td><td class="mdescRight">Width of each displayed board cell.  <br /></td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>User Interface for 4x4 Tic-Tac-Toe. </p>
+<div class="textblock"><p>User Interface for 4x4 Moving Tic-Tac-Toe game. </p>
+<p>Handles player input for source and destination positions and manages the game display and player creation. </p>
 
-<p class="definition">Definition at line <a class="el" href="4x4___t_t_t___classes_8h_source.html#l00095">95</a> of file <a class="el" href="4x4___t_t_t___classes_8h_source.html">4x4_TTT_Classes.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="4x4___t_t_t___classes_8h_source.html#l00119">119</a> of file <a class="el" href="4x4___t_t_t___classes_8h_source.html">4x4_TTT_Classes.h</a>.</p>
 </div><a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a286827042fcf9c70aa4da639f5feb02f" name="a286827042fcf9c70aa4da639f5feb02f"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a286827042fcf9c70aa4da639f5feb02f">&#9670;&#160;</a></span>FourByFour_TTT_UI()</h2>
@@ -156,7 +157,8 @@ Protected Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Constructor for 4x4 Tic-Tac-Toe <a class="el" href="class_u_i.html" title="Base class for handling user interface and input/output.">UI</a>. </p>
+<p>Constructor for 4x4 Moving Tic-Tac-Toe <a class="el" href="class_u_i.html" title="Base class for handling user interface and input/output.">UI</a>. </p>
+<p>Initializes the <a class="el" href="class_u_i.html" title="Base class for handling user interface and input/output.">UI</a> with welcome message and win condition of 3 in a row. </p>
 
 <p class="definition">Definition at line <a class="el" href="4x4___t_t_t___classes_8cpp_source.html#l00103">103</a> of file <a class="el" href="4x4___t_t_t___classes_8cpp_source.html">4x4_TTT_Classes.cpp</a>.</p>
 
@@ -201,7 +203,7 @@ Protected Attributes</h2></td></tr>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">name</td><td><a class="el" href="class_player.html" title="Base template for all players (human or AI).">Player</a>'s name </td></tr>
-    <tr><td class="paramname">symbol</td><td><a class="el" href="class_player.html" title="Base template for all players (human or AI).">Player</a>'s symbol </td></tr>
+    <tr><td class="paramname">symbol</td><td><a class="el" href="class_player.html" title="Base template for all players (human or AI).">Player</a>'s symbol ('X' or 'O') </td></tr>
     <tr><td class="paramname">type</td><td><a class="el" href="class_player.html" title="Base template for all players (human or AI).">Player</a> type (Human or Computer) </td></tr>
   </table>
   </dd>
@@ -341,7 +343,8 @@ Protected Attributes</h2></td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>Pointer to <a class="el" href="class_move.html" title="Represents a single move in a board game.">Move</a> object </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>Pointer to <a class="el" href="class_move.html" title="Represents a single move in a board game.">Move</a> object containing destination coordinates</dd></dl>
+<p>Prompts the player to enter destination cell coordinates. Source coordinates are requested in update_board(). </p>
 
 <p>Implements <a class="el" href="class_u_i.html#a8befa259c38c57e6ae2e8ed81c476337">UI&lt; char &gt;</a>.</p>
 

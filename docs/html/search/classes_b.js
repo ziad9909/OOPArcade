@@ -1,5 +1,8 @@
 var searchData=
 [
-  ['word_5fttt_5fboard_0',['Word_TTT_Board',['../class_word___t_t_t___board.html',1,'']]],
-  ['word_5fttt_5fui_1',['Word_TTT_UI',['../class_word___t_t_t___u_i.html',1,'']]]
+  ['ui_0',['UI',['../class_u_i.html',1,'']]],
+  ['ui_3c_20char_20_3e_1',['UI&lt; char &gt;',['../class_u_i.html',1,'']]],
+  ['ui_3c_20int_20_3e_2',['UI&lt; int &gt;',['../class_u_i.html',1,'']]],
+  ['ultimate_5fttt_5fboard_3',['Ultimate_TTT_Board',['../class_ultimate___t_t_t___board.html',1,'']]],
+  ['ultimate_5fttt_5fui_4',['Ultimate_TTT_UI',['../class_ultimate___t_t_t___u_i.html',1,'']]]
 ];

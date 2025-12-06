@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['x_0',['x',['../class_move.html#a5f399fb722305d3061e0f6f2438e5390',1,'Move']]]
+  ['valid_5fcells_0',['valid_cells',['../class_diamond___t_t_t___board.html#a41580f39b1442504381312d9fca3dbce',1,'Diamond_TTT_Board']]]
 ];

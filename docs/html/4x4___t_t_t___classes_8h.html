@@ -93,7 +93,7 @@ $(function(){initNavTree('4x4___t_t_t___classes_8h.html','',''); });
 </div><!--header-->
 <div class="contents">
 
-<p>4x4 Tic-Tac-Toe variant implementation  
+<p>4x4 Moving Tic-Tac-Toe variant implementation  
 <a href="#details">More...</a></p>
 <div class="textblock"><code>#include &quot;<a class="el" href="_board_game___classes_8h_source.html">BoardGame_Classes.h</a>&quot;</code><br />
 </div>
@@ -102,30 +102,31 @@ $(function(){initNavTree('4x4___t_t_t___classes_8h.html','',''); });
 <tr class="heading"><td colspan="2"><h2 id="header-nested-classes" class="groupheader"><a id="nested-classes" name="nested-classes"></a>
 Classes</h2></td></tr>
 <tr class="memitem:FourByFour_5FTTT_5FBoard" id="r_FourByFour_5FTTT_5FBoard"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_four_by_four___t_t_t___board.html">FourByFour_TTT_Board</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="class_board.html" title="Base template for any board used in board games.">Board</a> class for 4x4 Tic-Tac-Toe.  <a href="class_four_by_four___t_t_t___board.html#details">More...</a><br /></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="class_board.html" title="Base template for any board used in board games.">Board</a> class for 4x4 Moving Tic-Tac-Toe where players move existing tokens.  <a href="class_four_by_four___t_t_t___board.html#details">More...</a><br /></td></tr>
 <tr class="memitem:FourByFour_5FTTT_5FUI" id="r_FourByFour_5FTTT_5FUI"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_four_by_four___t_t_t___u_i.html">FourByFour_TTT_UI</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">User Interface for 4x4 Tic-Tac-Toe.  <a href="class_four_by_four___t_t_t___u_i.html#details">More...</a><br /></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">User Interface for 4x4 Moving Tic-Tac-Toe game.  <a href="class_four_by_four___t_t_t___u_i.html#details">More...</a><br /></td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>4x4 Tic-Tac-Toe variant implementation </p>
+<div class="textblock"><p>4x4 Moving Tic-Tac-Toe variant implementation </p>
 <dl class="section author"><dt>Author</dt><dd>Your Name/Team </dd></dl>
 <dl class="section date"><dt>Date</dt><dd>2024 </dd></dl>
 <dl class="section version"><dt>Version</dt><dd>1.0 </dd></dl>
 <dl class="section copyright"><dt>Copyright</dt><dd>Copyright (c) 2024 <a class="el" href="class_board.html" title="Base template for any board used in board games.">Board</a> Game Collection</dd></dl>
-<p>4x4 Tic-Tac-Toe: Larger board requiring four in a row to win.</p>
+<p>4x4 Moving Tic-Tac-Toe: Players move existing pieces instead of placing new ones.</p>
 <dl class="section user"><dt>Game Mechanics:\n</dt><dd><ul>
-<li><a class="el" href="class_board.html" title="Base template for any board used in board games.">Board</a>: 4x4 grid</li>
+<li><a class="el" href="class_board.html" title="Base template for any board used in board games.">Board</a>: 4x4 grid with pre-placed tokens</li>
 <li>Players: 2</li>
 <li>Symbols: 'X' and 'O'</li>
-<li>Objective: Get four in a row (horizontal, vertical, or diagonal)</li>
-<li>More spaces mean longer games and more strategic possibilities</li>
+<li>Objective: Get three in a row (horizontal, vertical, or diagonal)</li>
+<li>Movement: Players move their existing tokens one step at a time</li>
+<li>Starting Setup: Each player has 4 tokens placed on opposite sides</li>
 </ul>
 </dd></dl>
 <dl class="section user"><dt>Variant Rules:\n</dt><dd><ul>
-<li>Larger board than classic 3x3</li>
-<li>Requires four in a row instead of three</li>
-<li>More potential winning combinations</li>
-<li>Reduced chance of early draws </li>
+<li>Tokens are moved rather than placed</li>
+<li>No new pieces are added during play</li>
+<li>Strategic positioning and blocking</li>
+<li>Game continues until someone wins (no draws) </li>
 </ul>
 </dd></dl>
 

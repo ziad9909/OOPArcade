@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['word_5fttt_2ecpp_0',['Word_TTT.cpp',['../_word___t_t_t_8cpp.html',1,'']]],
-  ['word_5fttt_2eh_1',['Word_TTT.h',['../_word___t_t_t_8h.html',1,'']]]
+  ['timed_5fttt_5fclasses_2ecpp_0',['Timed_TTT_Classes.cpp',['../_timed___t_t_t___classes_8cpp.html',1,'']]],
+  ['timed_5fttt_5fclasses_2eh_1',['Timed_TTT_Classes.h',['../_timed___t_t_t___classes_8h.html',1,'']]]
 ];

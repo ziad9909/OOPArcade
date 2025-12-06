@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['timed_5fttt_5fboard_0',['Timed_TTT_Board',['../class_timed___t_t_t___board.html',1,'']]],
-  ['timed_5fttt_5fui_1',['Timed_TTT_UI',['../class_timed___t_t_t___u_i.html',1,'']]]
+  ['sus_5fboard_0',['SUS_board',['../class_s_u_s__board.html',1,'']]],
+  ['sus_5fplayer_1',['SUS_player',['../class_s_u_s__player.html',1,'']]]
 ];

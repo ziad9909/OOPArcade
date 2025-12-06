@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['players_0',['players',['../class_game_manager.html#abc7b7dc6bd0e89a29886ace8a7db60bd',1,'GameManager']]]
+  ['odd_5fnums_0',['odd_nums',['../class_numerical___t_t_t___board.html#ac46348917d14a907ea53483a1d5c9fe5',1,'Numerical_TTT_Board']]]
 ];

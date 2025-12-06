@@ -93,7 +93,7 @@ $(function(){initNavTree('_obstacle6x6___t_t_t_8h.html','',''); });
 </div><!--header-->
 <div class="contents">
 
-<p>6x6 Tic-Tac-Toe with obstacles variant implementation  
+<p>6x6 Tic-Tac-Toe with dynamic obstacles variant implementation  
 <a href="#details">More...</a></p>
 <div class="textblock"><code>#include &lt;iostream&gt;</code><br />
 <code>#include &lt;vector&gt;</code><br />
@@ -105,7 +105,7 @@ $(function(){initNavTree('_obstacle6x6___t_t_t_8h.html','',''); });
 <tr class="heading"><td colspan="2"><h2 id="header-nested-classes" class="groupheader"><a id="nested-classes" name="nested-classes"></a>
 Classes</h2></td></tr>
 <tr class="memitem:Obstacle6x6_5FTTT_5FBoard" id="r_Obstacle6x6_5FTTT_5FBoard"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_obstacle6x6___t_t_t___board.html">Obstacle6x6_TTT_Board</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="class_board.html" title="Base template for any board used in board games.">Board</a> class for 6x6 Tic-Tac-Toe with obstacles.  <a href="class_obstacle6x6___t_t_t___board.html#details">More...</a><br /></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="class_board.html" title="Base template for any board used in board games.">Board</a> class for 6x6 Tic-Tac-Toe with dynamically placed obstacles.  <a href="class_obstacle6x6___t_t_t___board.html#details">More...</a><br /></td></tr>
 <tr class="memitem:Obstacle6x6_5FTTT_5FUI" id="r_Obstacle6x6_5FTTT_5FUI"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_obstacle6x6___t_t_t___u_i.html">Obstacle6x6_TTT_UI</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">User Interface for 6x6 Tic-Tac-Toe with obstacles.  <a href="class_obstacle6x6___t_t_t___u_i.html#details">More...</a><br /></td></tr>
 </table><table class="memberdecls">
@@ -114,26 +114,27 @@ Macros</h2></td></tr>
 <tr class="memitem:abeb0c13866d59dde4e9398dec9c93a06" id="r_abeb0c13866d59dde4e9398dec9c93a06"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#abeb0c13866d59dde4e9398dec9c93a06">_OBSTACLE6X6_TTT_H</a></td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>6x6 Tic-Tac-Toe with obstacles variant implementation </p>
+<div class="textblock"><p>6x6 Tic-Tac-Toe with dynamic obstacles variant implementation </p>
 <dl class="section author"><dt>Author</dt><dd>Your Name/Team </dd></dl>
 <dl class="section date"><dt>Date</dt><dd>2024 </dd></dl>
 <dl class="section version"><dt>Version</dt><dd>1.0 </dd></dl>
 <dl class="section copyright"><dt>Copyright</dt><dd>Copyright (c) 2024 <a class="el" href="class_board.html" title="Base template for any board used in board games.">Board</a> Game Collection</dd></dl>
-<p>6x6 Tic-Tac-Toe with Obstacles: Larger board with blocking obstacles.</p>
+<p>6x6 Tic-Tac-Toe with Obstacles: Larger board with randomly appearing blocking obstacles.</p>
 <dl class="section user"><dt>Game Mechanics:\n</dt><dd><ul>
-<li><a class="el" href="class_board.html" title="Base template for any board used in board games.">Board</a>: 6x6 grid with obstacle cells</li>
+<li><a class="el" href="class_board.html" title="Base template for any board used in board games.">Board</a>: 6x6 grid with dynamically placed obstacle cells</li>
 <li>Players: 2</li>
 <li>Symbols: 'X' and 'O'</li>
+<li>Obstacles: '#' symbols that block cell placement</li>
 <li>Objective: Get four in a row (horizontal, vertical, or diagonal)</li>
-<li>Obstacles: Certain cells cannot be played</li>
-<li>Obstacles may change/rotate during game</li>
+<li>Challenge: Navigate around obstacles that appear every round</li>
 </ul>
 </dd></dl>
 <dl class="section user"><dt>Variant Rules:\n</dt><dd><ul>
-<li>Larger 6x6 board</li>
-<li>Obstacle cells block moves</li>
-<li>Dynamic obstacles that may change</li>
-<li>Requires navigation around blocked cells </li>
+<li>Larger 6x6 board requiring four in a row</li>
+<li>Dynamic obstacles appear after every 2 moves (1 complete round)</li>
+<li>2 random obstacles are added each round</li>
+<li>Requires strategic navigation around blocked cells</li>
+<li>Increased complexity and unpredictability </li>
 </ul>
 </dd></dl>
 
@@ -151,7 +152,7 @@ Macros</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_obstacle6x6___t_t_t_8h_source.html#l00028">28</a> of file <a class="el" href="_obstacle6x6___t_t_t_8h_source.html">Obstacle6x6_TTT.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_obstacle6x6___t_t_t_8h_source.html#l00029">29</a> of file <a class="el" href="_obstacle6x6___t_t_t_8h_source.html">Obstacle6x6_TTT.h</a>.</p>
 
 </div>
 </div>

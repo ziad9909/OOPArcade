@@ -305,11 +305,15 @@ void run_pyramid_ttt_game() {
 // memory -TTT
 void run_memory_ttt_game() {
     UI<char>* ui = new Memory_TTT_UI();
-    Board<char>* board = new Memory_TTT_Board();
+    Memory_TTT_Board* board = new Memory_TTT_Board();
     Player<char>** players = ui->setup_players();
 
     GameManager<char> game(board, players, ui);
     game.run();
+
+    board->reveal_board();
+    cout << "\n=== GAME OVER - FINAL BOARD REVEALED ===\n";
+    board->print();  // now compiles fine
 
     for (int i = 0; i < 2; ++i) delete players[i];
     delete[] players;

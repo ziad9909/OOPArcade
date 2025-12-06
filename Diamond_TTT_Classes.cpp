@@ -203,8 +203,11 @@ bool Diamond_TTT_Board::is_win(Player<char>* player) {
                 if (shares_cell) break;
             }
 
-            // They must NOT share any cell
-            if (!shares_cell) {
+            int shared_count = 0;
+            for (const auto& cell3 : three_line)
+                for (const auto& cell4 : four_line)
+                    if (cell3 == cell4) shared_count++;
+            if (shared_count == 1) {
                 return true;
             }
         }
@@ -280,6 +283,10 @@ vector<vector<pair<int, int>>> Diamond_TTT_Board::get_all_lines() {
     all_lines.push_back(get_line_cells(2, 0, 0, 1, 4));
     all_lines.push_back(get_line_cells(2, 1, 0, 1, 4));
     all_lines.push_back(get_line_cells(3, 1, 0, 1, 3));
+    all_lines.push_back(get_line_cells(2, 0, 0, 1, 3));  
+    all_lines.push_back(get_line_cells(2, 1, 0, 1, 3));  
+    all_lines.push_back(get_line_cells(2, 2, 0, 1, 3));  
+    all_lines.push_back(get_line_cells(2, 4, 1, -1, 3)); 
 
     // VERTICAL
     all_lines.push_back(get_line_cells(0, 2, 1, 0, 3));

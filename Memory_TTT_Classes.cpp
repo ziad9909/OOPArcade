@@ -110,3 +110,25 @@ Move<char>* Memory_TTT_UI::get_move(Player<char>* player)
     cin >> x >> y;
     return new Move<char>(x, y, player->get_symbol());
 }
+
+void Memory_TTT_Board::reveal_board() {
+    for (int i = 0; i < 3; ++i)
+        for (int j = 0; j < 3; ++j)
+            if (realBoard[i][j] != ' ')
+                board[i][j] = realBoard[i][j];
+}
+
+void Memory_TTT_Board::print() const {
+    cout << "\n   0   1   2\n";
+    for (int i = 0; i < 3; ++i) {
+        cout << i << " ";
+        for (int j = 0; j < 3; ++j) {
+            char display = (board[i][j] == ' ') ? '.' : board[i][j];
+            cout << " " << display << " ";
+            if (j < 2) cout << "|";
+        }
+        cout << "\n";
+        if (i < 2) cout << "  -----------\n";
+    }
+    cout << "\n";
+}

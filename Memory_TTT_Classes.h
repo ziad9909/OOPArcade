@@ -22,7 +22,8 @@ public:
     bool is_lose(Player<char>* player) override;
     bool is_draw(Player<char>* player) override;
     bool game_is_over(Player<char>* player) override;
-
+    void reveal_board();
+    void print() const ;
 private:
     bool check_win(char sym);
 };

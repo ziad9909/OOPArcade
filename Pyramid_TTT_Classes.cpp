@@ -91,13 +91,118 @@ bool Pyramid_TTT_Board::game_is_over(Player<char>* player)
     return is_win(player) || is_draw(player);
 }
 
+int Pyramid_TTT_Board::evaluate_state(char aiSym, char huSym, int depth)
+{
+    // AI wins = +10
+    // Human wins = -10
+    if (is_win(new Player<char>("", aiSym, PlayerType::HUMAN)))
+        return 10 - depth;
+
+    if (is_win(new Player<char>("", huSym, PlayerType::HUMAN)))
+        return -10 + depth;
+
+    return 0; // not terminal
+}
+
+int Pyramid_TTT_Board::minimax(bool isMax, char aiSym, char huSym,
+    int depth, int alpha, int beta)
+{
+    int score = evaluate_state(aiSym, huSym, depth);
+
+    // Terminal case
+    if (score != 0 || n_moves == 9)
+        return score;
+
+    if (isMax) {
+        int best = -1000;
+
+        for (int i = 0; i < rows; i++) {
+            for (int j = 0; j < columns; j++) {
+
+                if (board[i][j] == '_') {
+
+                    board[i][j] = aiSym;
+                    n_moves++;
+
+                    best = max(best, minimax(false, aiSym, huSym,
+                        depth + 1, alpha, beta));
+
+                    board[i][j] = '_';
+                    n_moves--;
+
+                    alpha = max(alpha, best);
+                    if (beta <= alpha)
+                        return best;
+                }
+            }
+        }
+        return best;
+    }
+    else {
+        int best = 1000;
+
+        for (int i = 0; i < rows; i++) {
+            for (int j = 0; j < columns; j++) {
+
+                if (board[i][j] == '_') {
+
+                    board[i][j] = huSym;
+                    n_moves++;
+
+                    best = min(best, minimax(true, aiSym, huSym,
+                        depth + 1, alpha, beta));
+
+                    board[i][j] = '_';
+                    n_moves--;
+
+                    beta = min(beta, best);
+                    if (beta <= alpha)
+                        return best;
+                }
+            }
+        }
+        return best;
+    }
+}
+
+Move<char>* Pyramid_TTT_Board::get_best_move_for_ai(char aiSym, char huSym)
+{
+    int bestVal = -1000;
+    int bestX = -1, bestY = -1;
+
+    for (int i = 0; i < rows; i++) {
+        for (int j = 0; j < columns; j++) {
+
+            if (board[i][j] == '_') {
+
+                board[i][j] = aiSym;
+                n_moves++;
+
+                int moveVal =
+                    minimax(false, aiSym, huSym, 0, -1000, 1000);
+
+                board[i][j] = '_';
+                n_moves--;
+
+                if (moveVal > bestVal) {
+                    bestX = i;
+                    bestY = j;
+                    bestVal = moveVal;
+                }
+            }
+        }
+    }
+
+    return new Move<char>(bestX, bestY, aiSym);
+}
+
 // =============================
 // UI: getting a move
 // =============================
 Move<char>* Pyramid_TTT_UI::get_move(Player<char>* player)
 {
     if (player->get_type() == PlayerType::COMPUTER) {
-        RandomComputerPlayer* bot = dynamic_cast<RandomComputerPlayer*>(player);
+        MinimaxComputerPlayer* bot = dynamic_cast<MinimaxComputerPlayer*>(player);
         cout << player->get_name() << " (Computer) is playing...\n";
         return bot->get_computer_move();
     }
@@ -111,7 +216,17 @@ Move<char>* Pyramid_TTT_UI::get_move(Player<char>* player)
 Player<char>* Pyramid_TTT_UI::create_player(string& name, char symbol, PlayerType type)
 {
     if (type == PlayerType::COMPUTER)
-        return new RandomComputerPlayer(name, symbol);
+        return new MinimaxComputerPlayer(name, symbol);
 
     return new Player<char>(name, symbol, PlayerType::HUMAN);
+}
+
+Move<char>* MinimaxComputerPlayer::get_computer_move()
+{
+    Pyramid_TTT_Board* b = dynamic_cast<Pyramid_TTT_Board*>(this->get_board_ptr());
+
+    char ai = this->symbol;
+    char human = (ai == 'X' ? 'O' : 'X');
+
+    return b->get_best_move_for_ai(ai, human);
 }

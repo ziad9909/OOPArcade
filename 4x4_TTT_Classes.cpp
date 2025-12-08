@@ -1,4 +1,4 @@
-﻿#include "4x4_TTT_Classes.h"
+﻿﻿#include "4x4_TTT_Classes.h"
 #include <iostream>
 using namespace std;
 
@@ -117,5 +117,5 @@ Move<char>* FourByFour_TTT_UI::get_move(Player<char>* p)
     cin >> x >> y;
 
     return new Move<char>(x, y, p->get_symbol());
-        
+
 }

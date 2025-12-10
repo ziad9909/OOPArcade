@@ -104,6 +104,14 @@ public:
      * @return true if game is won or drawn, false otherwise
      */
     bool game_is_over(Player<char>* player) override;
+
+    
+
+    int evaluate_state(char aiSym, char huSym, int depth);
+
+    int minimax(bool isMax, char aiSym, char huSym, int depth, int alpha, int beta);
+
+    Move<char>* get_best_move_for_ai(char aiSym, char huSym);
 };
 
 /**
@@ -182,6 +190,13 @@ public:
             }
         }
     }
+};
+class MinimaxComputerPlayer : public Player<char> {
+public:
+    MinimaxComputerPlayer(string name, char symbol)
+        : Player<char>(name, symbol, PlayerType::COMPUTER) {}
+
+    Move<char>* get_computer_move();
 };
 
 #endif

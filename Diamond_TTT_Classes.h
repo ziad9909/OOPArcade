@@ -80,6 +80,13 @@ private:
      */
     int evaluate_board(Diamond_TTT_Board* board, char ai_symbol, char opponent_symbol);
 
+    /**
+     * @brief Get direction of a line
+     * @param line Vector of cell coordinates
+     * @return String indicating line direction
+     */
+    string get_line_direction(const vector<pair<int, int>>& line);
+
 public:
     /**
      * @brief Constructor for Diamond Tic-Tac-Toe board

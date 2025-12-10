@@ -10,53 +10,39 @@
 using namespace std;
 
 // ============================================================================
-// DIAMOND_TTT_BOARD IMPLEMENTATION
+// DIAMOND_TTT_BOARD IMPLEMENTATION (7x7)
 // ============================================================================
 
 /**
  * @brief Construct a new Diamond_TTT_Board object
- * @details Initializes the 5x5 diamond-shaped board.
- * Invalid cells are marked with '.' and valid cells are stored in valid_cells.
+ * @details Initializes the 7x7 diamond-shaped board.
  */
-Diamond_TTT_Board::Diamond_TTT_Board() : Board<char>(5, 5) {
+Diamond_TTT_Board::Diamond_TTT_Board() : Board<char>(7, 7) {
     valid_cells.clear();
 
-    // Row 0: only center column
-    valid_cells.push_back({ 0, 2 });
-
-    // Row 1: three middle columns  
-    valid_cells.push_back({ 1, 1 });
-    valid_cells.push_back({ 1, 2 });
-    valid_cells.push_back({ 1, 3 });
-
-    // Row 2: all five columns
-    for (int j = 0; j < 5; j++) valid_cells.push_back({ 2, j });
-
-    // Row 3: mirror of row 1
-    valid_cells.push_back({ 3, 1 });
-    valid_cells.push_back({ 3, 2 });
-    valid_cells.push_back({ 3, 3 });
-
-    // Row 4: only center column
-    valid_cells.push_back({ 4, 2 });
+    int mid = rows / 2; // rows == 7 now
 
     // Initialize all cells to spaces
     for (int i = 0; i < rows; i++)
         for (int j = 0; j < columns; j++)
             board[i][j] = ' ';
 
-    // Mark invalid cells with '.'
-    for (int i = 0; i < rows; i++)
-        for (int j = 0; j < columns; j++)
-            if (!is_valid_cell(i, j))
-                board[i][j] = '.';
+    // Build valid_cells using diamond rule: |r-mid| + |c-mid| <= mid
+    for (int r = 0; r < rows; r++) {
+        for (int c = 0; c < columns; c++) {
+            if (std::abs(r - mid) + std::abs(c - mid) <= mid) {
+                valid_cells.push_back({ r, c });
+            }
+            else {
+                // Mark invalid cells with '.'
+                board[r][c] = '.';
+            }
+        }
+    }
 }
 
 /**
  * @brief Check if coordinates are part of the diamond
- * @param x Row index
- * @param y Column index
- * @return true if the cell is valid, false otherwise
  */
 bool Diamond_TTT_Board::is_valid_cell(int x, int y) const {
     for (const auto& cell : valid_cells)
@@ -66,8 +52,6 @@ bool Diamond_TTT_Board::is_valid_cell(int x, int y) const {
 
 /**
  * @brief Updates the board with a move
- * @param move Pointer to a Move object
- * @return true if move was valid and applied
  */
 bool Diamond_TTT_Board::update_board(Move<char>* move) {
     int x = move->get_x();
@@ -75,7 +59,7 @@ bool Diamond_TTT_Board::update_board(Move<char>* move) {
     char sym = move->get_symbol();
 
     if (x < 0 || x >= rows || y < 0 || y >= columns) {
-        cout << "Invalid coordinates! Must be between 0-4.\n";
+        cout << "Invalid coordinates! Must be between 0-6.\n";
         return false;
     }
 
@@ -96,8 +80,6 @@ bool Diamond_TTT_Board::update_board(Move<char>* move) {
 
 /**
  * @brief Undo a move (restore cell to empty)
- * @param x Row index
- * @param y Column index
  */
 void Diamond_TTT_Board::undo_move(int x, int y) {
     board[x][y] = ' ';
@@ -106,7 +88,6 @@ void Diamond_TTT_Board::undo_move(int x, int y) {
 
 /**
  * @brief Get all empty cells (for AI)
- * @return vector of coordinates of empty valid cells
  */
 vector<pair<int, int>> Diamond_TTT_Board::get_empty_cells() const {
     vector<pair<int, int>> empty;
@@ -118,13 +99,10 @@ vector<pair<int, int>> Diamond_TTT_Board::get_empty_cells() const {
 
 /**
  * @brief Validate move without applying it
- * @param x Row
- * @param y Column
- * @return error message or empty string
  */
 string Diamond_TTT_Board::validate_move(int x, int y) const {
     if (x < 0 || x >= rows || y < 0 || y >= columns)
-        return "Coordinates must be 0-4!";
+        return "Coordinates must be 0-6!";
     if (!is_valid_cell(x, y))
         return "Not a diamond cell!";
     if (board[x][y] != ' ') {
@@ -138,87 +116,103 @@ string Diamond_TTT_Board::validate_move(int x, int y) const {
 
 /**
  * @brief Check if player has won
- * @param player Pointer to player
- * @return true if player satisfies diamond TTT winning condition
  */
+ /**
+  * @brief Check if player has won - Simplified and optimized
+  */
 bool Diamond_TTT_Board::is_win(Player<char>* player) {
     char symbol = player->get_symbol();
+
+    // Get all possible lines
     auto all_lines = get_all_lines();
+
+    // Separate 3-lines and 4-lines completed by the player
     vector<vector<pair<int, int>>> completed_3lines;
     vector<vector<pair<int, int>>> completed_4lines;
 
-    // Collect all completed lines for this player
     for (const auto& line : all_lines) {
         bool complete = true;
-        for (const auto& cell : line)
+        for (const auto& cell : line) {
             if (board[cell.first][cell.second] != symbol) {
                 complete = false;
                 break;
             }
+        }
 
         if (complete) {
-            if (line.size() == 3) completed_3lines.push_back(line);
-            else if (line.size() == 4) completed_4lines.push_back(line);
+            if (line.size() == 3) {
+                completed_3lines.push_back(line);
+            }
+            else if (line.size() == 4) {
+                completed_4lines.push_back(line);
+            }
         }
     }
 
-    // Need at least one 3-line and one 4-line
-    if (completed_3lines.empty() || completed_4lines.empty()) return false;
+    // If we don't have at least one of each type, can't win
+    if (completed_3lines.empty() || completed_4lines.empty()) {
+        return false;
+    }
 
-    // Check all combinations of 3-lines and 4-lines
-    for (const auto& three_line : completed_3lines) {
-        // Determine direction of the 3-line
-        string dir3 = "other";
-        if (three_line.size() > 1) {
-            int dx = three_line[1].first - three_line[0].first;
-            int dy = three_line[1].second - three_line[0].second;
-            if (dx == 0) dir3 = "horizontal";
-            else if (dy == 0) dir3 = "vertical";
-            else if (abs(dx) == abs(dy)) dir3 = "diagonal";
-        }
+    // Debug output to see what lines were found
+    if (false) {  // Set to true for debugging
+        cout << "\nDEBUG: Player " << symbol << " has "
+            << completed_3lines.size() << " completed 3-lines and "
+            << completed_4lines.size() << " completed 4-lines\n";
+    }
 
-        for (const auto& four_line : completed_4lines) {
-            // Determine direction of the 4-line
-            string dir4 = "other";
-            if (four_line.size() > 1) {
-                int dx = four_line[1].first - four_line[0].first;
-                int dy = four_line[1].second - four_line[0].second;
-                if (dx == 0) dir4 = "horizontal";
-                else if (dy == 0) dir4 = "vertical";
-                else if (abs(dx) == abs(dy)) dir4 = "diagonal";
-            }
+    // Check if any 3-line and 4-line share exactly one cell and have different directions
+    for (const auto& line3 : completed_3lines) {
+        // Determine direction of 3-line
+        string dir3 = get_line_direction(line3);
 
-            // Must be in different directions
+        for (const auto& line4 : completed_4lines) {
+            // Determine direction of 4-line
+            string dir4 = get_line_direction(line4);
+
+            // Must be different directions
             if (dir3 == dir4) continue;
 
-            // Check if they share any cell
-            bool shares_cell = false;
-            for (const auto& cell3 : three_line) {
-                for (const auto& cell4 : four_line) {
+            // Count shared cells
+            int shared = 0;
+            for (const auto& cell3 : line3) {
+                for (const auto& cell4 : line4) {
                     if (cell3.first == cell4.first && cell3.second == cell4.second) {
-                        shares_cell = true;
+                        shared++;
                         break;
                     }
                 }
-                if (shares_cell) break;
             }
 
-            int shared_count = 0;
-            for (const auto& cell3 : three_line)
-                for (const auto& cell4 : four_line)
-                    if (cell3 == cell4) shared_count++;
-            if (shared_count == 1) {
-                return true;
+            if (shared == 1) {
+                return true;  // Win condition met!
             }
         }
     }
+
     return false;
+}
+
+string Diamond_TTT_Board::get_line_direction(const vector<pair<int, int>>& line) {
+    if (line.size() < 2) return "unknown";
+
+    int dx = line[1].first - line[0].first;
+    int dy = line[1].second - line[0].second;
+
+    // Normalize to -1, 0, or 1
+    if (dx != 0) dx /= abs(dx);
+    if (dy != 0) dy /= abs(dy);
+
+    if (dx == 0 && dy == 1) return "horizontal";
+    if (dx == 1 && dy == 0) return "vertical";
+    if (dx == 1 && dy == 1) return "diagonal_down";
+    if (dx == 1 && dy == -1) return "diagonal_up";
+
+    return "unknown";
 }
 
 /**
  * @brief Check if game is draw
- * @param player Pointer to player
- * @return true if board full and no winner
  */
 bool Diamond_TTT_Board::is_draw(Player<char>* player) {
     // Check if any empty cell exists
@@ -231,8 +225,6 @@ bool Diamond_TTT_Board::is_draw(Player<char>* player) {
 
 /**
  * @brief Check if game is over (win or draw)
- * @param player Pointer to player
- * @return true if game finished
  */
 bool Diamond_TTT_Board::game_is_over(Player<char>* player) {
     return is_win(player) || is_draw(player);
@@ -240,7 +232,6 @@ bool Diamond_TTT_Board::game_is_over(Player<char>* player) {
 
 /**
  * @brief Debug helper: print win status
- * @param player Pointer to player
  */
 void Diamond_TTT_Board::debug_win_check(Player<char>* player) {
     cout << "\n=== DEBUG for Player " << player->get_symbol() << " ===\n";
@@ -250,12 +241,6 @@ void Diamond_TTT_Board::debug_win_check(Player<char>* player) {
 
 /**
  * @brief Get line cells starting from (start_x,start_y) in direction (dx,dy)
- * @param start_x Row
- * @param start_y Column
- * @param dx Row increment
- * @param dy Column increment
- * @param length Length of line
- * @return vector of coordinates along the line
  */
 vector<pair<int, int>> Diamond_TTT_Board::get_line_cells(int start_x, int start_y,
     int dx, int dy, int length) {
@@ -272,49 +257,49 @@ vector<pair<int, int>> Diamond_TTT_Board::get_line_cells(int start_x, int start_
 }
 
 /**
- * @brief Generate all possible winning lines
- * @return vector of lines (each line is vector of coordinates)
+ * @brief Generate all possible winning lines (3 and 4) dynamically for 7x7 diamond
  */
 vector<vector<pair<int, int>>> Diamond_TTT_Board::get_all_lines() {
     vector<vector<pair<int, int>>> all_lines;
 
-    // HORIZONTAL
-    all_lines.push_back(get_line_cells(1, 1, 0, 1, 3));
-    all_lines.push_back(get_line_cells(2, 0, 0, 1, 4));
-    all_lines.push_back(get_line_cells(2, 1, 0, 1, 4));
-    all_lines.push_back(get_line_cells(3, 1, 0, 1, 3));
-    all_lines.push_back(get_line_cells(2, 0, 0, 1, 3));  
-    all_lines.push_back(get_line_cells(2, 1, 0, 1, 3));  
-    all_lines.push_back(get_line_cells(2, 2, 0, 1, 3));  
-    all_lines.push_back(get_line_cells(2, 4, 1, -1, 3)); 
+    const int dirs[4][2] = {
+        {1, 0},  // vertical
+        {0, 1},  // horizontal
+        {1, 1},  // main diagonal
+        {1,-1}   // anti diagonal
+    };
 
-    // VERTICAL
-    all_lines.push_back(get_line_cells(0, 2, 1, 0, 3));
-    all_lines.push_back(get_line_cells(1, 2, 1, 0, 3));
-    all_lines.push_back(get_line_cells(2, 2, 1, 0, 3));
-    all_lines.push_back(get_line_cells(1, 1, 1, 0, 3));
-    all_lines.push_back(get_line_cells(1, 3, 1, 0, 3));
-    all_lines.push_back(get_line_cells(0, 2, 1, 0, 4));
-    all_lines.push_back(get_line_cells(1, 2, 1, 0, 4));
+    const int lengths[2] = { 3, 4 };
 
-    // DIAGONALS
-    all_lines.push_back(get_line_cells(0, 2, 1, -1, 3));
-    all_lines.push_back(get_line_cells(1, 1, 1, 1, 3));
-    all_lines.push_back(get_line_cells(1, 3, 1, -1, 3));
-    all_lines.push_back(get_line_cells(0, 2, 1, 1, 3));
-    all_lines.push_back(get_line_cells(2, 0, 1, 1, 3));
-    all_lines.push_back(get_line_cells(2, 1, 1, 1, 3));
+    for (int r = 0; r < rows; r++) {
+        for (int c = 0; c < columns; c++) {
+            if (!is_valid_cell(r, c)) continue;
 
-    // 4-LINE DIAGONALS
-    all_lines.push_back(get_line_cells(1, 1, 1, 1, 4));
-    all_lines.push_back(get_line_cells(1, 3, 1, -1, 4));
+            for (const auto& d : dirs) {
+                int dx = d[0], dy = d[1];
 
-    // Filter valid lines
-    vector<vector<pair<int, int>>> valid_lines;
-    for (const auto& line : all_lines)
-        if (!line.empty()) valid_lines.push_back(line);
+                for (int L : lengths) {
+                    vector<pair<int, int>> line;
+                    int nr = r, nc = c;
+                    bool ok = true;
 
-    return valid_lines;
+                    for (int k = 0; k < L; k++) {
+                        if (!is_valid_cell(nr, nc)) {
+                            ok = false;
+                            break;
+                        }
+                        line.push_back({ nr, nc });
+                        nr += dx;
+                        nc += dy;
+                    }
+
+                    if (ok) all_lines.push_back(line);
+                }
+            }
+        }
+    }
+
+    return all_lines;
 }
 
 // ============================================================================
@@ -325,7 +310,6 @@ Diamond_TTT_UI::Diamond_TTT_UI() : UI<char>("=== Diamond Tic-Tac-Toe ===", 3) {}
 
 /**
  * @brief Set up two players
- * @return array of two player pointers
  */
 Player<char>** Diamond_TTT_UI::setup_players() {
     Player<char>** players = new Player<char>*[2];
@@ -362,6 +346,7 @@ int Diamond_TTT_UI::evaluate_board(Diamond_TTT_Board* board, char ai_symbol, cha
     if (board->is_win(&opp)) return -10;
     return 0;
 }
+
 int Diamond_TTT_UI::minimax_helper(Diamond_TTT_Board* board,
     char current_symbol,
     char ai_symbol,
@@ -385,7 +370,9 @@ int Diamond_TTT_UI::minimax_helper(Diamond_TTT_Board* board,
 
         auto empty_cells = board->get_empty_cells();
         for (auto cell : empty_cells) {
-            board->update_board(new Move<char>(cell.first, cell.second, current_symbol));
+            // use stack Move to avoid leaking memory
+            Move<char> tmp(cell.first, cell.second, current_symbol);
+            board->update_board(&tmp);
 
             int value = minimax_helper(board,
                 opponent_symbol,
@@ -404,7 +391,8 @@ int Diamond_TTT_UI::minimax_helper(Diamond_TTT_Board* board,
 
         auto empty_cells = board->get_empty_cells();
         for (auto cell : empty_cells) {
-            board->update_board(new Move<char>(cell.first, cell.second, current_symbol));
+            Move<char> tmp(cell.first, cell.second, current_symbol);
+            board->update_board(&tmp);
 
             int value = minimax_helper(board,
                 ai_symbol,
@@ -449,7 +437,6 @@ int Diamond_TTT_UI::minimax(Diamond_TTT_Board* board,
         search_depth);
 }
 
-
 /**
  * @brief Find best move for AI
  */
@@ -461,12 +448,23 @@ pair<int, int> Diamond_TTT_UI::find_best_move(Diamond_TTT_Board* board, char ai_
 
     // If there are too many empty cells, use a heuristic
     if (empty_cells.size() > 10) {
-        // Simple heuristic: prefer center cells first
-        vector<pair<int, int>> center_cells = { {0, 2}, {1, 1}, {1, 2}, {1, 3}, {2, 0}, {2, 1}, {2, 2}, {2, 3}, {2, 4}, {3, 1}, {3, 2}, {3, 3}, {4, 2} };
+        // Prefer cells closer to center first (heuristic)
+        int mid = board->get_rows() / 2; // assume Board has get_rows(); if not, use board->rows directly
+        // If get_rows() not available, fallback:
+        if (mid <= 0) mid = 3;
+
+        vector<pair<int, int>> sorted_cells = empty_cells;
+        sort(sorted_cells.begin(), sorted_cells.end(),
+            [mid](const pair<int, int>& a, const pair<int, int>& b) {
+                int da = abs(a.first - mid) + abs(a.second - mid);
+                int db = abs(b.first - mid) + abs(b.second - mid);
+                return da < db;
+            });
 
         // Check for winning move
         for (auto cell : empty_cells) {
-            board->update_board(new Move<char>(cell.first, cell.second, ai_symbol));
+            Move<char> tmp(cell.first, cell.second, ai_symbol);
+            board->update_board(&tmp);
             Player<char> temp_ai("AI", ai_symbol, PlayerType::COMPUTER);
             if (board->is_win(&temp_ai)) {
                 board->undo_move(cell.first, cell.second);
@@ -477,7 +475,8 @@ pair<int, int> Diamond_TTT_UI::find_best_move(Diamond_TTT_Board* board, char ai_
 
         // Check for blocking opponent's winning move
         for (auto cell : empty_cells) {
-            board->update_board(new Move<char>(cell.first, cell.second, opponent_symbol));
+            Move<char> tmp(cell.first, cell.second, opponent_symbol);
+            board->update_board(&tmp);
             Player<char> temp_opp("OPP", opponent_symbol, PlayerType::COMPUTER);
             if (board->is_win(&temp_opp)) {
                 board->undo_move(cell.first, cell.second);
@@ -486,8 +485,8 @@ pair<int, int> Diamond_TTT_UI::find_best_move(Diamond_TTT_Board* board, char ai_
             board->undo_move(cell.first, cell.second);
         }
 
-        // Prefer center cells
-        for (auto cell : center_cells) {
+        // Prefer center cells (from sorted list)
+        for (auto cell : sorted_cells) {
             if (board->validate_move(cell.first, cell.second).empty()) {
                 return cell;
             }
@@ -501,7 +500,8 @@ pair<int, int> Diamond_TTT_UI::find_best_move(Diamond_TTT_Board* board, char ai_
 
     // For fewer empty cells, use minimax
     for (auto cell : empty_cells) {
-        board->update_board(new Move<char>(cell.first, cell.second, ai_symbol));
+        Move<char> tmp(cell.first, cell.second, ai_symbol);
+        board->update_board(&tmp);
         int moveVal = minimax(board, opponent_symbol, ai_symbol, opponent_symbol, false);
         board->undo_move(cell.first, cell.second);
 
@@ -566,8 +566,44 @@ Move<char>* Diamond_TTT_UI::get_move(Player<char>* player) {
 /**
  * @brief Display board
  */
+ /**
+  * @brief Display board with properly aligned column numbers
+  */
 void Diamond_TTT_UI::display_board_matrix(const vector<vector<char>>& matrix) const {
-    cout << "\n=== Diamond Tic-Tac-Toe ===\n";
-    UI<char>::display_board_matrix(matrix);
-    cout << "Note: '.' marks invalid cells (not part of diamond shape)\n";
+    int rows = matrix.size();
+    if (rows == 0) return;
+    int columns = matrix[0].size();
+
+    cout << "\n=== Diamond Tic-Tac-Toe ===\n\n";
+
+    // Print column headers with proper spacing
+    cout << "     ";
+    for (int j = 0; j < columns; j++) {
+        cout << setw(3) << j << " ";
+    }
+    cout << endl;
+
+    // Print top border
+    cout << "    ";
+    for (int j = 0; j < columns; j++) {
+        cout << "----";
+    }
+    cout << "-" << endl;
+
+    // Print each row with row numbers
+    for (int i = 0; i < rows; i++) {
+        cout << setw(2) << i << " |";
+        for (int j = 0; j < columns; j++) {
+            cout << setw(3) << matrix[i][j] << "|";
+        }
+        cout << endl;
+
+        // Print row separator
+        cout << "    ";
+        for (int j = 0; j < columns; j++) {
+            cout << "----";
+        }
+        cout << "-" << endl;
+    }
+    cout << "\nNote: '.' marks invalid cells (not part of diamond shape)\n";
 }
